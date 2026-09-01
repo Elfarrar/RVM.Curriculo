@@ -52,7 +52,7 @@ Desenvolvedor e Arquiteto de Software | fev/2026 – jun/2026
 Programador Sênior | jun/2019 – jan/2026
 
 - Desenvolvimento e sustentação dos sistemas web do banco em C# e .NET sobre o CMS Sitefinity.
-- Referência técnica em time de 6 desenvolvedores: participação ativa nas decisões de arquitetura das soluções, apoio na resolução de problemas complexos e condução de code review.
+- Reconhecido como referência técnica do time de 6 desenvolvedores — vários com 10 anos de casa — após 1 ano na empresa: participação ativa nas decisões de arquitetura das soluções, apoio na resolução de problemas complexos e condução de code review.
 - Responsável técnico pelos sistemas de afiliados e parceiros da instituição, incluindo regras de comissionamento e integrações com sistemas internos.
 - Construção de APIs REST e integrações entre as plataformas do banco.
 - Atuação em ambiente regulado do setor financeiro, com requisitos de segurança, rastreabilidade e auditoria.

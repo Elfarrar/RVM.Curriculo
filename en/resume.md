@@ -52,7 +52,7 @@ Software Engineer and Architect | Feb 2026 – Jun 2026
 Senior Software Developer | Jun 2019 – Jan 2026
 
 - Developed and maintained the bank's web systems in C# and .NET on top of the Sitefinity CMS.
-- Technical reference within a 6-developer team: actively took part in solution architecture decisions, supported complex problem solving and led code reviews.
+- Recognized as the technical reference of a 6-developer team — several with 10 years at the company — within the first year: actively took part in solution architecture decisions, supported complex problem solving and led code reviews.
 - Technical owner of the bank's affiliate and partner systems, including commission rules and integrations with internal systems.
 - Built REST APIs and integrations across the bank's platforms.
 - Worked in a regulated financial environment with security, traceability and audit requirements.
