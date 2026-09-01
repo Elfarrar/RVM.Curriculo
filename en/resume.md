@@ -10,13 +10,13 @@ GitHub: github.com/Elfarrar
 
 ## Professional Summary
 
-Software engineer with 15+ years of experience building enterprise systems in C# and .NET end to end — from domain modeling to production deployment. Serves as a technical reference within the team and has led a squad as team lead, contributing to architecture decisions and supporting other developers. Background in ERP, banking, people management platforms and, currently, carbon emission calculation. Hands-on with layered architecture and Domain-Driven Design (DDD), REST APIs, Blazor, SQL Server and PostgreSQL, containerization with Docker and CI/CD pipelines on Microsoft Azure and Google Cloud Platform. Advanced English, working daily with a distributed international team.
+Software engineer with 15+ years of experience building enterprise systems in C# and .NET end to end — from domain modeling to production deployment. Serves as a technical reference within the team and has led a squad as team lead, contributing to architecture decisions and supporting other developers. Background in ERP, banking, people management platforms and, currently, carbon emission calculation. Hands-on with Vertical Slice Architecture (VSA), layered architecture and Domain-Driven Design (DDD), REST APIs, Blazor, SQL Server and PostgreSQL, containerization with Docker and CI/CD pipelines on Microsoft Azure and Google Cloud Platform. Advanced English, working daily with a distributed international team.
 
 ## Technical Skills
 
 Languages and Frameworks: C#, .NET, .NET Core, .NET 10, ASP.NET, ASP.NET Core MVC, REST Web API, Blazor (Server and WebAssembly), Entity Framework Core, WPF, WCF, Web Forms, Python, JavaScript, HTML5, CSS3, Angular
 
-Architecture: Domain-Driven Design (DDD), layered architecture, REST APIs, system integration, multi-tenant services, authentication and authorization (OAuth 2.0 / OpenID Connect)
+Architecture: Vertical Slice Architecture (VSA), Domain-Driven Design (DDD), layered architecture, REST APIs, system integration, multi-tenant services, authentication and authorization (OAuth 2.0 / OpenID Connect)
 
 Cloud and DevOps: Microsoft Azure, Google Cloud Platform (GCP), Docker, Jenkins, GitHub Actions, CI/CD, Git, Nginx, Linux
 
@@ -40,7 +40,7 @@ Senior Software Developer — client: UL Solutions | Jun 2026 – Present
 **Independent Projects — RVM Ecosystem**
 Software Engineer and Architect | Feb 2026 – Jun 2026
 
-- Designed and built, from scratch to production, an ecosystem of applications on .NET 10, Blazor Server, Entity Framework Core and PostgreSQL, deployed to a Linux VPS with Docker, Nginx and SSL.
+- Designed and built, from scratch to production, an ecosystem of applications using Vertical Slice Architecture (VSA), on .NET 10, Blazor Server, Entity Framework Core and PostgreSQL, deployed to a Linux VPS with Docker, Nginx and SSL.
 - ERPAgro: vertical ERP for small-scale farmers, operated through WhatsApp in natural language (MCP layer) and complemented by a web admin panel; generates the Brazilian LCDPR tax report for accountants.
 - Payments service: Pix, bank slip and credit card billing, abstracting multiple providers (Asaas and Inter), with per-application data isolation via API Key and signed webhooks.
 - Centralized identity service (authentication and authorization) consumed by every application in the ecosystem.

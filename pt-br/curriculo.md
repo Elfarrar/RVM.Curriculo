@@ -10,13 +10,13 @@ GitHub: github.com/Elfarrar
 
 ## Resumo Profissional
 
-Desenvolvedor de software com mais de 15 anos de experiência, construindo sistemas corporativos em C# e .NET de ponta a ponta — do modelo de domínio à publicação em produção. Atuo como referência técnica de time e já respondi pela liderança técnica de squad, participando das decisões de arquitetura e apoiando outros desenvolvedores. Atuação em ERP, sistemas bancários, gestão de pessoas e, atualmente, cálculo de emissão de carbono. Trabalho com arquitetura em camadas e Domain-Driven Design (DDD), APIs REST, Blazor, SQL Server e PostgreSQL, containerização com Docker e pipelines de CI/CD em Microsoft Azure e Google Cloud Platform. Inglês avançado, com atuação diária em time distribuído e cliente internacional.
+Desenvolvedor de software com mais de 15 anos de experiência, construindo sistemas corporativos em C# e .NET de ponta a ponta — do modelo de domínio à publicação em produção. Atuo como referência técnica de time e já respondi pela liderança técnica de squad, participando das decisões de arquitetura e apoiando outros desenvolvedores. Atuação em ERP, sistemas bancários, gestão de pessoas e, atualmente, cálculo de emissão de carbono. Trabalho com Vertical Slice Architecture (VSA), arquitetura em camadas e Domain-Driven Design (DDD), APIs REST, Blazor, SQL Server e PostgreSQL, containerização com Docker e pipelines de CI/CD em Microsoft Azure e Google Cloud Platform. Inglês avançado, com atuação diária em time distribuído e cliente internacional.
 
 ## Competências Técnicas
 
 Linguagens e Frameworks: C#, .NET, .NET Core, .NET 10, ASP.NET, ASP.NET Core MVC, Web API REST, Blazor (Server e WebAssembly), Entity Framework Core, WPF, WCF, Web Forms, Python, JavaScript, HTML5, CSS3, Angular
 
-Arquitetura: Domain-Driven Design (DDD), arquitetura em camadas, APIs REST, integração entre sistemas, serviços multi-tenant, autenticação e autorização (OAuth 2.0 / OpenID Connect)
+Arquitetura: Vertical Slice Architecture (VSA), Domain-Driven Design (DDD), arquitetura em camadas, APIs REST, integração entre sistemas, serviços multi-tenant, autenticação e autorização (OAuth 2.0 / OpenID Connect)
 
 Cloud e DevOps: Microsoft Azure, Google Cloud Platform (GCP), Docker, Jenkins, GitHub Actions, CI/CD, Git, Nginx, Linux
 
@@ -40,7 +40,7 @@ Desenvolvedor Sênior — alocado no cliente UL Solutions | jun/2026 – atual
 **Projetos Independentes — Ecossistema RVM**
 Desenvolvedor e Arquiteto de Software | fev/2026 – jun/2026
 
-- Concepção e implementação, do zero até produção, de um ecossistema de aplicações em .NET 10, Blazor Server, Entity Framework Core e PostgreSQL, publicado em VPS Linux com Docker, Nginx e SSL.
+- Concepção e implementação, do zero até produção, de um ecossistema de aplicações em Vertical Slice Architecture (VSA), com .NET 10, Blazor Server, Entity Framework Core e PostgreSQL, publicado em VPS Linux com Docker, Nginx e SSL.
 - ERPAgro: ERP vertical para o pequeno produtor rural, operado por WhatsApp em linguagem natural (camada MCP) e complementado por painel administrativo web; gera o LCDPR para a contabilidade do produtor.
 - Serviço de pagamentos: cobrança via Pix, boleto e cartão de crédito, com abstração sobre múltiplos provedores (Asaas e Inter), isolamento de dados por aplicação via API Key e webhooks assinados.
 - Serviço de identidade centralizado (autenticação e autorização) consumido por todas as aplicações do ecossistema.
