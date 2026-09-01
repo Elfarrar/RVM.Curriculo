@@ -5,7 +5,7 @@ Desenvolvedor de Software Sênior | .NET · C# · Azure · Arquitetura de Softwa
 Belo Horizonte, MG, Brasil — disponível para trabalho remoto
 Telefone: (31) 98239-5560
 E-mail: rvenerosomorici@gmail.com
-LinkedIn: br.linkedin.com/pub/rafael-morici/58/b4b/a73
+LinkedIn: linkedin.com/in/rafael-veneroso-morici
 GitHub: github.com/Elfarrar
 
 ## Resumo Profissional
@@ -73,8 +73,8 @@ Programador Pleno | jan/2017 – jul/2018
 
 ## Formação Acadêmica
 
-**[CURSO — PREENCHER]** — [INSTITUIÇÃO — PREENCHER]
-Conclusão: [ANO — PREENCHER]
+**Bacharelado em Sistemas de Informação** — Faculdade Infórium de Tecnologia, Belo Horizonte, MG
+Conclusão: 2009
 
 ## Certificações
 

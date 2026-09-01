@@ -5,7 +5,7 @@ Senior Software Engineer | .NET · C# · Azure · Software Architecture
 Belo Horizonte, Brazil — available for remote work
 Phone: +55 31 98239-5560
 Email: rvenerosomorici@gmail.com
-LinkedIn: br.linkedin.com/pub/rafael-morici/58/b4b/a73
+LinkedIn: linkedin.com/in/rafael-veneroso-morici
 GitHub: github.com/Elfarrar
 
 ## Professional Summary
@@ -73,8 +73,8 @@ Mid-level Software Developer | Jan 2017 – Jul 2018
 
 ## Education
 
-**[DEGREE — TO FILL]** — [UNIVERSITY — TO FILL]
-Graduated: [YEAR — TO FILL]
+**Bachelor's Degree in Information Systems** — Faculdade Infórium de Tecnologia, Belo Horizonte, Brazil
+Graduated: 2009
 
 ## Certifications
 

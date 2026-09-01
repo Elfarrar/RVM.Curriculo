@@ -28,6 +28,6 @@ Gera, em cada pasta de idioma, o `.docx` (formato preferido pelo ATS) e o `.pdf`
 
 ## Pendências
 
-- [ ] Preencher formação acadêmica (curso, instituição, ano) nos dois idiomas
-- [ ] Trocar a URL do LinkedIn pela versão curta (`linkedin.com/in/...`)
+- [x] Preencher formação acadêmica
+- [x] URL curta do LinkedIn
 - [ ] Adicionar métricas às experiências (volume, tempo, % de ganho)
