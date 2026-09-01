@@ -5,6 +5,7 @@ Desenvolvedor de Software Sênior | .NET · C# · Azure · Arquitetura de Softwa
 Belo Horizonte, MG, Brasil — disponível para trabalho remoto
 Telefone: (31) 98239-5560
 E-mail: rvenerosomorici@gmail.com
+Currículo online: rvmtech.com.br
 LinkedIn: linkedin.com/in/rafael-veneroso-morici
 GitHub: github.com/Elfarrar
 

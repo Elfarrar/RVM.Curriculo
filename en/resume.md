@@ -5,6 +5,7 @@ Senior Software Engineer | .NET · C# · Azure · Software Architecture
 Belo Horizonte, Brazil — available for remote work
 Phone: +55 31 98239-5560
 Email: rvenerosomorici@gmail.com
+Online resume: rvmtech.com.br/en
 LinkedIn: linkedin.com/in/rafael-veneroso-morici
 GitHub: github.com/Elfarrar
 
