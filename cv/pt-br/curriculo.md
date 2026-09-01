@@ -80,10 +80,11 @@ Experiências anteriores a 2017 disponíveis mediante solicitação.
 **Bacharelado em Sistemas de Informação** — Faculdade Infórium de Tecnologia, Belo Horizonte, MG
 Conclusão: 2009
 
-## Certificações
+## Certificações e Cursos
 
 - Exam 480: Programming in HTML5 with JavaScript and CSS3 — Microsoft
 - AZ-900: Microsoft Azure Fundamentals — em preparação
+- PHP — curso de desenvolvimento web
 
 ## Idiomas
 

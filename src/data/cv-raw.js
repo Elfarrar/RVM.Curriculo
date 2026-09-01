@@ -188,6 +188,10 @@ export const CV = {
       year: "Conclusão em 2009",
     },
 
+    courses: [
+      { name: "PHP — curso de desenvolvimento web" },
+    ],
+
     certifications: [
       { name: "Exam 480: Programming in HTML5 with JavaScript and CSS3", issuer: "Microsoft", status: "concluída" },
       { name: "AZ-900: Microsoft Azure Fundamentals", issuer: "Microsoft", status: "em preparação" },
@@ -402,6 +406,10 @@ export const CV = {
       place: "Belo Horizonte, Brazil",
       year: "Graduated in 2009",
     },
+
+    courses: [
+      { name: "PHP — web development course" },
+    ],
 
     certifications: [
       { name: "Exam 480: Programming in HTML5 with JavaScript and CSS3", issuer: "Microsoft", status: "completed" },

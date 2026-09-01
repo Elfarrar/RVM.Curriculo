@@ -80,10 +80,11 @@ Experience prior to 2017 available upon request.
 **Bachelor's Degree in Information Systems** — Faculdade Infórium de Tecnologia, Belo Horizonte, Brazil
 Graduated: 2009
 
-## Certifications
+## Certifications and Courses
 
 - Exam 480: Programming in HTML5 with JavaScript and CSS3 — Microsoft
 - AZ-900: Microsoft Azure Fundamentals — in progress
+- PHP — web development course
 
 ## Languages
 
