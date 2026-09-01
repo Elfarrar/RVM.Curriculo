@@ -10,7 +10,7 @@ GitHub: github.com/Elfarrar
 
 ## Resumo Profissional
 
-Desenvolvedor de software com mais de 9 anos de experiência em C# e .NET, construindo sistemas corporativos de ponta a ponta — do modelo de domínio à publicação em produção. Atuação em ERP, sistemas bancários, gestão de pessoas e, atualmente, cálculo de emissão de carbono. Trabalho com arquitetura em camadas e Domain-Driven Design (DDD), APIs REST, Blazor, SQL Server e PostgreSQL, containerização com Docker e pipelines de CI/CD em Microsoft Azure e Google Cloud Platform. Inglês avançado, com atuação diária em time distribuído e cliente internacional.
+Desenvolvedor de software com mais de 9 anos de experiência em C# e .NET, construindo sistemas corporativos de ponta a ponta — do modelo de domínio à publicação em produção. Atuo como referência técnica do time, participando das decisões de arquitetura e apoiando outros desenvolvedores. Atuação em ERP, sistemas bancários, gestão de pessoas e, atualmente, cálculo de emissão de carbono. Trabalho com arquitetura em camadas e Domain-Driven Design (DDD), APIs REST, Blazor, SQL Server e PostgreSQL, containerização com Docker e pipelines de CI/CD em Microsoft Azure e Google Cloud Platform. Inglês avançado, com atuação diária em time distribuído e cliente internacional.
 
 ## Competências Técnicas
 
@@ -52,6 +52,7 @@ Desenvolvedor e Arquiteto de Software | fev/2026 – jun/2026
 Programador Sênior | jun/2019 – jan/2026
 
 - Desenvolvimento e sustentação dos sistemas web do banco em C# e .NET sobre o CMS Sitefinity.
+- Referência técnica do time: participação ativa nas decisões de arquitetura das soluções, apoio na resolução de problemas complexos e condução de code review.
 - Responsável técnico pelos sistemas de afiliados e parceiros da instituição, incluindo regras de comissionamento e integrações com sistemas internos.
 - Construção de APIs REST e integrações entre as plataformas do banco.
 - Atuação em ambiente regulado do setor financeiro, com requisitos de segurança, rastreabilidade e auditoria.

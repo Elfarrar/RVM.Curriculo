@@ -10,7 +10,7 @@ GitHub: github.com/Elfarrar
 
 ## Professional Summary
 
-Software engineer with 9+ years of experience in C# and .NET, building enterprise systems end to end — from domain modeling to production deployment. Background in ERP, banking, people management platforms and, currently, carbon emission calculation. Hands-on with layered architecture and Domain-Driven Design (DDD), REST APIs, Blazor, SQL Server and PostgreSQL, containerization with Docker and CI/CD pipelines on Microsoft Azure and Google Cloud Platform. Advanced English, working daily with a distributed international team.
+Software engineer with 9+ years of experience in C# and .NET, building enterprise systems end to end — from domain modeling to production deployment. Serves as a technical reference within the team, contributing to architecture decisions and supporting other developers. Background in ERP, banking, people management platforms and, currently, carbon emission calculation. Hands-on with layered architecture and Domain-Driven Design (DDD), REST APIs, Blazor, SQL Server and PostgreSQL, containerization with Docker and CI/CD pipelines on Microsoft Azure and Google Cloud Platform. Advanced English, working daily with a distributed international team.
 
 ## Technical Skills
 
@@ -52,6 +52,7 @@ Software Engineer and Architect | Feb 2026 – Jun 2026
 Senior Software Developer | Jun 2019 – Jan 2026
 
 - Developed and maintained the bank's web systems in C# and .NET on top of the Sitefinity CMS.
+- Technical reference for the team: actively took part in solution architecture decisions, supported complex problem solving and led code reviews.
 - Technical owner of the bank's affiliate and partner systems, including commission rules and integrations with internal systems.
 - Built REST APIs and integrations across the bank's platforms.
 - Worked in a regulated financial environment with security, traceability and audit requirements.
