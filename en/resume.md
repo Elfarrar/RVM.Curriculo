@@ -33,9 +33,9 @@ Methodologies: Scrum, Kanban, Jira, Code Review, Automated Testing
 **Marlabs — Belo Horizonte, Brazil (remote)**
 Senior Software Developer — client: UL Solutions | Jun 2026 – Present
 
-- Develop UL Solutions' greenhouse gas (carbon footprint) calculation system in C# and .NET, exposing REST APIs consumed by the product applications.
-- Model and evolve the relational database (SQL Server and PostgreSQL), including aggregation queries over large volumes of emission data.
-- Deploy and support services on Microsoft Azure.
+- Develop the new greenhouse gas (carbon footprint) calculation platform in C# and .NET with REST APIs, set to replace the legacy system that serves UL Solutions' enterprise clients.
+- Model and evolve the new system's relational database (SQL Server and PostgreSQL).
+- Services hosted on Microsoft Azure.
 - Work within a distributed international team, running ceremonies, code reviews and documentation in English.
 
 **Independent Projects — RVM Ecosystem**
@@ -51,9 +51,9 @@ Software Engineer and Architect | Feb 2026 – Jun 2026
 **Questrade — Belo Horizonte, Brazil**
 Senior Software Developer | Jun 2019 – Jan 2026
 
-- Developed and maintained the bank's web systems in C# and .NET on top of the Sitefinity CMS.
+- Developed and maintained the bank's web systems in C# and .NET on top of the Sitefinity CMS, which sustained peaks of over 10,000 account openings per day during the pandemic.
 - Recognized as the technical reference of a 6-developer team — several with 10 years at the company — within the first year: actively took part in solution architecture decisions, supported complex problem solving and led code reviews.
-- Technical owner of the bank's affiliate and partner systems, including commission rules and integrations with internal systems.
+- Technical owner of the bank's affiliate and partner systems, covering 50+ active affiliates, including commission rules and integrations with internal systems.
 - Built REST APIs and integrations across the bank's platforms.
 - Worked in a regulated financial environment with security, traceability and audit requirements.
 - Daily communication in English with the team and business stakeholders in Canada.
@@ -68,9 +68,10 @@ Senior Software Developer | Jul 2018 – Jun 2019
 **EMC — Belo Horizonte, Brazil**
 Mid-level Software Developer | Jan 2017 – Jul 2018
 
-- Developed a corporate ERP with a WPF desktop interface for internal users and Web Forms + WCF for external clients.
-- Modeled the domain using Domain-Driven Design (DDD) and layered architecture.
-- Delivered evolutive and corrective maintenance on a legacy codebase.
+- Built from scratch the ERP that came to run the operation of a 100+ employee company, after failed attempts to roll out SAP and TOTVS.
+- Owned the domain modeling with Domain-Driven Design (DDD) and the design of the system's layered architecture.
+- Delivered modules for IT equipment leasing — the company's core business —, service orders, contracts, finance and customer support.
+- Built a WPF desktop interface for internal users and Web Forms + WCF for external clients.
 
 ## Education
 

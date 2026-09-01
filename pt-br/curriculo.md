@@ -33,9 +33,9 @@ Metodologias: Scrum, Kanban, Jira, Code Review, Testes Automatizados
 **Marlabs — Belo Horizonte, MG (remoto)**
 Desenvolvedor Sênior — alocado no cliente UL Solutions | jun/2026 – atual
 
-- Desenvolvimento do sistema de cálculo de emissão de gases de efeito estufa (pegada de carbono) da UL Solutions, em C# e .NET, com APIs REST consumidas pelas aplicações do produto.
-- Modelagem e evolução do banco de dados relacional (SQL Server e PostgreSQL), incluindo consultas de agregação sobre grandes volumes de dados de emissão.
-- Publicação e sustentação dos serviços em Microsoft Azure.
+- Desenvolvimento da nova plataforma de cálculo de emissão de gases de efeito estufa (pegada de carbono) em C# e .NET com APIs REST, destinada a substituir o sistema legado que atende os grandes clientes da UL Solutions.
+- Modelagem e evolução do banco de dados relacional (SQL Server e PostgreSQL) do novo sistema.
+- Serviços hospedados em Microsoft Azure.
 - Atuação em time distribuído internacional, com cerimônias, code review e documentação em inglês.
 
 **Projetos Independentes — Ecossistema RVM**
@@ -51,9 +51,9 @@ Desenvolvedor e Arquiteto de Software | fev/2026 – jun/2026
 **Questrade — Belo Horizonte, MG**
 Programador Sênior | jun/2019 – jan/2026
 
-- Desenvolvimento e sustentação dos sistemas web do banco em C# e .NET sobre o CMS Sitefinity.
+- Desenvolvimento e sustentação dos sistemas web do banco em C# e .NET sobre o CMS Sitefinity, que sustentaram picos de mais de 10 mil aberturas de conta por dia durante a pandemia.
 - Reconhecido como referência técnica do time de 6 desenvolvedores — vários com 10 anos de casa — após 1 ano na empresa: participação ativa nas decisões de arquitetura das soluções, apoio na resolução de problemas complexos e condução de code review.
-- Responsável técnico pelos sistemas de afiliados e parceiros da instituição, incluindo regras de comissionamento e integrações com sistemas internos.
+- Responsável técnico pelos sistemas de afiliados e parceiros da instituição, com mais de 50 afiliados ativos, incluindo regras de comissionamento e integrações com sistemas internos.
 - Construção de APIs REST e integrações entre as plataformas do banco.
 - Atuação em ambiente regulado do setor financeiro, com requisitos de segurança, rastreabilidade e auditoria.
 - Comunicação diária em inglês com o time e as áreas de negócio no Canadá.
@@ -68,9 +68,10 @@ Programador Sênior | jul/2018 – jun/2019
 **EMC — Belo Horizonte, MG**
 Programador Pleno | jan/2017 – jul/2018
 
-- Desenvolvimento de ERP corporativo com interface desktop em WPF para usuários internos e Web Forms + WCF para clientes externos.
-- Modelagem do domínio com Domain-Driven Design (DDD) e arquitetura em camadas.
-- Manutenção evolutiva e corretiva sobre base de código legada.
+- Construção, do zero, do ERP que passou a controlar a operação de uma empresa de mais de 100 funcionários, depois de tentativas frustradas de implantar SAP e TOTVS.
+- Responsável pela modelagem do domínio com Domain-Driven Design (DDD) e pelo desenho da arquitetura em camadas do sistema.
+- Módulos de locação de equipamentos de informática — atividade-fim da empresa —, ordens de serviço, contratos, financeiro e SAC.
+- Interface desktop em WPF para os usuários internos e Web Forms + WCF para os clientes externos.
 
 ## Formação Acadêmica
 
