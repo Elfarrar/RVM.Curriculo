@@ -1,5 +1,5 @@
 """Gera DOCX (ATS-friendly) e PDF a partir dos .md. Uso: python build.py"""
-import re, subprocess, sys
+import re, shutil, subprocess, sys
 from pathlib import Path
 from docx import Document
 from docx.shared import Pt, Cm, RGBColor
@@ -77,5 +77,25 @@ def para_pdf(docs):
         print("OK  PDFs gerados")
 
 
+# Landing do CV (rvmtech.com.br) consome estes PDFs.
+PORTFOLIO = Path("C:/IA/RVM.Portfolio/public/cv")
+PUBLICA = {
+    "Rafael Veneroso Morici - Curriculo.pdf": "Rafael-Veneroso-Morici-Curriculo.pdf",
+    "Rafael Veneroso Morici - Resume.pdf": "Rafael-Veneroso-Morici-Resume.pdf",
+}
+
+
+def sincroniza_portfolio(docs):
+    if not PORTFOLIO.is_dir():
+        return
+    for d in docs:
+        alvo = PUBLICA.get(d.with_suffix(".pdf").name)
+        if alvo and d.with_suffix(".pdf").exists():
+            shutil.copyfile(d.with_suffix(".pdf"), PORTFOLIO / alvo)
+            print(f"OK  publicado {alvo}")
+
+
 if __name__ == "__main__":
-    para_pdf([monta_docx(md, out) for md, out in ALVOS])
+    docs = [monta_docx(md, out) for md, out in ALVOS]
+    para_pdf(docs)
+    sincroniza_portfolio(docs)

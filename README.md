@@ -30,4 +30,5 @@ Gera, em cada pasta de idioma, o `.docx` (formato preferido pelo ATS) e o `.pdf`
 
 - [x] Preencher formação acadêmica
 - [x] URL curta do LinkedIn
-- [ ] Adicionar métricas às experiências (volume, tempo, % de ganho)
+- [x] Métricas nas experiências
+- Landing online: `C:IARVM.Portfolio` (rvmtech.com.br) — `python build.py` copia os PDFs para `public/cv/`
