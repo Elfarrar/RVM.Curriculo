@@ -5,7 +5,7 @@
 export const CV = {
   pt: {
     role: "Desenvolvedor de Software Sênior",
-    tagline: ".NET · C# · Azure · Arquitetura de Software",
+    tagline: ".NET · C# · Azure · Modelagem de Domínio",
 
     summary: [
       "Desenvolvo software há mais de 15 anos, quase sempre em C# e .NET, e o fio condutor da carreira é o mesmo desde o começo: pegar um problema de negócio mal resolvido e entregar um sistema que a operação usa todo dia. Passei por ERP, banco, gestão de pessoas e, hoje, cálculo de emissão de carbono.",
@@ -48,7 +48,7 @@ export const CV = {
       },
       {
         period: "fev/2026 — jun/2026",
-        role: "Desenvolvedor e Arquiteto de Software",
+        role: "Desenvolvedor de Software",
         company: "Projetos Independentes — Ecossistema RVM",
         client: "iniciativa própria",
         location: "Belo Horizonte, MG",
@@ -220,7 +220,7 @@ export const CV = {
 
   en: {
     role: "Senior Software Engineer",
-    tagline: ".NET · C# · Azure · Software Architecture",
+    tagline: ".NET · C# · Azure · Domain Modeling",
 
     summary: [
       "I have been building software for over 15 years, almost always in C# and .NET, and the thread has been the same since day one: take a badly solved business problem and ship a system the operation actually uses every day. I have worked across ERP, banking, people management and, today, carbon emission calculation.",
@@ -263,7 +263,7 @@ export const CV = {
       },
       {
         period: "Feb 2026 — Jun 2026",
-        role: "Software Engineer and Architect",
+        role: "Software Engineer",
         company: "Independent Projects — RVM Ecosystem",
         client: "own initiative",
         location: "Belo Horizonte, Brazil",

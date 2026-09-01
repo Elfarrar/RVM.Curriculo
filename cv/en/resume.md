@@ -1,6 +1,6 @@
 # Rafael Veneroso Morici
 
-Senior Software Engineer | .NET · C# · Azure · Software Architecture
+Senior Software Engineer | .NET · C# · Azure · Domain Modeling
 
 Belo Horizonte, Brazil — available for remote work
 Phone: +55 31 98239-5560
@@ -39,7 +39,7 @@ Senior Software Developer — client: UL Solutions | Jun 2026 – Present
 - Work within a distributed international team, running ceremonies, code reviews and documentation in English.
 
 **Independent Projects — RVM Ecosystem**
-Software Engineer and Architect | Feb 2026 – Jun 2026
+Software Engineer | Feb 2026 – Jun 2026
 
 - Designed and built, from scratch to production, an ecosystem of applications using Vertical Slice Architecture (VSA), on .NET 10, Blazor Server, Entity Framework Core and PostgreSQL, deployed to a Linux VPS with Docker, Nginx and SSL.
 - ERPAgro: vertical ERP for small-scale farmers, operated through WhatsApp in natural language (MCP layer) and complemented by a web admin panel; generates the Brazilian LCDPR tax report for accountants.

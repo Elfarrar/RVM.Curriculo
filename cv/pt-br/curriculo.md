@@ -1,6 +1,6 @@
 # Rafael Veneroso Morici
 
-Desenvolvedor de Software Sênior | .NET · C# · Azure · Arquitetura de Software
+Desenvolvedor de Software Sênior | .NET · C# · Azure · Modelagem de Domínio
 
 Belo Horizonte, MG, Brasil — disponível para trabalho remoto
 Telefone: (31) 98239-5560
@@ -39,7 +39,7 @@ Desenvolvedor Sênior — alocado no cliente UL Solutions | jun/2026 – atual
 - Atuação em time distribuído internacional, com cerimônias, code review e documentação em inglês.
 
 **Projetos Independentes — Ecossistema RVM**
-Desenvolvedor e Arquiteto de Software | fev/2026 – jun/2026
+Desenvolvedor de Software | fev/2026 – jun/2026
 
 - Concepção e implementação, do zero até produção, de um ecossistema de aplicações em Vertical Slice Architecture (VSA), com .NET 10, Blazor Server, Entity Framework Core e PostgreSQL, publicado em VPS Linux com Docker, Nginx e SSL.
 - ERPAgro: ERP vertical para o pequeno produtor rural, operado por WhatsApp em linguagem natural (camada MCP) e complementado por painel administrativo web; gera o LCDPR para a contabilidade do produtor.
