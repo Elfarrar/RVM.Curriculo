@@ -1,0 +1,55 @@
+---
+/**
+ * CustomCursor — blob custom que segue o ponteiro com lag.
+ * Inicializado via initCursor() em motion.ts. Auto-disable em touch/mobile.
+ */
+---
+
+<div id="cursor" aria-hidden="true">
+  <div class="dot"></div>
+</div>
+
+<style>
+  #cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 36px;
+    height: 36px;
+    margin: -18px 0 0 -18px;
+    border-radius: 50%;
+    border: 1px solid var(--color-border-strong);
+    background: oklch(38% 0.155 320 / 0.06);
+    backdrop-filter: blur(2px);
+    pointer-events: none;
+    z-index: 1000;
+    transition: width 0.4s var(--ease-out-expo), height 0.4s var(--ease-out-expo),
+                margin 0.4s var(--ease-out-expo), border-color 0.3s ease,
+                background 0.3s ease;
+    will-change: transform;
+  }
+
+  #cursor.hover {
+    width: 64px;
+    height: 64px;
+    margin: -32px 0 0 -32px;
+    border-color: var(--color-accent);
+    background: oklch(38% 0.155 320 / 0.12);
+  }
+
+  #cursor .dot {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 4px;
+    height: 4px;
+    margin: -2px 0 0 -2px;
+    border-radius: 50%;
+    background: var(--color-accent);
+    box-shadow: 0 0 12px var(--color-accent);
+  }
+
+  @media (hover: none), (max-width: 768px) {
+    #cursor { display: none; }
+  }
+</style>

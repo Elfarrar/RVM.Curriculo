@@ -1,0 +1,119 @@
+---
+import { tr, type Locale } from "../data/i18n";
+import { cv } from "../data/cv";
+interface Props { lang: Locale; }
+const { lang } = Astro.props;
+
+const data = cv(lang);
+const info = data.facts;
+---
+
+<section id="about" class="about">
+  <header class="about-header reveal">
+    <span class="tag mono">/ {tr(lang, "about.title").toLowerCase()}</span>
+    <h2 class="about-title display">
+      {lang === "pt" ? "Quem sou" : "Who I am"}<br/>
+      <span class="mix-italic">{tr(lang, "about.subtitle").toLowerCase()}.</span>
+    </h2>
+  </header>
+
+  <div class="about-grid">
+    <div class="about-text reveal">
+      {data.summary.map((s) => <p>{s}</p>)}
+    </div>
+
+    <aside class="info-card reveal">
+      <h3 class="info-h mono">/ {tr(lang, "about.info.title").toLowerCase()}</h3>
+      <dl class="info-dl">
+        {info.map((i) => (
+          <>
+            <dt class="info-dt mono">{i.l}</dt>
+            <dd class="info-dd">{i.v}</dd>
+          </>
+        ))}
+      </dl>
+    </aside>
+  </div>
+</section>
+
+<style>
+  .about {
+    max-width: 1200px;
+    margin: 6rem auto 0;
+    padding: 0 1.5rem;
+  }
+
+  .about-header { max-width: 720px; margin-bottom: 3rem; }
+
+  .about-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.0;
+    margin: 1.25rem 0 0;
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+
+  .about-text p {
+    color: var(--color-text-muted);
+    font-size: 1rem;
+    line-height: 1.7;
+    margin: 0 0 1.25rem;
+  }
+
+  .about-text strong {
+    color: var(--color-text);
+    font-weight: 600;
+  }
+
+  .info-card {
+    padding: 2rem;
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
+    background: var(--color-bg-glass);
+    backdrop-filter: blur(16px);
+    position: sticky;
+    top: 6rem;
+  }
+
+  .info-h {
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    color: var(--color-text-subtle);
+    text-transform: uppercase;
+    margin: 0 0 1.25rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .info-dl {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 0.625rem 1rem;
+  }
+
+  .info-dt {
+    font-size: 0.6875rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-text-subtle);
+    margin: 0;
+    align-self: center;
+  }
+
+  .info-dd {
+    margin: 0;
+    color: var(--color-text);
+    font-size: 0.875rem;
+  }
+
+  @media (max-width: 900px) {
+    .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .info-card { position: static; }
+  }
+</style>

@@ -1,0 +1,156 @@
+---
+import { tr, type Locale } from "../data/i18n";
+
+interface Props { lang: Locale; }
+const { lang } = Astro.props;
+
+const year = new Date().getFullYear();
+const isPt = lang === "pt";
+---
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-mark">
+        <span class="brand-mark">RVM</span><span class="brand-tag mono">/{lang}</span>
+      </div>
+      <p class="footer-tagline">
+        <span class="display">{isPt ? "Engenheiro" : "Senior"}</span>
+        <span class="display mix-italic">{isPt ? "de software" : "engineer"}.</span>
+      </p>
+      <p class="footer-bio mono">
+        Rafael Veneroso Morici · Belo Horizonte · {isPt ? "100% Remoto" : "100% Remote"}
+      </p>
+    </div>
+
+    <div>
+      <h4 class="footer-h">{isPt ? "Navegação" : "Sitemap"}</h4>
+      <ul>
+        <li><a href={`${isPt ? "" : "/en"}/#about`}>{tr(lang, "nav.about")}</a></li>
+        <li><a href={`${isPt ? "" : "/en"}/#skills`}>{tr(lang, "nav.skills")}</a></li>
+        <li><a href={`${isPt ? "" : "/en"}/#experience`}>{tr(lang, "nav.experience")}</a></li>
+        <li><a href={`${isPt ? "" : "/en"}/#cases`}>{tr(lang, "nav.cases")}</a></li>
+        <li><a href={`${isPt ? "" : "/en"}/#credentials`}>{tr(lang, "nav.credentials")}</a></li>
+        <li><a href={`${isPt ? "" : "/en"}/#contact`}>{tr(lang, "nav.contact")}</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="footer-h">{isPt ? "Idioma" : "Language"}</h4>
+      <ul>
+        <li><a href="/">Portugues</a></li>
+        <li><a href="/en/">English</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="footer-h">Social</h4>
+      <ul>
+        <li><a href="https://github.com/Elfarrar" target="_blank" rel="noopener">GitHub <span aria-hidden="true">&nearr;</span></a></li>
+        <li><a href="https://linkedin.com/in/rafael-veneroso-morici" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">&nearr;</span></a></li>
+        <li><a href="mailto:rafael@rvmit.com.br">rafael@rvmit.com.br</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-base">
+    <span class="mono">&copy; {year} Rafael Veneroso Morici · {isPt ? "Todos os direitos reservados" : "All rights reserved"}</span>
+    <span class="mono">{isPt ? "Construido em Astro" : "Built with Astro"}</span>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    position: relative;
+    padding: 6rem 1.5rem 3rem;
+    margin-top: 8rem;
+    border-top: 1px solid var(--color-border);
+    background: linear-gradient(to bottom, transparent, oklch(92% 0.008 286));
+  }
+
+  .footer-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 3rem;
+  }
+
+  .footer-mark {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.25rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .footer-mark .brand-mark {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 2rem;
+    letter-spacing: -0.05em;
+  }
+
+  .footer-mark .brand-tag {
+    font-size: 0.875rem;
+    color: var(--color-accent);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .footer-tagline {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    line-height: 1.15;
+    color: var(--color-text);
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-bio {
+    font-size: 0.75rem;
+    color: var(--color-text-subtle);
+    letter-spacing: 0.04em;
+  }
+
+  .footer-h {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-text-subtle);
+    margin-bottom: 1rem;
+  }
+
+  .footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+  }
+
+  .footer a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+    font-size: 0.9375rem;
+    transition: color 0.2s ease;
+  }
+  .footer a:hover { color: var(--color-accent); }
+
+  .footer-base {
+    max-width: 1200px;
+    margin: 4rem auto 0;
+    padding-top: 2rem;
+    border-top: 1px solid var(--color-border);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    color: var(--color-text-subtle);
+    font-size: 0.75rem;
+  }
+
+  @media (max-width: 768px) {
+    .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+    .footer-brand { grid-column: 1 / -1; }
+  }
+</style>

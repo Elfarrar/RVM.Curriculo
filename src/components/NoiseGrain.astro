@@ -1,0 +1,22 @@
+---
+/**
+ * NoiseGrain — overlay fixo de grão de filme.
+ * Usa SVG filter como background-image com mix-blend-mode.
+ */
+---
+
+<div class="grain" aria-hidden="true"></div>
+
+<style>
+  .grain {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    pointer-events: none;
+    background-image: url("/grain.svg");
+    background-size: 200px 200px;
+    opacity: 0.03;
+    mix-blend-mode: multiply;
+    will-change: transform;
+  }
+</style>

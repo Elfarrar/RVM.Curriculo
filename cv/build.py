@@ -77,25 +77,24 @@ def para_pdf(docs):
         print("OK  PDFs gerados")
 
 
-# Landing do CV (rvmtech.com.br) consome estes PDFs.
-PORTFOLIO = Path("C:/IA/RVM.Portfolio/public/cv")
+# A landing (rvmtech.com.br) serve estes PDFs a partir de public/cv.
+PUBLICO = Path(__file__).parent.parent / "public" / "cv"
 PUBLICA = {
     "Rafael Veneroso Morici - Curriculo.pdf": "Rafael-Veneroso-Morici-Curriculo.pdf",
     "Rafael Veneroso Morici - Resume.pdf": "Rafael-Veneroso-Morici-Resume.pdf",
 }
 
 
-def sincroniza_portfolio(docs):
-    if not PORTFOLIO.is_dir():
-        return
+def sincroniza_site(docs):
+    PUBLICO.mkdir(parents=True, exist_ok=True)
     for d in docs:
         alvo = PUBLICA.get(d.with_suffix(".pdf").name)
         if alvo and d.with_suffix(".pdf").exists():
-            shutil.copyfile(d.with_suffix(".pdf"), PORTFOLIO / alvo)
+            shutil.copyfile(d.with_suffix(".pdf"), PUBLICO / alvo)
             print(f"OK  publicado {alvo}")
 
 
 if __name__ == "__main__":
     docs = [monta_docx(md, out) for md, out in ALVOS]
     para_pdf(docs)
-    sincroniza_portfolio(docs)
+    sincroniza_site(docs)

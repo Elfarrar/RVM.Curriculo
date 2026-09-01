@@ -1,0 +1,149 @@
+---
+import { type Locale } from "../data/i18n";
+import { cv } from "../data/cv";
+
+interface Props { lang: Locale; }
+const { lang } = Astro.props;
+const data = cv(lang);
+const isPt = lang === "pt";
+---
+
+<section id="cases" class="cases">
+  <header class="cases-header reveal">
+    <span class="tag mono">/ {isPt ? "estudos de caso" : "case studies"}</span>
+    <h2 class="cases-title display">
+      {isPt ? "Três problemas" : "Three problems"}<br/>
+      <span class="mix-italic">{isPt ? "que valeram a carreira." : "that shaped the career."}</span>
+    </h2>
+    <p class="cases-lead">
+      {isPt
+        ? "Currículo lista o que a pessoa fez. Estas três histórias explicam como — e o que estava em jogo quando deu certo."
+        : "A résumé lists what someone did. These three stories explain how — and what was at stake when it worked."}
+    </p>
+  </header>
+
+  <div class="cases-list">
+    {data.caseStudies.map((c, i) => (
+      <article class="case reveal">
+        <div class="case-index mono">/{String(i + 1).padStart(2, "0")}</div>
+
+        <div class="case-body">
+          <span class="case-tag mono">{c.tag}</span>
+          <h3 class="case-title display">{c.title}</h3>
+          <p class="case-lead">{c.lead}</p>
+
+          <div class="case-blocks">
+            {c.blocks.map((b) => (
+              <div class="case-block">
+                <h4 class="case-h mono">{b.h}</h4>
+                <p class="case-p">{b.p}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </article>
+    ))}
+  </div>
+</section>
+
+<style>
+  .cases {
+    max-width: 1200px;
+    margin: 9rem auto 0;
+    padding: 0 1.5rem;
+  }
+
+  .cases-header { max-width: 760px; margin-bottom: 4rem; }
+
+  .cases-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.0;
+    margin: 1.25rem 0 1.5rem;
+  }
+
+  .cases-lead {
+    color: var(--color-text-muted);
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    margin: 0;
+    max-width: 620px;
+  }
+
+  .cases-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4.5rem;
+  }
+
+  .case {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  .case-index {
+    font-size: 0.875rem;
+    color: var(--color-accent);
+    letter-spacing: 0.08em;
+    padding-top: 0.5rem;
+  }
+
+  .case-tag {
+    display: inline-block;
+    font-size: 0.6875rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-text-subtle);
+    margin-bottom: 0.875rem;
+  }
+
+  .case-title {
+    font-size: clamp(1.5rem, 3vw, 2.125rem);
+    line-height: 1.1;
+    margin: 0 0 1rem;
+    max-width: 24ch;
+  }
+
+  .case-lead {
+    color: var(--color-text);
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    margin: 0 0 2rem;
+    max-width: 68ch;
+    font-weight: 400;
+  }
+
+  .case-blocks {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding-top: 1.75rem;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .case-h {
+    font-size: 0.6875rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin: 0 0 0.75rem;
+    font-weight: 500;
+  }
+
+  .case-p {
+    color: var(--color-text-muted);
+    font-size: 0.9375rem;
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  @media (max-width: 980px) {
+    .case-blocks { grid-template-columns: 1fr; gap: 1.75rem; }
+  }
+
+  @media (max-width: 768px) {
+    .case { grid-template-columns: 1fr; gap: 0.75rem; }
+    .case-index { padding-top: 0; }
+  }
+</style>

@@ -1,0 +1,158 @@
+---
+import { tr, type Locale } from "../data/i18n";
+interface Props { lang: Locale; }
+const { lang } = Astro.props;
+const isPt = lang === "pt";
+
+const channels = [
+  {
+    label: "Email",
+    value: "rafael@rvmit.com.br",
+    href: "mailto:rafael@rvmit.com.br",
+    icon: "M2 5l8 5 8-5M2 5h16v10H2z",
+  },
+  {
+    label: "LinkedIn",
+    value: "rafael-veneroso-morici",
+    href: "https://linkedin.com/in/rafael-veneroso-morici",
+    icon: "M3 3h4v14H3V3zm5.5 0h4v2h.1c.6-1.1 2-2.3 4-2.3 4.3 0 5.1 2.8 5.1 6.4V17h-4v-7c0-1.7 0-3.8-2.3-3.8-2.3 0-2.7 1.8-2.7 3.7V17h-4V3zM5 1.5a2 2 0 110 4 2 2 0 010-4z",
+  },
+  {
+    label: "GitHub",
+    value: "Elfarrar",
+    href: "https://github.com/Elfarrar",
+    icon: "M12 0C5.4 0 0 5.4 0 12c0 5.3 3.4 9.8 8.2 11.4.6.1.8-.3.8-.6v-2C5.7 21.5 5 19.4 5 19.4c-.5-1.4-1.3-1.8-1.3-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.4-1.3-5.4-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2.9-.3 2-.4 3-.4s2 .1 3 .4c2.3-1.5 3.3-1.2 3.3-1.2.7 1.6.2 2.8.1 3.1.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6C20.6 21.7 24 17.3 24 12c0-6.6-5.4-12-12-12z",
+  },
+];
+---
+
+<section id="contact" class="contact">
+  <div class="contact-inner">
+    <div class="contact-copy">
+      <span class="tag tag-dot">{tr(lang, "hero.label")}</span>
+      <h2 class="contact-title display">
+        {isPt ? "Vamos" : "Let's"}<br/>
+        <span class="mix-italic">{isPt ? "conversar?" : "talk?"}</span>
+      </h2>
+      <p class="contact-sub">
+        {isPt
+          ? "Aberto a oportunidades remotas com .NET. Resposta em ate 24h."
+          : "Open to remote .NET opportunities. Reply within 24h."}
+      </p>
+    </div>
+
+    <div class="contact-channels">
+      {channels.map((c) => (
+        <a href={c.href} target={c.href.startsWith("http") ? "_blank" : undefined} rel={c.href.startsWith("http") ? "noopener" : undefined} class="channel" data-magnetic data-magnetic-strength="0.15">
+          <div class="channel-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+              <path d={c.icon} stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="channel-text">
+            <span class="channel-label mono">{c.label}</span>
+            <span class="channel-value">{c.value}</span>
+          </div>
+          <span class="channel-arrow" aria-hidden="true">&nearr;</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .contact {
+    max-width: 1200px;
+    margin: 8rem auto 4rem;
+    padding: 0 1.5rem;
+  }
+
+  .contact-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    padding: 4rem;
+    border-radius: 24px;
+    background: linear-gradient(135deg, var(--color-bg-elev), oklch(96% 0.006 320));
+    border: 1px solid var(--color-border);
+    backdrop-filter: blur(20px);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .contact-inner::before {
+    content: "";
+    position: absolute;
+    width: 480px;
+    height: 480px;
+    top: -200px;
+    right: -200px;
+    background: radial-gradient(circle, oklch(38% 0.155 320 / 0.10), transparent 70%);
+    filter: blur(40px);
+    pointer-events: none;
+  }
+
+  .contact-title {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    line-height: 0.95;
+    margin: 1.25rem 0 1.5rem;
+  }
+
+  .contact-sub {
+    color: var(--color-text-muted);
+    font-size: 1rem;
+    max-width: 380px;
+  }
+
+  .contact-channels { display: flex; flex-direction: column; gap: 0.75rem; }
+
+  .channel {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem;
+    border-radius: 14px;
+    background: var(--color-bg-elev);
+    border: 1px solid var(--color-border);
+    text-decoration: none;
+    color: var(--color-text);
+    transition: border-color 0.3s, transform 0.5s var(--ease-out-expo), background 0.3s;
+  }
+
+  .channel:hover {
+    border-color: var(--color-accent);
+    background: var(--color-bg-elev);
+  }
+
+  .channel-icon {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background: oklch(93% 0.006 286);
+    color: var(--color-accent);
+  }
+
+  .channel-text { display: flex; flex-direction: column; gap: 0.125rem; flex: 1; }
+  .channel-label {
+    font-size: 0.6875rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-text-subtle);
+  }
+  .channel-value { font-size: 0.9375rem; }
+  .channel-arrow {
+    color: var(--color-text-subtle);
+    transition: transform 0.4s var(--ease-out-expo), color 0.3s;
+  }
+  .channel:hover .channel-arrow {
+    transform: translate(4px, -4px);
+    color: var(--color-accent);
+  }
+
+  @media (max-width: 900px) {
+    .contact-inner { grid-template-columns: 1fr; gap: 2.5rem; padding: 2.5rem; }
+  }
+</style>

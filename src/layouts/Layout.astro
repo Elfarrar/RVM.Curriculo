@@ -1,0 +1,90 @@
+---
+import { ClientRouter } from "astro:transitions";
+import "../styles/global.css";
+import type { Locale } from "../data/i18n";
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+import NoiseGrain from "../components/NoiseGrain.astro";
+import AuroraOrbs from "../components/AuroraOrbs.astro";
+import CustomCursor from "../components/CustomCursor.astro";
+
+interface Props {
+  title?: string;
+  description?: string;
+  ogImage?: string;
+  canonical?: string;
+  lang?: Locale;
+}
+
+const {
+  title = "Rafael Veneroso Morici — Senior Software Engineer",
+  description = "15+ years of .NET / C# senior software engineer. Backend, distributed systems, legacy modernization.",
+  ogImage = "/og/default.png",
+  canonical = Astro.url.href,
+  lang = "pt",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang={lang === "pt" ? "pt-BR" : "en"}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="theme-color" content="#efeff3" />
+    <meta name="color-scheme" content="light" />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:locale" content={lang === "pt" ? "pt_BR" : "en_US"} />
+
+    <!-- Alternate languages -->
+    <link rel="alternate" hreflang="pt-BR" href="https://rvmtech.com.br/" />
+    <link rel="alternate" hreflang="en" href="https://rvmtech.com.br/en/" />
+    <link rel="alternate" hreflang="x-default" href="https://rvmtech.com.br/" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Geist+Mono:wght@100..800&display=swap"
+    />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <ClientRouter fallback="swap" />
+  </head>
+  <body>
+    <AuroraOrbs />
+    <NoiseGrain />
+    <CustomCursor />
+
+    <Nav lang={lang} transition:persist />
+
+    <main>
+      <slot />
+    </main>
+
+    <Footer lang={lang} />
+
+    <script>
+      import { bootstrap } from "../lib/motion";
+      document.addEventListener("astro:page-load", () => bootstrap());
+    </script>
+  </body>
+</html>
