@@ -43,8 +43,15 @@ tem que bater nos dois. Mudou um, muda o outro na mesma task.
 ## Historico que evita retrabalho
 
 - **O portfolio nao mora aqui.** Os 11 projetos e as paginas `/projects/[slug]` continuam no
-  `RVM.Portfolio`, que perdeu o dominio `rvmtech.com.br` para este repo. O plano do Rafael e voltar
-  com o portfolio em `projetos.rvmtech.com.br`.
+  `RVM.Portfolio`, que perdeu o dominio `rvmtech.com.br` para este repo. Em 01/09/2026 o Rafael
+  mandou **descomissionar o portfolio inteiro** (TASK-832) e refaze-lo do zero depois: containers,
+  vhosts, DNS `*.lab` e Pages fora do ar; os 12 repos **arquivados**, nao apagados.
+
+  > ⚠️ **Correcao de um erro meu:** durante a TASK-831 eu afirmei que os demos em
+  > `*.lab.rvmtech.com.br` ja estavam fora do ar por causa do descomissionamento do Rivendell
+  > (TASK-830). **Eram falsos** — os 11 estavam de pe respondendo 200, e o Rivendell tambem. Eu
+  > deduzi da skill `padrao-rvm` sem testar. A decisao de tirar a vitrine da landing foi do Rafael
+  > ("nao esta mais ativa"), tomada antes e independente dessa afirmacao errada.
 - **Nao existe secao de projetos aqui** e as chaves `projects.*` / `detail.*` do i18n foram
   removidas de proposito.
 - Experiencia anterior a 2017 existe mas nao esta listada (o Rafael estudou Mecatronica em 2013-14).
