@@ -58,25 +58,35 @@ const isPt = lang === "pt";
     </div>
 
     <div class="hero-visual" aria-hidden="true">
-      <div class="card card-1">
+      <div class="card card-1 note-backend">
         <span class="card-num mono">/01</span>
         <div class="card-title display">.NET Core</div>
         <div class="card-tag mono">backend</div>
       </div>
-      <div class="card card-2">
+      <div class="card card-2 note-data">
         <span class="card-num mono">/02</span>
         <div class="card-title display">Postgres</div>
         <div class="card-tag mono">data</div>
       </div>
-      <div class="card card-3">
+      <div class="card card-3 note-ui">
         <span class="card-num mono">/03</span>
         <div class="card-title display">Blazor</div>
         <div class="card-tag mono">ui</div>
       </div>
-      <div class="card card-4">
+      <div class="card card-4 note-infra">
         <span class="card-num mono">/04</span>
         <div class="card-title display">Docker</div>
         <div class="card-tag mono">infra</div>
+      </div>
+      <div class="card card-5 note-ai">
+        <span class="card-num mono">/05</span>
+        <div class="card-title display">Claude Code</div>
+        <div class="card-tag mono">{isPt ? "ia" : "ai"}</div>
+      </div>
+      <div class="card card-6 note-ai">
+        <span class="card-num mono">/06</span>
+        <div class="card-title display">MCP</div>
+        <div class="card-tag mono">{isPt ? "ia" : "ai"}</div>
       </div>
     </div>
   </div>
@@ -162,28 +172,43 @@ const isPt = lang === "pt";
   /* Visual: floating tech cards */
   .hero-visual {
     position: relative;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 6 / 7;
     width: 100%;
     max-width: 480px;
-    min-height: 460px;
+    min-height: 540px;
     margin-left: auto;
   }
 
   .card {
+    --rot: 0deg;
     position: absolute;
-    width: 180px;
-    padding: 1.25rem;
-    border-radius: 14px;
-    background: var(--color-bg-glass);
-    border: 1px solid var(--color-border-strong);
-    backdrop-filter: blur(12px);
-    box-shadow: 0 20px 45px oklch(30% 0.03 285 / 0.12);
-    animation: float 8s ease-in-out infinite;
+    width: 178px;
+    padding: 1.125rem;
+    border-radius: 4px 4px 14px 4px;
+    background: var(--note-bg);
+    border: 1px solid var(--note-ink);
+    border-color: color-mix(in oklch, var(--note-ink) 22%, transparent);
+    box-shadow: 0 14px 32px oklch(30% 0.03 285 / 0.14);
+    transform: rotate(var(--rot));
+    animation: float-note 9s ease-in-out infinite;
+  }
+
+  .note-backend { --note-bg: var(--color-note-backend); --note-ink: var(--color-note-backend-ink); }
+  .note-data    { --note-bg: var(--color-note-data);    --note-ink: var(--color-note-data-ink); }
+  .note-ui      { --note-bg: var(--color-note-ui);      --note-ink: var(--color-note-ui-ink); }
+  .note-infra   { --note-bg: var(--color-note-infra);   --note-ink: var(--color-note-infra-ink); }
+  .note-ai      { --note-bg: var(--color-note-ai);      --note-ink: var(--color-note-ai-ink); }
+
+  /* Preserva a rotacao do post-it durante o float */
+  @keyframes float-note {
+    0%, 100% { transform: translate(0, 0) rotate(var(--rot)); }
+    33% { transform: translate(10px, -16px) rotate(calc(var(--rot) + 1.5deg)); }
+    66% { transform: translate(-8px, 11px) rotate(calc(var(--rot) - 1.5deg)); }
   }
 
   .card-num {
     font-size: 0.6875rem;
-    color: var(--color-accent);
+    color: var(--note-ink);
     letter-spacing: 0.1em;
   }
 
@@ -195,19 +220,23 @@ const isPt = lang === "pt";
 
   .card-tag {
     font-size: 0.6875rem;
-    color: var(--color-text-subtle);
+    color: var(--note-ink);
+    opacity: 0.8;
     letter-spacing: 0.08em;
     text-transform: uppercase;
   }
 
-  .card-1 { top: 6%;  left: 12%; transform: rotate(-6deg); animation-delay: 0s; }
-  .card-2 { top: 14%; right: 4%; transform: rotate(4deg);  animation-delay: -2s; }
-  .card-3 { bottom: 18%; left: 4%; transform: rotate(3deg); animation-delay: -4s; }
-  .card-4 { bottom: 6%; right: 8%; transform: rotate(-4deg); animation-delay: -6s; }
+  .card-1 { top: 0;   left: 4%;  --rot: -6deg; animation-delay: 0s; }
+  .card-2 { top: 7%;  right: 1%; --rot: 5deg;  animation-delay: -1.5s; }
+  .card-3 { top: 35%; left: 0;   --rot: 3deg;  animation-delay: -3s; }
+  .card-4 { top: 41%; right: 5%; --rot: -4deg; animation-delay: -4.5s; }
+  .card-5 { top: 69%; left: 7%;  --rot: -3deg; animation-delay: -6s; }
+  .card-6 { top: 75%; right: 0;  --rot: 6deg;  animation-delay: -7.5s; }
 
   @media (max-width: 900px) {
     .hero-grid { grid-template-columns: 1fr; gap: 3rem; }
-    .hero-visual { max-width: 360px; margin: 0 auto; min-height: 360px; }
-    .card { width: 150px; padding: 1rem; }
+    .hero-visual { max-width: 340px; margin: 0 auto; min-height: 400px; }
+    .card { width: 142px; padding: 0.875rem; }
+    .card-title { font-size: 1.25rem; }
   }
 </style>
