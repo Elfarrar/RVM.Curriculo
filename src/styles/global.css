@@ -62,11 +62,6 @@
     text-rendering: optimizeLegibility;
     scroll-behavior: smooth;
     color-scheme: light;
-    cursor: none;
-  }
-
-  @media (hover: none), (max-width: 768px) {
-    html { cursor: auto; }
   }
 
   body {
@@ -160,13 +155,9 @@
     font-size: 0.9375rem;
     letter-spacing: -0.01em;
     border-radius: 999px;
-    cursor: none;
+    cursor: pointer;
     transition: transform 0.4s var(--ease-out-expo), background 0.3s ease, color 0.3s ease, box-shadow 0.4s ease;
     will-change: transform;
-  }
-
-  @media (hover: none), (max-width: 768px) {
-    .btn { cursor: pointer; }
   }
 
   .btn-primary {

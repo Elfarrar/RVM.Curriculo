@@ -93,39 +93,6 @@ export function initSplitReveal(): void {
 }
 
 /**
- * Custom cursor blob — segue mouse com lag, expande em hover.
- */
-export function initCursor(): void {
-  if (window.matchMedia("(hover: none)").matches) return;
-  if (window.innerWidth < 768) return;
-
-  const cursor = document.getElementById("cursor");
-  if (!cursor) return;
-
-  let mx = 0, my = 0, cx = 0, cy = 0;
-
-  document.addEventListener("pointermove", (e) => {
-    mx = e.clientX;
-    my = e.clientY;
-  });
-
-  function tick() {
-    cx += (mx - cx) * 0.18;
-    cy += (my - cy) * 0.18;
-    cursor!.style.transform = `translate3d(${cx}px, ${cy}px, 0)`;
-    requestAnimationFrame(tick);
-  }
-  tick();
-
-  // hover targets
-  const hoverables = document.querySelectorAll<HTMLElement>("a, button, [data-magnetic], [data-cursor='hover']");
-  hoverables.forEach((el) => {
-    el.addEventListener("pointerenter", () => cursor.classList.add("hover"));
-    el.addEventListener("pointerleave", () => cursor.classList.remove("hover"));
-  });
-}
-
-/**
  * Aurora orbs — parallax simples com window.scrollY (raf throttled).
  */
 export function initAurora(): void {
@@ -205,7 +172,6 @@ export function initReveal(): void {
  */
 export function bootstrap(): void {
   initLenis();
-  initCursor();
   initMagnetic();
   initSplitReveal();
   initReveal();
