@@ -62,7 +62,7 @@ export const CV = {
           "Esteira de CI/CD com GitHub Actions e ambientes segregados de desenvolvimento, homologação e produção.",
           "Agentes de IA como ferramenta de engenharia em todo o ciclo: especificação, implementação, code review e deploy.",
         ],
-        stack: [".NET 10", "VSA", "Blazor Server", "EF Core", "PostgreSQL", "Docker", "Nginx", "GitHub Actions", "MCP"],
+        stack: [".NET 10", "VSA", "Blazor Server", "EF Core", "PostgreSQL", "Docker", "Nginx", "GitHub Actions", "MCP", "Agentes de IA", "Claude Code", "LLM", "Vibe Coding"],
       },
       {
         period: "jun/2019 — jan/2026",
@@ -281,7 +281,7 @@ export const CV = {
           "CI/CD pipelines with GitHub Actions and segregated development, staging and production environments.",
           "AI agents as an engineering tool across the whole cycle: specification, implementation, code review and deployment.",
         ],
-        stack: [".NET 10", "VSA", "Blazor Server", "EF Core", "PostgreSQL", "Docker", "Nginx", "GitHub Actions", "MCP"],
+        stack: [".NET 10", "VSA", "Blazor Server", "EF Core", "PostgreSQL", "Docker", "Nginx", "GitHub Actions", "MCP", "AI Agents", "Claude Code", "LLM", "Vibe Coding"],
       },
       {
         period: "Jun 2019 — Jan 2026",

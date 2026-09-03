@@ -25,7 +25,7 @@ Banco de Dados: SQL Server, PostgreSQL, MySQL, T-SQL
 
 Plataformas e CMS: Sitefinity
 
-Inteligência Artificial: agentes de IA aplicados ao ciclo de desenvolvimento, Model Context Protocol (MCP), automação de engenharia de software
+Inteligência Artificial: agentes de IA (Claude Code) aplicados ao ciclo de desenvolvimento, LLMs, vibe coding, Model Context Protocol (MCP), automação de engenharia de software
 
 Metodologias: Scrum, Kanban, Jira, Code Review, Testes Automatizados
 
