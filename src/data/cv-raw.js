@@ -219,6 +219,10 @@ export const CV = {
         label: "cloud & devops",
         items: ["Microsoft Azure", "Google Cloud", "Docker", "GitHub Actions", "Jenkins", "Nginx · Linux"],
       },
+      {
+        label: "ia & agentes",
+        items: ["Agentes de IA", "LLMs", "GitHub Copilot", "Claude Code", "MCP", "Vibe coding"],
+      },
     ],
   },
 
@@ -437,6 +441,10 @@ export const CV = {
       {
         label: "cloud & devops",
         items: ["Microsoft Azure", "Google Cloud", "Docker", "GitHub Actions", "Jenkins", "Nginx · Linux"],
+      },
+      {
+        label: "ai & agents",
+        items: ["AI agents", "LLMs", "GitHub Copilot", "Claude Code", "MCP", "Vibe coding"],
       },
     ],
   },
