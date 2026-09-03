@@ -68,7 +68,7 @@ Senior Software Developer / Team Lead | Jul 2018 – Jun 2019
 **EMC — Belo Horizonte, Brazil**
 Mid-level Software Developer | Jan 2017 – Jul 2018
 
-- Built from scratch the ERP that came to run the operation of a 100+ employee company, after failed attempts to roll out SAP and TOTVS.
+- Built from scratch the ERP that came to run the operation of a 100+ employee company, after failed attempts to roll out off-the-shelf ERPs.
 - Owned the domain modeling with Domain-Driven Design (DDD) and the design of the system's layered architecture.
 - Delivered modules for IT equipment leasing — the company's core business —, service orders, contracts, finance and customer support.
 - Built a WPF desktop interface for internal users and Web Forms + WCF for external clients.

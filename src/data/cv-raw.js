@@ -104,9 +104,9 @@ export const CV = {
         client: "locação de equipamentos de informática",
         location: "Belo Horizonte, MG",
         context:
-          "A empresa tentou implantar SAP, tentou Totvs, e nenhum dos dois pegou. A decisão foi construir o ERP em casa. Fui o responsável por desenhar os modelos do domínio — sendo pleno.",
+          "A empresa tentou implantar dois ERPs de mercado, e nenhum dos dois pegou. A decisão foi construir o ERP em casa. Fui o responsável por desenhar os modelos do domínio — sendo pleno.",
         bullets: [
-          "Construção, do zero, do ERP que passou a controlar a operação de uma empresa de mais de 100 funcionários, depois de tentativas frustradas de implantar SAP e TOTVS.",
+          "Construção, do zero, do ERP que passou a controlar a operação de uma empresa de mais de 100 funcionários, depois de tentativas frustradas de implantar ERPs de mercado.",
           "Responsável pela modelagem do domínio com Domain-Driven Design (DDD) e pelo desenho da arquitetura em camadas do sistema.",
           "Módulos de locação de equipamentos — atividade-fim da empresa —, ordens de serviço, contratos, financeiro e SAC.",
           "Interface desktop em WPF para os usuários internos e Web Forms + WCF para os clientes externos.",
@@ -121,13 +121,13 @@ export const CV = {
     caseStudies: [
       {
         tag: "EMC · 2017—2018",
-        title: "O ERP que entrou onde SAP e Totvs não entraram",
+        title: "O ERP que entrou onde os pacotes de mercado não entraram",
         lead:
           "Duas implantações de ERP de mercado fracassaram na mesma empresa. A terceira tentativa foi construir o sistema em casa — e coube a mim desenhar o domínio.",
         blocks: [
           {
             h: "O problema",
-            p: "A empresa vive de alugar computadores. Isso parece simples até você olhar de perto: um mesmo equipamento entra em contrato, sai para manutenção, volta, é substituído por outro em regime de comodato, gera cobrança proporcional e ainda aparece num chamado de SAC. Nenhum ERP de prateleira modelava isso sem customização pesada, e foi aí que SAP e Totvs travaram.",
+            p: "A empresa vive de alugar computadores. Isso parece simples até você olhar de perto: um mesmo equipamento entra em contrato, sai para manutenção, volta, é substituído por outro em regime de comodato, gera cobrança proporcional e ainda aparece num chamado de SAC. Nenhum ERP de prateleira modelava isso sem customização pesada, e foi aí que os pacotes de mercado travaram.",
           },
           {
             h: "O que eu fiz",
@@ -327,9 +327,9 @@ export const CV = {
         client: "IT equipment leasing",
         location: "Belo Horizonte, Brazil",
         context:
-          "The company tried to roll out SAP, then Totvs, and neither stuck. The decision was to build the ERP in house. I owned the domain modeling — as a mid-level developer.",
+          "The company tried to roll out two off-the-shelf ERPs, and neither stuck. The decision was to build the ERP in house. I owned the domain modeling — as a mid-level developer.",
         bullets: [
-          "Built from scratch the ERP that came to run the operation of a 100+ employee company, after failed attempts to roll out SAP and TOTVS.",
+          "Built from scratch the ERP that came to run the operation of a 100+ employee company, after failed attempts to roll out off-the-shelf ERPs.",
           "Owned the domain modeling with Domain-Driven Design (DDD) and the design of the system's layered architecture.",
           "Modules for equipment leasing — the company's core business —, service orders, contracts, finance and customer support.",
           "WPF desktop interface for internal users and Web Forms + WCF for external clients.",
@@ -344,13 +344,13 @@ export const CV = {
     caseStudies: [
       {
         tag: "EMC · 2017—2018",
-        title: "The ERP that got in where SAP and Totvs could not",
+        title: "The ERP that got in where the off-the-shelf packages could not",
         lead:
           "Two off-the-shelf ERP rollouts failed at the same company. The third attempt was to build it in house — and I owned the domain design.",
         blocks: [
           {
             h: "The problem",
-            p: "The company makes its money renting out computers. That sounds simple until you look closely: the same machine enters a contract, leaves for maintenance, comes back, gets swapped for another one on loan, generates pro-rata billing and still shows up in a support ticket. No off-the-shelf ERP modeled that without heavy customization, and that is exactly where SAP and Totvs stalled.",
+            p: "The company makes its money renting out computers. That sounds simple until you look closely: the same machine enters a contract, leaves for maintenance, comes back, gets swapped for another one on loan, generates pro-rata billing and still shows up in a support ticket. No off-the-shelf ERP modeled that without heavy customization, and that is exactly where the off-the-shelf packages stalled.",
           },
           {
             h: "What I did",
