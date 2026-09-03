@@ -85,7 +85,7 @@ const isPt = lang === "pt";
       </div>
       <div class="card card-6 note-ui">
         <span class="card-num mono">/06</span>
-        <div class="card-title display">Angular</div>
+        <div class="card-title display">JavaScript</div>
         <div class="card-tag mono">ui</div>
       </div>
       <div class="card card-7 note-infra">
@@ -128,12 +128,12 @@ const isPt = lang === "pt";
     margin: 0 auto;
     width: 100%;
     display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    gap: 4rem;
+    grid-template-columns: 1fr 1.15fr;
+    gap: 3rem;
     align-items: center;
   }
 
-  .hero-copy { max-width: 640px; }
+  .hero-copy { max-width: 640px; min-width: 0; }
 
   .hero-title {
     margin-top: 1.5rem;
@@ -192,18 +192,19 @@ const isPt = lang === "pt";
   /* Visual: floating tech cards */
   .hero-visual {
     position: relative;
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 3 / 2;
     width: 100%;
-    max-width: 480px;
-    min-height: 580px;
+    max-width: 620px;
+    min-height: 400px;
     margin-left: auto;
   }
 
   .card {
     --rot: 0deg;
     position: absolute;
-    width: 178px;
-    padding: 1.125rem;
+    width: 29%;
+    min-width: 138px;
+    padding: 1rem;
     border-radius: 4px 4px 14px 4px;
     background: var(--note-bg);
     border: 1px solid var(--note-ink);
@@ -233,7 +234,7 @@ const isPt = lang === "pt";
   }
 
   .card-title {
-    font-size: 1.5rem;
+    font-size: 1.375rem;
     margin: 0.5rem 0 0.25rem;
     font-weight: 600;
   }
@@ -246,17 +247,24 @@ const isPt = lang === "pt";
     text-transform: uppercase;
   }
 
-  /* Mural: as fileiras se tocam de proposito, empilhadas pelo z-index */
-  .card-1  { top: 0;   left: 2%;  --rot: -6deg; z-index: 5; animation-delay: 0s; }
-  .card-2  { top: 8%;  left: 40%; --rot: 4deg;  z-index: 6; animation-delay: -0.9s; }
-  .card-3  { top: 17%; left: 8%;  --rot: 3deg;  z-index: 3; animation-delay: -1.8s; }
-  .card-4  { top: 24%; left: 45%; --rot: -5deg; z-index: 7; animation-delay: -2.7s; }
-  .card-5  { top: 35%; left: 0;   --rot: -3deg; z-index: 4; animation-delay: -3.6s; }
-  .card-6  { top: 42%; left: 42%; --rot: 6deg;  z-index: 5; animation-delay: -4.5s; }
-  .card-7  { top: 53%; left: 6%;  --rot: 4deg;  z-index: 3; animation-delay: -5.4s; }
-  .card-8  { top: 60%; left: 46%; --rot: -4deg; z-index: 6; animation-delay: -6.3s; }
-  .card-9  { top: 71%; left: 2%;  --rot: -5deg; z-index: 4; animation-delay: -7.2s; }
-  .card-10 { top: 78%; left: 40%; --rot: 5deg;  z-index: 7; animation-delay: -8.1s; }
+  /* Mural 4 x 3, com buracos e jitter: as colunas se sobrepoem de
+     proposito e quem esta mais a direita/abaixo fica por cima, entao a
+     sobreposicao cai na area vazia do vizinho. */
+  .card-1  { top: 3%;  left: 1%;  --rot: -9deg;  z-index: 3;  animation-delay: 0s; }
+  .card-3  { top: 0;   left: 25%; --rot: 6deg;   z-index: 5;  animation-delay: -1.1s; }
+  .card-5  { top: 4%;  left: 47%; --rot: -5deg;  z-index: 7;  animation-delay: -2.3s; }
+  .card-7  { top: 1%;  left: 71%; --rot: 8deg;   z-index: 9;  animation-delay: -3.4s; }
+  .card-2  { top: 36%; left: 0;   --rot: 7deg;   z-index: 4;  animation-delay: -4.6s; }
+  .card-4  { top: 33%; left: 26%; --rot: -8deg;  z-index: 6;  animation-delay: -5.7s; }
+  .card-9  { top: 35%; left: 70%; --rot: -4deg;  z-index: 10; animation-delay: -6.9s; }
+  .card-6  { top: 70%; left: 23%; --rot: 9deg;   z-index: 7;  animation-delay: -8s; }
+  .card-8  { top: 66%; left: 47%; --rot: -11deg; z-index: 9;  animation-delay: -9.2s; }
+  .card-10 { top: 69%; left: 72%; --rot: 5deg;   z-index: 11; animation-delay: -10.3s; }
+
+  @media (max-width: 1200px) {
+    .card { padding: 0.8125rem; }
+    .card-title { font-size: 1.125rem; }
+  }
 
   @media (max-width: 900px) {
     .hero-grid { grid-template-columns: 1fr; gap: 3rem; }
