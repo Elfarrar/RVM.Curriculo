@@ -20,6 +20,18 @@
   --color-accent-warm: oklch(55% 0.14 50);
   --color-danger: oklch(52% 0.2 25);
 
+  /* Post-its do hero — uma cor por categoria de stack */
+  --color-note-backend: oklch(93% 0.045 320);
+  --color-note-backend-ink: oklch(42% 0.14 320);
+  --color-note-data: oklch(93% 0.055 160);
+  --color-note-data-ink: oklch(42% 0.11 160);
+  --color-note-ui: oklch(92% 0.05 235);
+  --color-note-ui-ink: oklch(42% 0.13 245);
+  --color-note-infra: oklch(93% 0.055 65);
+  --color-note-infra-ink: oklch(45% 0.12 55);
+  --color-note-ai: oklch(94% 0.075 95);
+  --color-note-ai-ink: oklch(45% 0.11 80);
+
   /* Tipografia — Geist (sans + mono), Vercel-style geometric */
   --font-sans: "Geist", "Inter Variable", -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono: "Geist Mono", "JetBrains Mono Variable", "SF Mono", monospace;
@@ -50,11 +62,6 @@
     text-rendering: optimizeLegibility;
     scroll-behavior: smooth;
     color-scheme: light;
-    cursor: none;
-  }
-
-  @media (hover: none), (max-width: 768px) {
-    html { cursor: auto; }
   }
 
   body {
@@ -148,13 +155,9 @@
     font-size: 0.9375rem;
     letter-spacing: -0.01em;
     border-radius: 999px;
-    cursor: none;
+    cursor: pointer;
     transition: transform 0.4s var(--ease-out-expo), background 0.3s ease, color 0.3s ease, box-shadow 0.4s ease;
     will-change: transform;
-  }
-
-  @media (hover: none), (max-width: 768px) {
-    .btn { cursor: pointer; }
   }
 
   .btn-primary {

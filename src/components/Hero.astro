@@ -58,25 +58,55 @@ const isPt = lang === "pt";
     </div>
 
     <div class="hero-visual" aria-hidden="true">
-      <div class="card card-1">
+      <div class="card card-1 note-backend">
         <span class="card-num mono">/01</span>
         <div class="card-title display">.NET Core</div>
         <div class="card-tag mono">backend</div>
       </div>
-      <div class="card card-2">
+      <div class="card card-2 note-backend">
         <span class="card-num mono">/02</span>
+        <div class="card-title display">C#</div>
+        <div class="card-tag mono">backend</div>
+      </div>
+      <div class="card card-3 note-data">
+        <span class="card-num mono">/03</span>
         <div class="card-title display">Postgres</div>
         <div class="card-tag mono">data</div>
       </div>
-      <div class="card card-3">
-        <span class="card-num mono">/03</span>
+      <div class="card card-4 note-data">
+        <span class="card-num mono">/04</span>
+        <div class="card-title display">SQL Server</div>
+        <div class="card-tag mono">data</div>
+      </div>
+      <div class="card card-5 note-ui">
+        <span class="card-num mono">/05</span>
         <div class="card-title display">Blazor</div>
         <div class="card-tag mono">ui</div>
       </div>
-      <div class="card card-4">
-        <span class="card-num mono">/04</span>
+      <div class="card card-6 note-ui">
+        <span class="card-num mono">/06</span>
+        <div class="card-title display">JavaScript</div>
+        <div class="card-tag mono">ui</div>
+      </div>
+      <div class="card card-7 note-infra">
+        <span class="card-num mono">/07</span>
         <div class="card-title display">Docker</div>
         <div class="card-tag mono">infra</div>
+      </div>
+      <div class="card card-8 note-infra">
+        <span class="card-num mono">/08</span>
+        <div class="card-title display">Azure</div>
+        <div class="card-tag mono">infra</div>
+      </div>
+      <div class="card card-9 note-ai">
+        <span class="card-num mono">/09</span>
+        <div class="card-title display">Claude Code</div>
+        <div class="card-tag mono">{isPt ? "ia" : "ai"}</div>
+      </div>
+      <div class="card card-10 note-ai">
+        <span class="card-num mono">/10</span>
+        <div class="card-title display">MCP</div>
+        <div class="card-tag mono">{isPt ? "ia" : "ai"}</div>
       </div>
     </div>
   </div>
@@ -98,12 +128,12 @@ const isPt = lang === "pt";
     margin: 0 auto;
     width: 100%;
     display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    gap: 4rem;
+    grid-template-columns: 1fr 1.15fr;
+    gap: 3rem;
     align-items: center;
   }
 
-  .hero-copy { max-width: 640px; }
+  .hero-copy { max-width: 640px; min-width: 0; }
 
   .hero-title {
     margin-top: 1.5rem;
@@ -162,52 +192,82 @@ const isPt = lang === "pt";
   /* Visual: floating tech cards */
   .hero-visual {
     position: relative;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 62 / 35;
     width: 100%;
-    max-width: 480px;
-    min-height: 460px;
+    max-width: 620px;
+    min-height: 350px;
     margin-left: auto;
   }
 
   .card {
+    --rot: 0deg;
     position: absolute;
-    width: 180px;
-    padding: 1.25rem;
-    border-radius: 14px;
-    background: var(--color-bg-glass);
-    border: 1px solid var(--color-border-strong);
-    backdrop-filter: blur(12px);
-    box-shadow: 0 20px 45px oklch(30% 0.03 285 / 0.12);
-    animation: float 8s ease-in-out infinite;
+    width: 31%;
+    min-width: 138px;
+    padding: 1rem;
+    border-radius: 4px 4px 14px 4px;
+    background: var(--note-bg);
+    border: 1px solid var(--note-ink);
+    border-color: color-mix(in oklch, var(--note-ink) 22%, transparent);
+    box-shadow: 0 14px 32px oklch(30% 0.03 285 / 0.14);
+    transform: rotate(var(--rot));
+    animation: float-note 9s ease-in-out infinite;
+  }
+
+  .note-backend { --note-bg: var(--color-note-backend); --note-ink: var(--color-note-backend-ink); }
+  .note-data    { --note-bg: var(--color-note-data);    --note-ink: var(--color-note-data-ink); }
+  .note-ui      { --note-bg: var(--color-note-ui);      --note-ink: var(--color-note-ui-ink); }
+  .note-infra   { --note-bg: var(--color-note-infra);   --note-ink: var(--color-note-infra-ink); }
+  .note-ai      { --note-bg: var(--color-note-ai);      --note-ink: var(--color-note-ai-ink); }
+
+  /* Preserva a rotacao do post-it durante o float */
+  @keyframes float-note {
+    0%, 100% { transform: translate(0, 0) rotate(var(--rot)); }
+    33% { transform: translate(7px, -10px) rotate(calc(var(--rot) + 1.5deg)); }
+    66% { transform: translate(-6px, 8px) rotate(calc(var(--rot) - 1.5deg)); }
   }
 
   .card-num {
     font-size: 0.6875rem;
-    color: var(--color-accent);
+    color: var(--note-ink);
     letter-spacing: 0.1em;
   }
 
   .card-title {
-    font-size: 1.5rem;
+    font-size: 1.375rem;
     margin: 0.5rem 0 0.25rem;
     font-weight: 600;
   }
 
   .card-tag {
     font-size: 0.6875rem;
-    color: var(--color-text-subtle);
+    color: var(--note-ink);
+    opacity: 0.8;
     letter-spacing: 0.08em;
     text-transform: uppercase;
   }
 
-  .card-1 { top: 6%;  left: 12%; transform: rotate(-6deg); animation-delay: 0s; }
-  .card-2 { top: 14%; right: 4%; transform: rotate(4deg);  animation-delay: -2s; }
-  .card-3 { bottom: 18%; left: 4%; transform: rotate(3deg); animation-delay: -4s; }
-  .card-4 { bottom: 6%; right: 8%; transform: rotate(-4deg); animation-delay: -6s; }
+  /* Mural 4 x 3: linhas 2 e 3 tem tres cards, e o vazio alterna de lado
+     formando uma diagonal. Colunas e linhas se sobrepoem; o empilhamento
+     segue x+y, entao quem cobre so alcanca a area vazia do vizinho. */
+  .card-7  { top: 2%;  left: 0;   --rot: -9deg;  z-index: 3;  animation-delay: 0s; }
+  .card-10 { top: 0;   left: 23%; --rot: 6deg;   z-index: 5;  animation-delay: -1.1s; }
+  .card-5  { top: 3%;  left: 46%; --rot: -5deg;  z-index: 7;  animation-delay: -2.3s; }
+  .card-1  { top: 0;   left: 69%; --rot: 8deg;   z-index: 9;  animation-delay: -3.4s; }
+  .card-2  { top: 36%; left: 3%;  --rot: 7deg;   z-index: 4;  animation-delay: -4.6s; }
+  .card-4  { top: 33%; left: 26%; --rot: -8deg;  z-index: 6;  animation-delay: -5.7s; }
+  .card-9  { top: 35%; left: 49%; --rot: -4deg;  z-index: 8;  animation-delay: -6.9s; }
+  .card-6  { top: 69%; left: 20%; --rot: 9deg;   z-index: 6;  animation-delay: -8s; }
+  .card-8  { top: 66%; left: 43%; --rot: -11deg; z-index: 8;  animation-delay: -9.2s; }
+  .card-3  { top: 68%; left: 66%; --rot: 5deg;   z-index: 10; animation-delay: -10.3s; }
+
+  @media (max-width: 1200px) {
+    .card { padding: 0.8125rem; }
+    .card-title { font-size: 1.125rem; }
+  }
 
   @media (max-width: 900px) {
     .hero-grid { grid-template-columns: 1fr; gap: 3rem; }
-    .hero-visual { max-width: 360px; margin: 0 auto; min-height: 360px; }
-    .card { width: 150px; padding: 1rem; }
+    .hero-visual { display: none; }
   }
 </style>

@@ -68,7 +68,7 @@ Programador Sênior / Líder Técnico de Time | jul/2018 – jun/2019
 **EMC — Belo Horizonte, MG**
 Programador Pleno | jan/2017 – jul/2018
 
-- Construção, do zero, do ERP que passou a controlar a operação de uma empresa de mais de 100 funcionários, depois de tentativas frustradas de implantar SAP e TOTVS.
+- Construção, do zero, do ERP que passou a controlar a operação de uma empresa de mais de 100 funcionários, depois de tentativas frustradas de implantar ERPs de mercado.
 - Responsável pela modelagem do domínio com Domain-Driven Design (DDD) e pelo desenho da arquitetura em camadas do sistema.
 - Módulos de locação de equipamentos de informática — atividade-fim da empresa —, ordens de serviço, contratos, financeiro e SAC.
 - Interface desktop em WPF para os usuários internos e Web Forms + WCF para os clientes externos.
