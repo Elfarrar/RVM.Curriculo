@@ -63,28 +63,48 @@ const isPt = lang === "pt";
         <div class="card-title display">.NET Core</div>
         <div class="card-tag mono">backend</div>
       </div>
-      <div class="card card-2 note-data">
+      <div class="card card-2 note-backend">
         <span class="card-num mono">/02</span>
+        <div class="card-title display">C#</div>
+        <div class="card-tag mono">backend</div>
+      </div>
+      <div class="card card-3 note-data">
+        <span class="card-num mono">/03</span>
         <div class="card-title display">Postgres</div>
         <div class="card-tag mono">data</div>
       </div>
-      <div class="card card-3 note-ui">
-        <span class="card-num mono">/03</span>
+      <div class="card card-4 note-data">
+        <span class="card-num mono">/04</span>
+        <div class="card-title display">SQL Server</div>
+        <div class="card-tag mono">data</div>
+      </div>
+      <div class="card card-5 note-ui">
+        <span class="card-num mono">/05</span>
         <div class="card-title display">Blazor</div>
         <div class="card-tag mono">ui</div>
       </div>
-      <div class="card card-4 note-infra">
-        <span class="card-num mono">/04</span>
+      <div class="card card-6 note-ui">
+        <span class="card-num mono">/06</span>
+        <div class="card-title display">Angular</div>
+        <div class="card-tag mono">ui</div>
+      </div>
+      <div class="card card-7 note-infra">
+        <span class="card-num mono">/07</span>
         <div class="card-title display">Docker</div>
         <div class="card-tag mono">infra</div>
       </div>
-      <div class="card card-5 note-ai">
-        <span class="card-num mono">/05</span>
+      <div class="card card-8 note-infra">
+        <span class="card-num mono">/08</span>
+        <div class="card-title display">Azure</div>
+        <div class="card-tag mono">infra</div>
+      </div>
+      <div class="card card-9 note-ai">
+        <span class="card-num mono">/09</span>
         <div class="card-title display">Claude Code</div>
         <div class="card-tag mono">{isPt ? "ia" : "ai"}</div>
       </div>
-      <div class="card card-6 note-ai">
-        <span class="card-num mono">/06</span>
+      <div class="card card-10 note-ai">
+        <span class="card-num mono">/10</span>
         <div class="card-title display">MCP</div>
         <div class="card-tag mono">{isPt ? "ia" : "ai"}</div>
       </div>
@@ -172,10 +192,10 @@ const isPt = lang === "pt";
   /* Visual: floating tech cards */
   .hero-visual {
     position: relative;
-    aspect-ratio: 6 / 7;
+    aspect-ratio: 4 / 5;
     width: 100%;
     max-width: 480px;
-    min-height: 540px;
+    min-height: 580px;
     margin-left: auto;
   }
 
@@ -202,8 +222,8 @@ const isPt = lang === "pt";
   /* Preserva a rotacao do post-it durante o float */
   @keyframes float-note {
     0%, 100% { transform: translate(0, 0) rotate(var(--rot)); }
-    33% { transform: translate(10px, -16px) rotate(calc(var(--rot) + 1.5deg)); }
-    66% { transform: translate(-8px, 11px) rotate(calc(var(--rot) - 1.5deg)); }
+    33% { transform: translate(7px, -10px) rotate(calc(var(--rot) + 1.5deg)); }
+    66% { transform: translate(-6px, 8px) rotate(calc(var(--rot) - 1.5deg)); }
   }
 
   .card-num {
@@ -226,17 +246,20 @@ const isPt = lang === "pt";
     text-transform: uppercase;
   }
 
-  .card-1 { top: 0;   left: 4%;  --rot: -6deg; animation-delay: 0s; }
-  .card-2 { top: 7%;  right: 1%; --rot: 5deg;  animation-delay: -1.5s; }
-  .card-3 { top: 35%; left: 0;   --rot: 3deg;  animation-delay: -3s; }
-  .card-4 { top: 41%; right: 5%; --rot: -4deg; animation-delay: -4.5s; }
-  .card-5 { top: 69%; left: 7%;  --rot: -3deg; animation-delay: -6s; }
-  .card-6 { top: 75%; right: 0;  --rot: 6deg;  animation-delay: -7.5s; }
+  /* Mural: as fileiras se tocam de proposito, empilhadas pelo z-index */
+  .card-1  { top: 0;   left: 2%;  --rot: -6deg; z-index: 5; animation-delay: 0s; }
+  .card-2  { top: 8%;  left: 40%; --rot: 4deg;  z-index: 6; animation-delay: -0.9s; }
+  .card-3  { top: 17%; left: 8%;  --rot: 3deg;  z-index: 3; animation-delay: -1.8s; }
+  .card-4  { top: 24%; left: 45%; --rot: -5deg; z-index: 7; animation-delay: -2.7s; }
+  .card-5  { top: 35%; left: 0;   --rot: -3deg; z-index: 4; animation-delay: -3.6s; }
+  .card-6  { top: 42%; left: 42%; --rot: 6deg;  z-index: 5; animation-delay: -4.5s; }
+  .card-7  { top: 53%; left: 6%;  --rot: 4deg;  z-index: 3; animation-delay: -5.4s; }
+  .card-8  { top: 60%; left: 46%; --rot: -4deg; z-index: 6; animation-delay: -6.3s; }
+  .card-9  { top: 71%; left: 2%;  --rot: -5deg; z-index: 4; animation-delay: -7.2s; }
+  .card-10 { top: 78%; left: 40%; --rot: 5deg;  z-index: 7; animation-delay: -8.1s; }
 
   @media (max-width: 900px) {
     .hero-grid { grid-template-columns: 1fr; gap: 3rem; }
-    .hero-visual { max-width: 340px; margin: 0 auto; min-height: 400px; }
-    .card { width: 142px; padding: 0.875rem; }
-    .card-title { font-size: 1.25rem; }
+    .hero-visual { display: none; }
   }
 </style>
