@@ -25,7 +25,7 @@ Databases: SQL Server, PostgreSQL, MySQL, T-SQL
 
 Platforms and CMS: Sitefinity
 
-Artificial Intelligence: AI agents applied to the software development lifecycle, Model Context Protocol (MCP), engineering automation
+Artificial Intelligence: AI agents (Claude Code) applied to the software development lifecycle, LLMs, vibe coding, Model Context Protocol (MCP), engineering automation
 
 Methodologies: Scrum, Kanban, Jira, Code Review, Automated Testing
 
