@@ -36,6 +36,8 @@ Senior Software Developer — client: UL Solutions | Jun 2026 – Present
 
 - Develop the new greenhouse gas (carbon footprint) calculation platform in C# and .NET with REST APIs, set to replace the legacy system that serves UL Solutions' enterprise clients.
 - Model and evolve the new system's relational database (SQL Server and PostgreSQL), with services hosted on Microsoft Azure.
+- Build and maintain six AI skills (Claude Code) that automate the team's development cycle: four generate entities, repositories, controllers and unit tests from the model description; one validates the model against the table creation SQL scripts and surfaces every inconsistency to the developer along with the correction options; and one assists with merge conflict resolution.
+- The skills learn from every run and improve themselves, cutting rework on the following rounds.
 - Work within a distributed international team, running ceremonies, code reviews and documentation in English.
 
 **Independent Projects — RVM Ecosystem**
