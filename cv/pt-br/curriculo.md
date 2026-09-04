@@ -36,8 +36,7 @@ Desenvolvedor Sênior — alocado no cliente UL Solutions | jun/2026 – atual
 
 - Desenvolvimento da nova plataforma de cálculo de emissão de gases de efeito estufa (pegada de carbono) em C# e .NET com APIs REST, destinada a substituir o sistema legado que atende os grandes clientes da UL Solutions.
 - Modelagem e evolução do banco de dados relacional (SQL Server e PostgreSQL) do novo sistema, com os serviços hospedados em Microsoft Azure.
-- Criação de seis skills de IA (Claude Code) que automatizam o ciclo de desenvolvimento do time: quatro geram entidades, repositórios, controllers e testes unitários a partir da descrição do modelo; uma valida o modelo contra os scripts SQL de criação das tabelas e apresenta ao desenvolvedor as inconsistências com as opções de correção; e uma apoia a resolução de conflitos de merge.
-- As skills aprendem a cada execução e se aprimoram sozinhas, reduzindo o retrabalho nas rodadas seguintes.
+- Criação de seis skills de IA (Claude Code) que, a partir da descrição do modelo, geram entidades, repositórios, controllers e testes unitários, validam o modelo contra os scripts SQL das tabelas apontando inconsistências e correções, e apoiam a resolução de conflitos de merge — todas aprendem e se aprimoram a cada execução.
 - Atuação em time distribuído internacional, com cerimônias, code review e documentação em inglês.
 
 **Projetos Independentes — Ecossistema RVM**
@@ -45,10 +44,8 @@ Desenvolvedor de Software | fev/2026 – jun/2026
 
 - Concepção e implementação, do zero até produção, de um ecossistema de aplicações em Vertical Slice Architecture (VSA), com .NET 10, Blazor Server, Entity Framework Core e PostgreSQL, publicado em VPS Linux com Docker, Nginx e SSL.
 - ERPAgro: ERP vertical para o pequeno produtor rural, operado por WhatsApp em linguagem natural (camada MCP) e complementado por painel administrativo web; gera o LCDPR para a contabilidade do produtor.
-- Serviço de pagamentos: cobrança via Pix, boleto e cartão de crédito, com abstração sobre múltiplos provedores (Asaas e Inter), isolamento de dados por aplicação via API Key e webhooks assinados.
-- Serviço de identidade centralizado (autenticação e autorização) consumido por todas as aplicações do ecossistema.
-- Esteira de CI/CD com GitHub Actions e ambientes segregados de desenvolvimento, homologação e produção.
-- Uso de agentes de IA como ferramenta de engenharia em todo o ciclo: especificação, implementação, code review e deploy.
+- Serviços de plataforma reutilizáveis: pagamentos (Pix, boleto e cartão, abstraindo Asaas e Inter, com isolamento por aplicação e webhooks assinados) e identidade centralizada, consumidos por todo o ecossistema.
+- Esteira de CI/CD com GitHub Actions e ambientes segregados, com agentes de IA em todo o ciclo: especificação, implementação, code review e deploy.
 
 **Questrade — Belo Horizonte, MG**
 Programador Sênior | jun/2019 – jan/2026
