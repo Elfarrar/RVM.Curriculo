@@ -36,6 +36,8 @@ Desenvolvedor Sênior — alocado no cliente UL Solutions | jun/2026 – atual
 
 - Desenvolvimento da nova plataforma de cálculo de emissão de gases de efeito estufa (pegada de carbono) em C# e .NET com APIs REST, destinada a substituir o sistema legado que atende os grandes clientes da UL Solutions.
 - Modelagem e evolução do banco de dados relacional (SQL Server e PostgreSQL) do novo sistema, com os serviços hospedados em Microsoft Azure.
+- Criação de seis skills de IA (Claude Code) que automatizam o ciclo de desenvolvimento do time: quatro geram entidades, repositórios, controllers e testes unitários a partir da descrição do modelo; uma valida o modelo contra os scripts SQL de criação das tabelas e apresenta ao desenvolvedor as inconsistências com as opções de correção; e uma apoia a resolução de conflitos de merge.
+- As skills aprendem a cada execução e se aprimoram sozinhas, reduzindo o retrabalho nas rodadas seguintes.
 - Atuação em time distribuído internacional, com cerimônias, code review e documentação em inglês.
 
 **Projetos Independentes — Ecossistema RVM**
