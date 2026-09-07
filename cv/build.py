@@ -24,15 +24,16 @@ def escreve_runs(par, texto):
 def monta_docx(md: Path, saida: Path):
     doc = Document()
 
-    # Fonte padrao e margens: Calibri 10.5, 1,8 cm - lido por qualquer ATS.
+    # Fonte padrao e margens: Calibri 10, 1,8 cm - lido por qualquer ATS. Espacamento apertado p/ 1 pagina.
     normal = doc.styles["Normal"]
     normal.font.name = "Calibri"
     normal.font.size = Pt(10)
-    normal.paragraph_format.space_after = Pt(2.5)
+    normal.paragraph_format.space_after = Pt(1.5)
+    normal.paragraph_format.line_spacing = 0.97
     normal.paragraph_format.space_before = Pt(0)
     for secao in doc.sections:
-        secao.top_margin = secao.bottom_margin = Cm(1.3)
-        secao.left_margin = secao.right_margin = Cm(1.8)
+        secao.top_margin = secao.bottom_margin = Cm(1.1)
+        secao.left_margin = secao.right_margin = Cm(1.6)
 
     for estilo, tam in (("Heading 1", 20), ("Heading 2", 12)):
         st = doc.styles[estilo]
@@ -40,7 +41,7 @@ def monta_docx(md: Path, saida: Path):
         st.font.size = Pt(tam)
         st.font.bold = True
         st.font.color.rgb = RGBColor(0x1F, 0x1F, 0x1F)
-        st.paragraph_format.space_before = Pt(0 if tam > 15 else 7)
+        st.paragraph_format.space_before = Pt(0 if tam > 15 else 5)
         st.paragraph_format.space_after = Pt(2)
 
     for linha in md.read_text(encoding="utf-8").splitlines():

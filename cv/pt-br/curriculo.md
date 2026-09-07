@@ -1,91 +1,52 @@
 # Rafael Veneroso Morici
 
-Desenvolvedor de Software Sênior | .NET · C# · Azure · Modelagem de Domínio
+Desenvolvedor de Software Sênior | .NET · C# · Azure · IA Aplicada
 
-Belo Horizonte, MG, Brasil — disponível para trabalho remoto
-Telefone: (31) 98239-5560
-E-mail: rvenerosomorici@gmail.com
-Currículo online: rvmtech.com.br
-LinkedIn: linkedin.com/in/rafael-veneroso-morici
-GitHub: github.com/Elfarrar
+Belo Horizonte, MG — disponível para trabalho remoto | (31) 98239-5560 | rvenerosomorici@gmail.com
+rvmtech.com.br | linkedin.com/in/rafael-veneroso-morici | github.com/Elfarrar
 
 ## Resumo Profissional
 
-Desenvolvedor de software com mais de 15 anos de experiência, construindo sistemas corporativos em C# e .NET de ponta a ponta — do modelo de domínio à publicação em produção. Atuo como referência técnica de time e já respondi pela liderança técnica de squad, participando das decisões de arquitetura e apoiando outros desenvolvedores. Atuação em ERP, sistemas bancários, gestão de pessoas e, atualmente, cálculo de emissão de carbono. Trabalho com Vertical Slice Architecture (VSA), arquitetura em camadas e Domain-Driven Design (DDD), APIs REST, Blazor, SQL Server e PostgreSQL, containerização com Docker e pipelines de CI/CD em Microsoft Azure e Google Cloud Platform. Inglês avançado, com atuação diária em time distribuído e cliente internacional.
+Mais de 15 anos construindo sistemas corporativos em C# e .NET de ponta a ponta — do modelo de domínio à produção — em ERP, banco, gestão de pessoas e, hoje, cálculo de emissão de carbono. Referência técnica de time e ex-líder técnico de squad. Aplico agentes de IA no ciclo de desenvolvimento e curso pós-graduação em Engenharia de Software em IA Aplicada. Inglês avançado, em time distribuído com cliente internacional.
 
 ## Competências Técnicas
 
-Linguagens e Frameworks: C#, .NET, .NET Core, .NET 10, ASP.NET, ASP.NET Core MVC, Web API REST, Blazor (Server e WebAssembly), Entity Framework Core, WPF, WCF, Web Forms, Python, JavaScript, HTML5, CSS3, Angular
-
-Arquitetura: Vertical Slice Architecture (VSA), Domain-Driven Design (DDD), arquitetura em camadas, APIs REST, integração entre sistemas, serviços multi-tenant, autenticação e autorização (OAuth 2.0 / OpenID Connect)
-
-Cloud e DevOps: Microsoft Azure, Google Cloud Platform (GCP), Docker, Jenkins, GitHub Actions, CI/CD, Git, Nginx, Linux
-
-Banco de Dados: SQL Server, PostgreSQL, MySQL, T-SQL
-
-Plataformas e CMS: Sitefinity
-
-Inteligência Artificial: agentes de IA (Claude Code, GitHub Copilot) aplicados ao ciclo de desenvolvimento, LLMs, vibe coding, Model Context Protocol (MCP), automação de engenharia de software
-
-Metodologias: Scrum, Kanban, Jira, Code Review, Testes Automatizados
+**Linguagens e Frameworks:** C#, .NET 10, ASP.NET Core MVC, Web API REST, Blazor, Entity Framework Core, WPF, WCF, Python, JavaScript, Angular
+**Arquitetura e Métodos:** Vertical Slice Architecture (VSA), Domain-Driven Design (DDD), camadas, APIs REST, multi-tenant, OAuth 2.0 / OIDC, Scrum, Kanban, code review, testes
+**Cloud, DevOps e Dados:** Azure, Google Cloud, Docker, GitHub Actions, Jenkins, CI/CD, Git, Nginx, Linux · SQL Server, PostgreSQL, MySQL, T-SQL
+**Inteligência Artificial:** agentes de IA (Claude Code, GitHub Copilot) no ciclo de desenvolvimento, LLMs, RAG, Model Context Protocol (MCP)
 
 ## Experiência Profissional
 
-**Marlabs — Belo Horizonte, MG (remoto)**
-Desenvolvedor Sênior — alocado no cliente UL Solutions | jun/2026 – atual
+**Marlabs** — Desenvolvedor Sênior, alocado no cliente UL Solutions | remoto | jun/2026 – atual
 
-- Desenvolvimento da nova plataforma de cálculo de emissão de gases de efeito estufa (pegada de carbono) em C# e .NET com APIs REST, destinada a substituir o sistema legado que atende os grandes clientes da UL Solutions.
-- Modelagem e evolução do banco de dados relacional (SQL Server e PostgreSQL) do novo sistema, com os serviços hospedados em Microsoft Azure.
-- Criação de seis skills de IA (Claude Code) que, a partir da descrição do modelo, geram entidades, repositórios, controllers e testes unitários, validam o modelo contra os scripts SQL das tabelas apontando inconsistências e correções, e apoiam a resolução de conflitos de merge — todas aprendem e se aprimoram a cada execução.
-- Atuação em time distribuído internacional, com cerimônias, code review e documentação em inglês.
+- Nova plataforma de cálculo de emissão de gases de efeito estufa em C# e .NET com APIs REST, substituindo o legado que atende os grandes clientes da UL Solutions; modelagem do banco (SQL Server, PostgreSQL) e serviços em Azure.
+- Seis skills de IA (Claude Code) que geram entidades, repositórios, controllers e testes a partir do modelo, validam o modelo contra os scripts SQL e apoiam conflitos de merge — aprendendo a cada execução.
 
-**Projetos Independentes — Ecossistema RVM**
-Desenvolvedor de Software | fev/2026 – jun/2026
+**Projetos Independentes — Ecossistema RVM** — Desenvolvedor de Software | fev/2026 – jun/2026
 
-- Concepção e implementação, do zero até produção, de um ecossistema de aplicações em Vertical Slice Architecture (VSA), com .NET 10, Blazor Server, Entity Framework Core e PostgreSQL, publicado em VPS Linux com Docker, Nginx e SSL.
-- ERPAgro: ERP vertical para o pequeno produtor rural, operado por WhatsApp em linguagem natural (camada MCP) e complementado por painel administrativo web; gera o LCDPR para a contabilidade do produtor.
-- Serviços de plataforma reutilizáveis: pagamentos (Pix, boleto e cartão, abstraindo Asaas e Inter, com isolamento por aplicação e webhooks assinados) e identidade centralizada, consumidos por todo o ecossistema.
-- Esteira de CI/CD com GitHub Actions e ambientes segregados, com agentes de IA em todo o ciclo: especificação, implementação, code review e deploy.
+- Ecossistema .NET 10 do zero até produção em Vertical Slice Architecture, com Blazor Server, EF Core e PostgreSQL, em VPS Linux com Docker, Nginx e CI/CD no GitHub Actions.
+- ERPAgro: ERP para o pequeno produtor rural operado por WhatsApp em linguagem natural (camada MCP), gerando o LCDPR; mais serviços de pagamento (Pix, boleto, cartão) e identidade centralizada.
 
-**Questrade — Belo Horizonte, MG**
-Programador Sênior | jun/2019 – jan/2026
+**Questrade** — Programador Sênior | Belo Horizonte, MG | jun/2019 – jan/2026
 
-- Desenvolvimento e sustentação dos sistemas web do banco em C# e .NET sobre o CMS Sitefinity, que sustentaram picos de mais de 10 mil aberturas de conta por dia durante a pandemia.
-- Reconhecido como referência técnica do time de 6 desenvolvedores — vários com 10 anos de casa — após 1 ano na empresa: participação ativa nas decisões de arquitetura das soluções, apoio na resolução de problemas complexos e condução de code review.
-- Responsável técnico pelos sistemas de afiliados e parceiros da instituição, com mais de 50 afiliados ativos, incluindo regras de comissionamento e integrações com sistemas internos.
-- Construção de APIs REST e integrações entre as plataformas do banco.
-- Atuação em ambiente regulado do setor financeiro — segurança, rastreabilidade e auditoria —, com comunicação diária em inglês com o time e as áreas de negócio no Canadá.
+- Sistemas web do banco em C# e .NET sobre o CMS Sitefinity, que sustentaram picos de mais de 10 mil aberturas de conta por dia durante a pandemia.
+- Referência técnica do time de 6 desenvolvedores após 1 ano de casa: decisões de arquitetura, apoio em problemas complexos e condução de code review.
+- Responsável técnico pelos sistemas de afiliados e parceiros (50+ ativos): comissionamento, APIs REST e integrações, em setor financeiro regulado, com comunicação diária em inglês com o Canadá.
 
-**Mereo — Belo Horizonte, MG**
-Programador Sênior / Líder Técnico de Time | jul/2018 – jun/2019
+**Mereo** — Programador Sênior / Líder Técnico | Belo Horizonte, MG | jul/2018 – jun/2019
 
-- Liderança técnica de time de 3 desenvolvedores e 1 QA responsável pelo módulo de avaliação de desempenho da plataforma SaaS de gestão de RH.
-- Desenvolvimento das funcionalidades de avaliação de colaboradores: matriz nine box e planos de sucessão para cargos-chave da organização.
-- Plataforma em C# com ASP.NET e front-end em Angular 2, com APIs REST consumidas pela aplicação web.
-- Modelagem e otimização de banco de dados SQL Server.
+- Liderança técnica de 3 desenvolvedores e 1 QA no módulo de avaliação de desempenho de um SaaS de gestão de RH (nine box e planos de sucessão), em C# com ASP.NET, Angular 2 e SQL Server.
 
-**EMC — Belo Horizonte, MG**
-Programador Pleno | jan/2017 – jul/2018
+**EMC** — Programador Pleno | Belo Horizonte, MG | jan/2017 – jul/2018
 
-- Construção, do zero, do ERP que passou a controlar a operação de uma empresa de mais de 100 funcionários, depois de tentativas frustradas de implantar ERPs de mercado.
-- Responsável pela modelagem do domínio com Domain-Driven Design (DDD) e pelo desenho da arquitetura em camadas do sistema.
-- Módulos de locação de equipamentos de informática — atividade-fim da empresa —, ordens de serviço, contratos, financeiro e SAC.
-- Interface desktop em WPF para os usuários internos e Web Forms + WCF para os clientes externos.
+- ERP construído do zero, com DDD e arquitetura em camadas, que passou a controlar a operação de uma empresa de mais de 100 funcionários: locação de equipamentos, ordens de serviço, contratos e financeiro.
 
 Experiências anteriores a 2017 disponíveis mediante solicitação.
 
-## Formação Acadêmica
+## Formação, Certificações e Idiomas
 
-**Bacharelado em Sistemas de Informação** — Faculdade Infórium de Tecnologia, Belo Horizonte, MG
-Conclusão: 2009
-
-## Certificações e Cursos
-
-- Exam 480: Programming in HTML5 with JavaScript and CSS3 — Microsoft
-- AZ-900: Microsoft Azure Fundamentals — em preparação
-- PHP — curso de desenvolvimento web
-
-## Idiomas
-
-- Português: nativo
-- Inglês: avançado (reuniões, code review e documentação técnica)
+**Pós-graduação em Engenharia de Software em IA Aplicada** — UNIPDS | set/2026 – previsão 2027
+**Bacharelado em Sistemas de Informação** — Faculdade Infórium de Tecnologia | conclusão em 2009
+Exam 480: Programming in HTML5 with JavaScript and CSS3 — Microsoft | AZ-900: Azure Fundamentals — em preparação
+Português nativo | Inglês avançado — reuniões, code review e documentação técnica

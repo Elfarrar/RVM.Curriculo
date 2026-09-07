@@ -28,7 +28,7 @@ export interface CvData {
   experiences: CvExperience[];
   priorNote: string;
   caseStudies: CvCaseStudy[];
-  education: { degree: string; school: string; place: string; year: string };
+  education: { degree: string; school: string; place: string; year: string; ongoing?: boolean }[];
   courses: { name: string }[];
   certifications: { name: string; issuer: string; status: string }[];
   languages: { name: string; level: string }[];
