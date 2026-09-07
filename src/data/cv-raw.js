@@ -5,12 +5,13 @@
 export const CV = {
   pt: {
     role: "Desenvolvedor de Software Sênior",
-    tagline: ".NET · C# · Azure · Modelagem de Domínio",
+    tagline: ".NET · C# · Azure · IA Aplicada",
 
     summary: [
       "Desenvolvo software há mais de 15 anos, quase sempre em C# e .NET, e o fio condutor da carreira é o mesmo desde o começo: pegar um problema de negócio mal resolvido e entregar um sistema que a operação usa todo dia. Passei por ERP, banco, gestão de pessoas e, hoje, cálculo de emissão de carbono.",
       "Trabalho de ponta a ponta — modelagem de domínio, arquitetura, implementação, banco, deploy e sustentação. Uso Vertical Slice Architecture e DDD conforme o problema pede, PostgreSQL e SQL Server, Docker, e esteiras de CI/CD em Azure e GCP.",
       "Sou referência técnica de time e já respondi pela liderança técnica de squad. A parte do trabalho que mais gosto não é escrever código: é entender o domínio a fundo o suficiente para que o código fique simples.",
+      "Desde setembro de 2026 curso a pós-graduação em Engenharia de Software em IA Aplicada na UNIPDS: agentes, RAG, arquiteturas AI-first, fine-tuning e governança de IA. É o mesmo terreno que já uso todo dia com Claude Code — a pós vem para dar o nome e o rigor ao que a prática já tinha mostrado.",
     ],
 
     facts: [
@@ -18,7 +19,7 @@ export const CV = {
       { l: "Disponibilidade", v: "Remoto" },
       { l: "Experiência", v: "15+ anos" },
       { l: "Cargo atual", v: "Sênior @ Marlabs" },
-      { l: "Formação", v: "Sistemas de Informação (2009)" },
+      { l: "Formação", v: "Pós em IA Aplicada (em curso) · SI (2009)" },
       { l: "Idiomas", v: "PT nativo · EN avançado" },
     ],
 
@@ -184,12 +185,21 @@ export const CV = {
       },
     ],
 
-    education: {
-      degree: "Bacharelado em Sistemas de Informação",
-      school: "Faculdade Infórium de Tecnologia",
-      place: "Belo Horizonte, MG",
-      year: "Conclusão em 2009",
-    },
+    education: [
+      {
+        degree: "Pós-graduação em Engenharia de Software em IA Aplicada",
+        school: "UNIPDS",
+        place: "à distância",
+        year: "set/2026 — previsão 2027",
+        ongoing: true,
+      },
+      {
+        degree: "Bacharelado em Sistemas de Informação",
+        school: "Faculdade Infórium de Tecnologia",
+        place: "Belo Horizonte, MG",
+        year: "Conclusão em 2009",
+      },
+    ],
 
     courses: [
       { name: "PHP — curso de desenvolvimento web" },
@@ -224,19 +234,20 @@ export const CV = {
       },
       {
         label: "ia & agentes",
-        items: ["Agentes de IA", "LLMs", "GitHub Copilot", "Claude Code", "MCP", "Vibe coding"],
+        items: ["Agentes de IA", "LLMs", "RAG", "GitHub Copilot", "Claude Code", "MCP"],
       },
     ],
   },
 
   en: {
     role: "Senior Software Engineer",
-    tagline: ".NET · C# · Azure · Domain Modeling",
+    tagline: ".NET · C# · Azure · Applied AI",
 
     summary: [
       "I have been building software for over 15 years, almost always in C# and .NET, and the thread has been the same since day one: take a badly solved business problem and ship a system the operation actually uses every day. I have worked across ERP, banking, people management and, today, carbon emission calculation.",
       "I work end to end — domain modeling, architecture, implementation, database, deployment and support. I use Vertical Slice Architecture and DDD depending on what the problem asks for, PostgreSQL and SQL Server, Docker, and CI/CD pipelines on Azure and GCP.",
       "I am a technical reference within my team and have led a squad as team lead. The part of the job I enjoy most is not writing code: it is understanding the domain deeply enough that the code turns out simple.",
+      "Since September 2026 I have been taking a postgraduate program in Software Engineering for Applied AI at UNIPDS: agents, RAG, AI-first architectures, fine-tuning and AI governance. It is the same ground I already cover daily with Claude Code — the program brings the name and the rigor to what practice had already shown me.",
     ],
 
     facts: [
@@ -244,7 +255,7 @@ export const CV = {
       { l: "Availability", v: "Remote" },
       { l: "Experience", v: "15+ years" },
       { l: "Current role", v: "Senior @ Marlabs" },
-      { l: "Education", v: "Information Systems (2009)" },
+      { l: "Education", v: "Postgrad in Applied AI (ongoing) · IS (2009)" },
       { l: "Languages", v: "PT native · EN advanced" },
     ],
 
@@ -410,12 +421,21 @@ export const CV = {
       },
     ],
 
-    education: {
-      degree: "Bachelor's Degree in Information Systems",
-      school: "Faculdade Infórium de Tecnologia",
-      place: "Belo Horizonte, Brazil",
-      year: "Graduated in 2009",
-    },
+    education: [
+      {
+        degree: "Postgraduate Program in Software Engineering for Applied AI",
+        school: "UNIPDS",
+        place: "distance learning",
+        year: "Sep 2026 — expected 2027",
+        ongoing: true,
+      },
+      {
+        degree: "Bachelor's Degree in Information Systems",
+        school: "Faculdade Infórium de Tecnologia",
+        place: "Belo Horizonte, Brazil",
+        year: "Graduated in 2009",
+      },
+    ],
 
     courses: [
       { name: "PHP — web development course" },
@@ -450,7 +470,7 @@ export const CV = {
       },
       {
         label: "ai & agents",
-        items: ["AI agents", "LLMs", "GitHub Copilot", "Claude Code", "MCP", "Vibe coding"],
+        items: ["AI agents", "LLMs", "RAG", "GitHub Copilot", "Claude Code", "MCP"],
       },
     ],
   },

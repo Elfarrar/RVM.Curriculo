@@ -18,7 +18,7 @@ Astro 5 · Tailwind CSS 4 (CSS-first, OKLCH) · Motion · Lenis · Geist/Geist M
 
 | Onde | O que e | Tom |
 |---|---|---|
-| `cv/pt-br/curriculo.md` e `cv/en/resume.md` | o PDF/DOCX | enxuto, 2 paginas, otimizado para ATS |
+| `cv/pt-br/curriculo.md` e `cv/en/resume.md` | o PDF/DOCX | enxuto, **1 pagina** (TASK-837), otimizado para ATS |
 | `src/data/cv-raw.js` | o site | expandido: contexto de negocio, estudos de caso |
 
 **Nao sao o mesmo texto** — o site e ~3x maior. Mas **todo fato** (data, cargo, empresa, numero)

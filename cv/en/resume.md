@@ -1,94 +1,52 @@
 # Rafael Veneroso Morici
 
-Senior Software Engineer | .NET · C# · Azure · Domain Modeling
+Senior Software Engineer | .NET · C# · Azure · Applied AI
 
-Belo Horizonte, Brazil — available for remote work
-Phone: +55 31 98239-5560
-Email: rvenerosomorici@gmail.com
-Online resume: rvmtech.com.br/en
-LinkedIn: linkedin.com/in/rafael-veneroso-morici
-GitHub: github.com/Elfarrar
+Belo Horizonte, Brazil — available for remote work | +55 31 98239-5560 | rvenerosomorici@gmail.com
+rvmtech.com.br/en | linkedin.com/in/rafael-veneroso-morici | github.com/Elfarrar
 
 ## Professional Summary
 
-Software engineer with 15+ years of experience building enterprise systems in C# and .NET end to end — from domain modeling to production deployment. Serves as a technical reference within the team and has led a squad as team lead, contributing to architecture decisions and supporting other developers. Background in ERP, banking, people management platforms and, currently, carbon emission calculation. Hands-on with Vertical Slice Architecture (VSA), layered architecture and Domain-Driven Design (DDD), REST APIs, Blazor, SQL Server and PostgreSQL, containerization with Docker and CI/CD pipelines on Microsoft Azure and Google Cloud Platform. Advanced English, working daily with a distributed international team.
+15+ years building enterprise systems in C# and .NET end to end — from domain modeling to production — across ERP, banking, people management and, currently, carbon emission calculation. Technical reference within the team and former squad tech lead. Applies AI agents across the development cycle and is taking a postgraduate program in Software Engineering for Applied AI. Advanced English, in a distributed international team.
 
 ## Technical Skills
 
-Languages and Frameworks: C#, .NET, .NET Core, .NET 10, ASP.NET, ASP.NET Core MVC, REST Web API, Blazor (Server and WebAssembly), Entity Framework Core, WPF, WCF, Web Forms, Python, JavaScript, HTML5, CSS3, Angular
-
-Architecture: Vertical Slice Architecture (VSA), Domain-Driven Design (DDD), layered architecture, REST APIs, system integration, multi-tenant services, authentication and authorization (OAuth 2.0 / OpenID Connect)
-
-Cloud and DevOps: Microsoft Azure, Google Cloud Platform (GCP), Docker, Jenkins, GitHub Actions, CI/CD, Git, Nginx, Linux
-
-Databases: SQL Server, PostgreSQL, MySQL, T-SQL
-
-Platforms and CMS: Sitefinity
-
-Artificial Intelligence: AI agents (Claude Code, GitHub Copilot) applied to the software development lifecycle, LLMs, vibe coding, Model Context Protocol (MCP), engineering automation
-
-Methodologies: Scrum, Kanban, Jira, Code Review, Automated Testing
+**Languages and Frameworks:** C#, .NET 10, ASP.NET Core MVC, REST Web API, Blazor, Entity Framework Core, WPF, WCF, Python, JavaScript, Angular
+**Architecture and Methods:** Vertical Slice Architecture (VSA), Domain-Driven Design (DDD), layered architecture, REST APIs, multi-tenant, OAuth 2.0 / OIDC, Scrum, Kanban, code review, testing
+**Cloud, DevOps and Data:** Azure, Google Cloud, Docker, GitHub Actions, Jenkins, CI/CD, Git, Nginx, Linux · SQL Server, PostgreSQL, MySQL, T-SQL
+**Artificial Intelligence:** AI agents (Claude Code, GitHub Copilot) in the development cycle, LLMs, RAG, Model Context Protocol (MCP)
 
 ## Professional Experience
 
-**Marlabs — Belo Horizonte, Brazil (remote)**
-Senior Software Developer — client: UL Solutions | Jun 2026 – Present
+**Marlabs** — Senior Software Developer, client: UL Solutions | remote | Jun 2026 – Present
 
-- Develop the new greenhouse gas (carbon footprint) calculation platform in C# and .NET with REST APIs, set to replace the legacy system that serves UL Solutions' enterprise clients.
-- Model and evolve the new system's relational database (SQL Server and PostgreSQL), with services hosted on Microsoft Azure.
-- Build and maintain six AI skills (Claude Code) that automate the team's development cycle: four generate entities, repositories, controllers and unit tests from the model description; one validates the model against the table creation SQL scripts and surfaces every inconsistency to the developer along with the correction options; and one assists with merge conflict resolution.
-- The skills learn from every run and improve themselves, cutting rework on the following rounds.
-- Work within a distributed international team, running ceremonies, code reviews and documentation in English.
+- New greenhouse gas calculation platform in C# and .NET with REST APIs, replacing the legacy system that serves UL Solutions' enterprise clients; database modeling (SQL Server, PostgreSQL) and services on Azure.
+- Six AI skills (Claude Code) that generate entities, repositories, controllers and tests from the model, validate the model against the table creation SQL scripts and assist with merge conflicts — learning on every run.
 
-**Independent Projects — RVM Ecosystem**
-Software Engineer | Feb 2026 – Jun 2026
+**Independent Projects — RVM Ecosystem** — Software Engineer | Feb 2026 – Jun 2026
 
-- Designed and built, from scratch to production, an ecosystem of applications using Vertical Slice Architecture (VSA), on .NET 10, Blazor Server, Entity Framework Core and PostgreSQL, deployed to a Linux VPS with Docker, Nginx and SSL.
-- ERPAgro: vertical ERP for small-scale farmers, operated through WhatsApp in natural language (MCP layer) and complemented by a web admin panel; generates the Brazilian LCDPR tax report for accountants.
-- Payments service: Pix, bank slip and credit card billing, abstracting multiple providers (Asaas and Inter), with per-application data isolation via API Key and signed webhooks.
-- Centralized identity service (authentication and authorization) consumed by every application in the ecosystem.
-- CI/CD pipelines with GitHub Actions and segregated development, staging and production environments.
-- Used AI agents as an engineering tool across the whole cycle: specification, implementation, code review and deployment.
+- .NET 10 ecosystem from scratch to production on Vertical Slice Architecture, with Blazor Server, EF Core and PostgreSQL, on a Linux VPS with Docker, Nginx and CI/CD on GitHub Actions.
+- ERPAgro: ERP for small-scale farmers operated through WhatsApp in natural language (MCP layer), generating the Brazilian LCDPR tax report; plus payment (Pix, bank slip, card) and centralized identity services.
 
-**Questrade — Belo Horizonte, Brazil**
-Senior Software Developer | Jun 2019 – Jan 2026
+**Questrade** — Senior Software Developer | Belo Horizonte, Brazil | Jun 2019 – Jan 2026
 
-- Developed and maintained the bank's web systems in C# and .NET on top of the Sitefinity CMS, which sustained peaks of over 10,000 account openings per day during the pandemic.
-- Recognized as the technical reference of a 6-developer team — several with 10 years at the company — within the first year: actively took part in solution architecture decisions, supported complex problem solving and led code reviews.
-- Technical owner of the bank's affiliate and partner systems, covering 50+ active affiliates, including commission rules and integrations with internal systems.
-- Built REST APIs and integrations across the bank's platforms.
-- Worked in a regulated financial environment — security, traceability and audit requirements —, communicating daily in English with the team and business stakeholders in Canada.
+- The bank's web systems in C# and .NET on top of the Sitefinity CMS, which sustained peaks of over 10,000 account openings per day during the pandemic.
+- Technical reference of a 6-developer team within the first year: architecture decisions, support on complex problems and leading code reviews.
+- Technical owner of the affiliate and partner systems (50+ active): commission rules, REST APIs and integrations, in a regulated financial environment, communicating daily in English with Canada.
 
-**Mereo — Belo Horizonte, Brazil**
-Senior Software Developer / Team Lead | Jul 2018 – Jun 2019
+**Mereo** — Senior Software Developer / Team Lead | Belo Horizonte, Brazil | Jul 2018 – Jun 2019
 
-- Led a team of 3 developers and 1 QA responsible for the performance review module of a SaaS HR management platform.
-- Built the employee assessment features: nine box matrix and succession planning for key positions.
-- Platform in C# with ASP.NET and an Angular 2 front end, with REST APIs consumed by the web application.
-- Modeled and optimized the SQL Server database.
+- Led 3 developers and 1 QA on the performance review module of an HR management SaaS (nine box matrix and succession planning), in C# with ASP.NET, Angular 2 and SQL Server.
 
-**EMC — Belo Horizonte, Brazil**
-Mid-level Software Developer | Jan 2017 – Jul 2018
+**EMC** — Mid-level Software Developer | Belo Horizonte, Brazil | Jan 2017 – Jul 2018
 
-- Built from scratch the ERP that came to run the operation of a 100+ employee company, after failed attempts to roll out off-the-shelf ERPs.
-- Owned the domain modeling with Domain-Driven Design (DDD) and the design of the system's layered architecture.
-- Delivered modules for IT equipment leasing — the company's core business —, service orders, contracts, finance and customer support.
-- Built a WPF desktop interface for internal users and Web Forms + WCF for external clients.
+- ERP built from scratch, with DDD and layered architecture, that came to run the operation of a 100+ employee company: equipment leasing, service orders, contracts and finance.
 
 Experience prior to 2017 available upon request.
 
-## Education
+## Education, Certifications and Languages
 
-**Bachelor's Degree in Information Systems** — Faculdade Infórium de Tecnologia, Belo Horizonte, Brazil
-Graduated: 2009
-
-## Certifications and Courses
-
-- Exam 480: Programming in HTML5 with JavaScript and CSS3 — Microsoft
-- AZ-900: Microsoft Azure Fundamentals — in progress
-- PHP — web development course
-
-## Languages
-
-- Portuguese: native
-- English: advanced (meetings, code review and technical documentation)
+**Postgraduate Program in Software Engineering for Applied AI** — UNIPDS | Sep 2026 – expected 2027
+**Bachelor's Degree in Information Systems** — Faculdade Infórium de Tecnologia | graduated 2009
+Exam 480: Programming in HTML5 with JavaScript and CSS3 — Microsoft | AZ-900: Azure Fundamentals — in progress
+Portuguese native | English advanced — meetings, code review and technical documentation
