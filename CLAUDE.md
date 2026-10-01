@@ -72,6 +72,30 @@ python cv/build.py         # regenera DOCX/PDF e publica em public/cv/
 Push em `master` -> `.github/workflows/deploy.yml` -> build Astro -> `actions/deploy-pages@v4`.
 DNS: `rvmtech.com.br` -> `elfarrar.github.io` (Hostinger). `CNAME` em `public/CNAME`.
 
+⏳ **Planejado (TASK-839):** o `deploy.yml` ganha `workflow_dispatch:` — e o **RVM.Depoimentos**
+que dispara, quando o Rafael aprova um comentario. Nao ha outro gatilho novo.
+
+## Secao "Comentários" (planejada — TASK-839, decisao de 30/09/2026)
+
+Depoimentos de ex-colegas (ex.: Bruno, da EMC), **no final da pagina**, titulo "Comentários".
+Detalhe: `RVM.Brainstorming/ajustes/Curriculo-2026-09-30.md`. Backend: projeto **`RVM.Depoimentos`**
+(`C:\IA\RVM.Depoimentos`).
+
+- **O site continua estatico, sem backend e sem segredo.** No build, o Astro le
+  `GET https://depoimentos.rvmit.com.br/api/sites/curriculo/depoimentos` (publico, so aprovados).
+  API fora no build → o build **nao falha** e a secao e **omitida** (sem fallback commitado — decisao dele).
+- Exibe: nome, cargo e empresa na epoca, relacao com o Rafael, LinkedIn e o texto **no idioma
+  original**; se houver traducao, ela aparece **abaixo**, marcada como traducao. Mesma lista em `/` e `/en/`.
+- Aprovou no Telegram (`@Rvm_Depoimentos_bot`) → a API dispara o `deploy.yml` → no ar em ~1–2 min.
+  Ninguem republica a mao.
+- ⛔ **O formulario NAO mora aqui** (o link do convite e `depoimentos.rvmit.com.br/c/{token}`).
+  ⛔ **Nada de backend/infra no `rvmtech.com.br`** — dominio pessoal (decisao de 27/09).
+- **Ordem:** implementar so depois que a API do RVM.Depoimentos estiver em prd (Fase 3 dela).
+- PDF/DOCX nao mudam: comentario e so do site.
+
 ## Segredos
 
 Nenhum. Site estatico, sem backend, sem `.env`. O deploy usa o token do proprio GitHub Actions.
+
+O token que **dispara** o rebuild (fine-grained, so este repo, Actions read/write, criado 30/09)
+mora no **RVM.Depoimentos**, nao aqui. Este repo continua sem segredo nenhum.
