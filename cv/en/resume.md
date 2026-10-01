@@ -7,21 +7,21 @@ rvmtech.com.br/en | linkedin.com/in/rafael-veneroso-morici | github.com/Elfarrar
 
 ## Professional Summary
 
-15+ years building enterprise systems in C# and .NET end to end — from domain modeling to production — across ERP, banking, people management and, currently, carbon emission calculation. Technical reference within the team and former squad tech lead. Applies AI agents across the development cycle and is taking a postgraduate program in Software Engineering for Applied AI. Advanced English, in a distributed international team.
+15+ years building enterprise systems in C# and .NET end to end — from domain modeling to production — across ERP, banking, people management, carbon emission calculation and, currently, healthcare (dental). Technical reference within the team and former squad tech lead. Applies AI agents across the development cycle and is taking a postgraduate program in Software Engineering for Applied AI. Advanced English, in a distributed international team.
 
 ## Technical Skills
 
-**Languages and Frameworks:** C#, .NET 10, ASP.NET Core MVC, REST Web API, Blazor, Entity Framework Core, WPF, WCF, Python, JavaScript, Angular
+**Languages and Frameworks:** C#, .NET 10, ASP.NET Core MVC, REST Web API, Blazor, Entity Framework Core, WPF, WCF, Python, JavaScript, TypeScript, Next.js, Angular
 **Architecture and Methods:** Vertical Slice Architecture (VSA), Domain-Driven Design (DDD), layered architecture, REST APIs, multi-tenant, OAuth 2.0 / OIDC, Scrum, Kanban, code review, testing
-**Cloud, DevOps and Data:** Azure, Google Cloud, Docker, GitHub Actions, Jenkins, CI/CD, Git, Nginx, Linux · SQL Server, PostgreSQL, MySQL, T-SQL
-**Artificial Intelligence:** AI agents (Claude Code, GitHub Copilot) in the development cycle, LLMs, RAG, Model Context Protocol (MCP)
+**Cloud, DevOps and Data:** Azure, Google Cloud, Docker, GitHub Actions, Jenkins, CI/CD, Git, Nginx, Linux, WSL · SQL Server, PostgreSQL, MySQL, T-SQL
+**Artificial Intelligence:** AI agents (Claude Code, GitHub Copilot) in the development cycle, harness engineering, LLMs, RAG, Model Context Protocol (MCP)
 
 ## Professional Experience
 
-**Marlabs** — Senior Software Developer, client: UL Solutions | remote | Jun 2026 – Present
+**Marlabs** — Senior Software Engineer | remote | Jun 2026 – Present
 
-- New greenhouse gas calculation platform in C# and .NET with REST APIs, replacing the legacy system that serves UL Solutions' enterprise clients; database modeling (SQL Server, PostgreSQL) and services on Azure.
-- Six AI skills (Claude Code) that generate entities, repositories, controllers and tests from the model, validate the model against the table creation SQL scripts and assist with merge conflicts — learning on every run.
+- Client Practice Tek (Sep 2026 – Present), healthcare software: system for dental clinics in C#, .NET, TypeScript and Next.js, with SQL Server and Azure; harness engineering for AI agents (Claude Code) that automates the whole process, from code to CI.
+- Client UL Solutions (Jun – Aug 2026): new carbon emission calculation platform in C# and .NET, replacing the legacy system; six AI skills (Claude Code) that generate entities, repositories, controllers and tests from the model and validate it against the SQL scripts.
 
 **Independent Projects — RVM Ecosystem** — Software Engineer | Feb 2026 – Jun 2026
 

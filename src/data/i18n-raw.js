@@ -11,7 +11,7 @@ export const LANG = {
 
     // Hero
     'hero.label': 'Disponível para trabalho remoto',
-    'hero.desc': 'Desenvolvedor de Software Sênior com mais de 15 anos em C# e .NET. Hoje na Marlabs, na plataforma de cálculo de emissão de carbono da UL Solutions. Arquitetura, backend, APIs REST e modernização de sistemas legados.',
+    'hero.desc': 'Engenheiro de Software Sênior com mais de 15 anos em C# e .NET. Hoje na Marlabs, no sistema para clínicas odontológicas da Practice Tek, com desenvolvimento automatizado por agentes de IA. Arquitetura, backend, APIs REST e modernização de sistemas legados.',
     'hero.btn.cv': 'Baixar CV (PDF)',
 
     // About
@@ -67,7 +67,7 @@ export const LANG = {
 
     // Hero
     'hero.label': 'Available for remote work',
-    'hero.desc': 'Senior Software Engineer with 15+ years in C# and .NET. Currently at Marlabs, on the UL Solutions carbon emission calculation platform. Architecture, backend, REST APIs and legacy modernization.',
+    'hero.desc': 'Senior Software Engineer with 15+ years in C# and .NET. Currently at Marlabs, on the Practice Tek dental clinic system, with development automated by AI agents. Architecture, backend, REST APIs and legacy modernization.',
     'hero.btn.cv': 'Download CV (PDF)',
 
     // About

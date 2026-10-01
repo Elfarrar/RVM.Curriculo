@@ -1,27 +1,27 @@
 # Rafael Veneroso Morici
 
-Desenvolvedor de Software Sênior | .NET · C# · Azure · IA Aplicada
+Engenheiro de Software Sênior | .NET · C# · Azure · IA Aplicada
 
 Belo Horizonte, MG — disponível para trabalho remoto | (31) 98239-5560 | rvenerosomorici@gmail.com
 rvmtech.com.br | linkedin.com/in/rafael-veneroso-morici | github.com/Elfarrar
 
 ## Resumo Profissional
 
-Mais de 15 anos construindo sistemas corporativos em C# e .NET de ponta a ponta — do modelo de domínio à produção — em ERP, banco, gestão de pessoas e, hoje, cálculo de emissão de carbono. Referência técnica de time e ex-líder técnico de squad. Aplico agentes de IA no ciclo de desenvolvimento e curso pós-graduação em Engenharia de Software em IA Aplicada. Inglês avançado, em time distribuído com cliente internacional.
+Mais de 15 anos construindo sistemas corporativos em C# e .NET de ponta a ponta — do modelo de domínio à produção — em ERP, banco, gestão de pessoas, cálculo de emissão de carbono e, hoje, saúde (odontologia). Referência técnica de time e ex-líder técnico de squad. Aplico agentes de IA no ciclo de desenvolvimento e curso pós-graduação em Engenharia de Software em IA Aplicada. Inglês avançado, em time distribuído com cliente internacional.
 
 ## Competências Técnicas
 
-**Linguagens e Frameworks:** C#, .NET 10, ASP.NET Core MVC, Web API REST, Blazor, Entity Framework Core, WPF, WCF, Python, JavaScript, Angular
+**Linguagens e Frameworks:** C#, .NET 10, ASP.NET Core MVC, Web API REST, Blazor, Entity Framework Core, WPF, WCF, Python, JavaScript, TypeScript, Next.js, Angular
 **Arquitetura e Métodos:** Vertical Slice Architecture (VSA), Domain-Driven Design (DDD), camadas, APIs REST, multi-tenant, OAuth 2.0 / OIDC, Scrum, Kanban, code review, testes
-**Cloud, DevOps e Dados:** Azure, Google Cloud, Docker, GitHub Actions, Jenkins, CI/CD, Git, Nginx, Linux · SQL Server, PostgreSQL, MySQL, T-SQL
-**Inteligência Artificial:** agentes de IA (Claude Code, GitHub Copilot) no ciclo de desenvolvimento, LLMs, RAG, Model Context Protocol (MCP)
+**Cloud, DevOps e Dados:** Azure, Google Cloud, Docker, GitHub Actions, Jenkins, CI/CD, Git, Nginx, Linux, WSL · SQL Server, PostgreSQL, MySQL, T-SQL
+**Inteligência Artificial:** agentes de IA (Claude Code, GitHub Copilot) no ciclo de desenvolvimento, engenharia de harness, LLMs, RAG, Model Context Protocol (MCP)
 
 ## Experiência Profissional
 
-**Marlabs** — Desenvolvedor Sênior, alocado no cliente UL Solutions | remoto | jun/2026 – atual
+**Marlabs** — Engenheiro de Software Sênior | remoto | jun/2026 – atual
 
-- Nova plataforma de cálculo de emissão de gases de efeito estufa em C# e .NET com APIs REST, substituindo o legado que atende os grandes clientes da UL Solutions; modelagem do banco (SQL Server, PostgreSQL) e serviços em Azure.
-- Seis skills de IA (Claude Code) que geram entidades, repositórios, controllers e testes a partir do modelo, validam o modelo contra os scripts SQL e apoiam conflitos de merge — aprendendo a cada execução.
+- Cliente Practice Tek (set/2026 – atual), software de saúde: sistema para clínicas odontológicas em C#, .NET, TypeScript e Next.js, com SQL Server e Azure; engenharia de harness para agentes de IA (Claude Code) que automatiza o processo inteiro, do código ao CI.
+- Cliente UL Solutions (jun – ago/2026): nova plataforma de cálculo de emissão de carbono em C# e .NET, substituindo o legado; seis skills de IA (Claude Code) que geram entidades, repositórios, controllers e testes a partir do modelo e o validam contra os scripts SQL.
 
 **Projetos Independentes — Ecossistema RVM** — Desenvolvedor de Software | fev/2026 – jun/2026
 

@@ -4,11 +4,11 @@
 
 export const CV = {
   pt: {
-    role: "Desenvolvedor de Software Sênior",
+    role: "Engenheiro de Software Sênior",
     tagline: ".NET · C# · Azure · IA Aplicada",
 
     summary: [
-      "Desenvolvo software há mais de 15 anos, quase sempre em C# e .NET, e o fio condutor da carreira é o mesmo desde o começo: pegar um problema de negócio mal resolvido e entregar um sistema que a operação usa todo dia. Passei por ERP, banco, gestão de pessoas e, hoje, cálculo de emissão de carbono.",
+      "Desenvolvo software há mais de 15 anos, quase sempre em C# e .NET, e o fio condutor da carreira é o mesmo desde o começo: pegar um problema de negócio mal resolvido e entregar um sistema que a operação usa todo dia. Passei por ERP, banco, gestão de pessoas, cálculo de emissão de carbono e, hoje, saúde — um sistema para clínicas odontológicas.",
       "Trabalho de ponta a ponta — modelagem de domínio, arquitetura, implementação, banco, deploy e sustentação. Uso Vertical Slice Architecture e DDD conforme o problema pede, PostgreSQL e SQL Server, Docker, e esteiras de CI/CD em Azure e GCP.",
       "Sou referência técnica de time e já respondi pela liderança técnica de squad. A parte do trabalho que mais gosto não é escrever código: é entender o domínio a fundo o suficiente para que o código fique simples.",
       "Desde setembro de 2026 curso a pós-graduação em Engenharia de Software em IA Aplicada na UNIPDS: agentes, RAG, arquiteturas AI-first, fine-tuning e governança de IA. É o mesmo terreno que já uso todo dia com Claude Code — a pós vem para dar o nome e o rigor ao que a prática já tinha mostrado.",
@@ -27,18 +27,34 @@ export const CV = {
       { v: "15+", l: "anos de carreira" },
       { v: "10k", l: "contas/dia no pico" },
       { v: "6", l: "devs sob referência técnica" },
-      { v: "5", l: "domínios de negócio" },
+      { v: "6", l: "domínios de negócio" },
     ],
 
     experiences: [
       {
-        period: "jun/2026 — atual",
-        role: "Desenvolvedor Sênior",
+        period: "set/2026 — atual",
+        role: "Engenheiro de Software Sênior",
+        company: "Marlabs",
+        client: "alocado no cliente Practice Tek",
+        location: "remoto",
+        context:
+          "A Practice Tek desenvolve software para a área da saúde. Atuo no sistema usado por clínicas odontológicas — num time em que o processo de desenvolvimento é todo automatizado por agentes de IA.",
+        bullets: [
+          "Desenvolvimento full stack do sistema para dentistas em C# e .NET no backend e TypeScript com Next.js no front-end.",
+          "Banco de dados SQL Server e serviços em Microsoft Azure.",
+          "Engenharia de harness para agentes de IA (Claude Code): o ambiente, as regras e as ferramentas com que os agentes conduzem o processo inteiro — do código ao CI —, com o engenheiro no julgamento e na revisão.",
+          "Ambiente de desenvolvimento em WSL.",
+        ],
+        stack: [".NET", "C#", "TypeScript", "Next.js", "SQL Server", "Azure", "Claude Code", "Harness engineering", "WSL"],
+      },
+      {
+        period: "jun/2026 — ago/2026",
+        role: "Engenheiro de Software Sênior",
         company: "Marlabs",
         client: "alocado no cliente UL Solutions",
         location: "remoto",
         context:
-          "A UL Solutions certifica produtos e segurança no mundo inteiro. O sistema em que atuo calcula a emissão de gases de efeito estufa dos clientes dela — e nasceu para substituir a plataforma legada que atende as maiores contas da empresa.",
+          "A UL Solutions certifica produtos e segurança no mundo inteiro. O sistema em que atuei calcula a emissão de gases de efeito estufa dos clientes dela — e nasceu para substituir a plataforma legada que atende as maiores contas da empresa.",
         bullets: [
           "Desenvolvimento da nova plataforma de cálculo de pegada de carbono em C# e .NET, com APIs REST consumidas pelas aplicações do produto.",
           "Modelagem e evolução do banco relacional (SQL Server e PostgreSQL) do novo sistema.",
@@ -218,7 +234,7 @@ export const CV = {
     skills: [
       {
         label: "linguagens & frameworks",
-        items: ["C# / .NET 10", "ASP.NET Core", "Blazor Server", "Entity Framework Core", "WPF · WCF", "Python", "Angular"],
+        items: ["C# / .NET 10", "ASP.NET Core", "Blazor Server", "Entity Framework Core", "WPF · WCF", "Python", "TypeScript", "Next.js", "Angular"],
       },
       {
         label: "arquitetura",
@@ -234,7 +250,7 @@ export const CV = {
       },
       {
         label: "ia & agentes",
-        items: ["Agentes de IA", "LLMs", "RAG", "GitHub Copilot", "Claude Code", "MCP"],
+        items: ["Agentes de IA", "Engenharia de harness", "LLMs", "RAG", "GitHub Copilot", "Claude Code", "MCP"],
       },
     ],
   },
@@ -244,7 +260,7 @@ export const CV = {
     tagline: ".NET · C# · Azure · Applied AI",
 
     summary: [
-      "I have been building software for over 15 years, almost always in C# and .NET, and the thread has been the same since day one: take a badly solved business problem and ship a system the operation actually uses every day. I have worked across ERP, banking, people management and, today, carbon emission calculation.",
+      "I have been building software for over 15 years, almost always in C# and .NET, and the thread has been the same since day one: take a badly solved business problem and ship a system the operation actually uses every day. I have worked across ERP, banking, people management, carbon emission calculation and, today, healthcare — a system for dental clinics.",
       "I work end to end — domain modeling, architecture, implementation, database, deployment and support. I use Vertical Slice Architecture and DDD depending on what the problem asks for, PostgreSQL and SQL Server, Docker, and CI/CD pipelines on Azure and GCP.",
       "I am a technical reference within my team and have led a squad as team lead. The part of the job I enjoy most is not writing code: it is understanding the domain deeply enough that the code turns out simple.",
       "Since September 2026 I have been taking a postgraduate program in Software Engineering for Applied AI at UNIPDS: agents, RAG, AI-first architectures, fine-tuning and AI governance. It is the same ground I already cover daily with Claude Code — the program brings the name and the rigor to what practice had already shown me.",
@@ -263,18 +279,34 @@ export const CV = {
       { v: "15+", l: "years of career" },
       { v: "10k", l: "accounts/day at peak" },
       { v: "6", l: "devs relying on me" },
-      { v: "5", l: "business domains" },
+      { v: "6", l: "business domains" },
     ],
 
     experiences: [
       {
-        period: "Jun 2026 — Present",
-        role: "Senior Software Developer",
+        period: "Sep 2026 — Present",
+        role: "Senior Software Engineer",
+        company: "Marlabs",
+        client: "assigned to client Practice Tek",
+        location: "remote",
+        context:
+          "Practice Tek builds healthcare software. I work on the system used by dental clinics — on a team where the development process is fully automated by AI agents.",
+        bullets: [
+          "Full stack development of the dental practice system in C# and .NET on the back end and TypeScript with Next.js on the front end.",
+          "SQL Server database and services on Microsoft Azure.",
+          "Harness engineering for AI agents (Claude Code): the environment, rules and tools through which the agents drive the whole process — from code to CI —, with the engineer owning judgment and review.",
+          "Development environment on WSL.",
+        ],
+        stack: [".NET", "C#", "TypeScript", "Next.js", "SQL Server", "Azure", "Claude Code", "Harness engineering", "WSL"],
+      },
+      {
+        period: "Jun 2026 — Aug 2026",
+        role: "Senior Software Engineer",
         company: "Marlabs",
         client: "assigned to client UL Solutions",
         location: "remote",
         context:
-          "UL Solutions certifies product safety worldwide. The system I work on calculates its clients' greenhouse gas emissions — and was born to replace the legacy platform serving the company's largest accounts.",
+          "UL Solutions certifies product safety worldwide. The system I worked on calculates its clients' greenhouse gas emissions — and was born to replace the legacy platform serving the company's largest accounts.",
         bullets: [
           "Develop the new carbon footprint calculation platform in C# and .NET, with REST APIs consumed by the product applications.",
           "Model and evolve the new system's relational database (SQL Server and PostgreSQL).",
@@ -454,7 +486,7 @@ export const CV = {
     skills: [
       {
         label: "languages & frameworks",
-        items: ["C# / .NET 10", "ASP.NET Core", "Blazor Server", "Entity Framework Core", "WPF · WCF", "Python", "Angular"],
+        items: ["C# / .NET 10", "ASP.NET Core", "Blazor Server", "Entity Framework Core", "WPF · WCF", "Python", "TypeScript", "Next.js", "Angular"],
       },
       {
         label: "architecture",
@@ -470,7 +502,7 @@ export const CV = {
       },
       {
         label: "ai & agents",
-        items: ["AI agents", "LLMs", "RAG", "GitHub Copilot", "Claude Code", "MCP"],
+        items: ["AI agents", "Harness engineering", "LLMs", "RAG", "GitHub Copilot", "Claude Code", "MCP"],
       },
     ],
   },
