@@ -7,7 +7,7 @@ rvmtech.com.br | linkedin.com/in/rafael-veneroso-morici | github.com/Elfarrar
 
 ## Resumo Profissional
 
-Mais de 15 anos em desenvolvimento full stack com C#, .NET Framework e .NET Core, do banco de dados à tela, em ERP, banco, gestão de pessoas e, hoje, software de saúde para clínicas odontológicas. Uso o Claude Code todo dia a favor da qualidade — geração de testes, refatoração e revisão —, com o julgamento de engenharia no centro, e curso pós-graduação em Engenharia de Software em IA Aplicada. Referência técnica de time, ex-líder técnico e condutor de code review. Experiência em modernização de sistemas legados e em ambiente Azure.
+Mais de 15 anos em desenvolvimento full stack com C#, .NET Framework e .NET Core, do banco de dados à tela, em ERP, banco, gestão de pessoas e, hoje, software de saúde para clínicas odontológicas. Uso o Claude Code todo dia a favor da qualidade — geração de testes, refatoração e revisão —, com o julgamento de engenharia no centro, e curso pós-graduação em Engenharia de Software em IA Aplicada. Referência técnica de time, ex-líder técnico e condutor de code review. Experiência em modernização de sistemas legados e em nuvem (AWS e Azure).
 
 ## Competências Técnicas
 
@@ -16,13 +16,13 @@ Mais de 15 anos em desenvolvimento full stack com C#, .NET Framework e .NET Core
 **Banco de Dados:** SQL Server, PostgreSQL, T-SQL — modelagem, rotinas e otimização de consultas
 **Qualidade e Arquitetura:** testes automatizados, code review, SOLID, Clean Code, arquitetura limpa, DDD, Vertical Slice Architecture
 **IA no desenvolvimento:** Claude Code, GitHub Copilot, engenharia de harness para agentes, MCP
-**Cloud, DevOps e Métodos:** Azure, Docker, Git, GitHub Actions, CI/CD, WSL · Scrum, Kanban, time remoto
+**Cloud, DevOps e Métodos:** AWS, Azure, Docker, Git, GitHub Actions, CI/CD, WSL · Scrum, Kanban, time remoto
 
 ## Experiência Profissional
 
 **Marlabs** — Engenheiro de Software Sênior | remoto | jun/2026 – atual
 
-- Cliente Practice Tek (set/2026 – atual), software de saúde: desenvolvimento full stack do sistema para clínicas odontológicas em C#, .NET, TypeScript e Next.js, com SQL Server e Azure.
+- Cliente Practice Tek (set/2026 – atual), software de saúde: desenvolvimento full stack do sistema para clínicas odontológicas em C#, .NET, TypeScript e Next.js, com SQL Server e AWS.
 - Engenharia de harness para agentes de IA (Claude Code), que automatiza o processo inteiro — do código e dos testes até o CI —, com o engenheiro no julgamento e na revisão.
 - Cliente UL Solutions (jun – ago/2026): modernização do legado de cálculo de emissão de carbono numa nova plataforma em C# e .NET com APIs REST; seis skills de IA que geram entidades, repositórios, controllers e testes unitários a partir do modelo e o validam contra os scripts SQL.
 

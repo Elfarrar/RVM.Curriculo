@@ -41,11 +41,11 @@ export const CV = {
           "A Practice Tek desenvolve software para a área da saúde. Atuo no sistema usado por clínicas odontológicas — num time em que o processo de desenvolvimento é todo automatizado por agentes de IA.",
         bullets: [
           "Desenvolvimento full stack do sistema para dentistas em C# e .NET no backend e TypeScript com Next.js no front-end.",
-          "Banco de dados SQL Server e serviços em Microsoft Azure.",
+          "Banco de dados SQL Server e serviços na AWS (Amazon Web Services).",
           "Engenharia de harness para agentes de IA (Claude Code): o ambiente, as regras e as ferramentas com que os agentes conduzem o processo inteiro — do código ao CI —, com o engenheiro no julgamento e na revisão.",
           "Ambiente de desenvolvimento em WSL.",
         ],
-        stack: [".NET", "C#", "TypeScript", "Next.js", "SQL Server", "Azure", "Claude Code", "Harness engineering", "WSL"],
+        stack: [".NET", "C#", "TypeScript", "Next.js", "SQL Server", "AWS", "Claude Code", "Harness engineering", "WSL"],
       },
       {
         period: "jun/2026 — ago/2026",
@@ -246,7 +246,7 @@ export const CV = {
       },
       {
         label: "cloud & devops",
-        items: ["Microsoft Azure", "Google Cloud", "Docker", "GitHub Actions", "Jenkins", "Nginx · Linux"],
+        items: ["Microsoft Azure", "AWS", "Google Cloud", "Docker", "GitHub Actions", "Jenkins", "Nginx · Linux"],
       },
       {
         label: "ia & agentes",
@@ -293,11 +293,11 @@ export const CV = {
           "Practice Tek builds healthcare software. I work on the system used by dental clinics — on a team where the development process is fully automated by AI agents.",
         bullets: [
           "Full stack development of the dental practice system in C# and .NET on the back end and TypeScript with Next.js on the front end.",
-          "SQL Server database and services on Microsoft Azure.",
+          "SQL Server database and services on AWS (Amazon Web Services).",
           "Harness engineering for AI agents (Claude Code): the environment, rules and tools through which the agents drive the whole process — from code to CI —, with the engineer owning judgment and review.",
           "Development environment on WSL.",
         ],
-        stack: [".NET", "C#", "TypeScript", "Next.js", "SQL Server", "Azure", "Claude Code", "Harness engineering", "WSL"],
+        stack: [".NET", "C#", "TypeScript", "Next.js", "SQL Server", "AWS", "Claude Code", "Harness engineering", "WSL"],
       },
       {
         period: "Jun 2026 — Aug 2026",
@@ -498,7 +498,7 @@ export const CV = {
       },
       {
         label: "cloud & devops",
-        items: ["Microsoft Azure", "Google Cloud", "Docker", "GitHub Actions", "Jenkins", "Nginx · Linux"],
+        items: ["Microsoft Azure", "AWS", "Google Cloud", "Docker", "GitHub Actions", "Jenkins", "Nginx · Linux"],
       },
       {
         label: "ai & agents",

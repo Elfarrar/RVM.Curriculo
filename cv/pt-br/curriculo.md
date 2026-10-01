@@ -13,14 +13,14 @@ Mais de 15 anos construindo sistemas corporativos em C# e .NET de ponta a ponta 
 
 **Linguagens e Frameworks:** C#, .NET 10, ASP.NET Core MVC, Web API REST, Blazor, Entity Framework Core, WPF, WCF, Python, JavaScript, TypeScript, Next.js, Angular
 **Arquitetura e Métodos:** Vertical Slice Architecture (VSA), Domain-Driven Design (DDD), camadas, APIs REST, multi-tenant, OAuth 2.0 / OIDC, Scrum, Kanban, code review, testes
-**Cloud, DevOps e Dados:** Azure, Google Cloud, Docker, GitHub Actions, Jenkins, CI/CD, Git, Nginx, Linux, WSL · SQL Server, PostgreSQL, MySQL, T-SQL
+**Cloud, DevOps e Dados:** Azure, AWS, Google Cloud, Docker, GitHub Actions, Jenkins, CI/CD, Git, Nginx, Linux, WSL · SQL Server, PostgreSQL, MySQL, T-SQL
 **Inteligência Artificial:** agentes de IA (Claude Code, GitHub Copilot) no ciclo de desenvolvimento, engenharia de harness, LLMs, RAG, Model Context Protocol (MCP)
 
 ## Experiência Profissional
 
 **Marlabs** — Engenheiro de Software Sênior | remoto | jun/2026 – atual
 
-- Cliente Practice Tek (set/2026 – atual), software de saúde: sistema para clínicas odontológicas em C#, .NET, TypeScript e Next.js, com SQL Server e Azure; engenharia de harness para agentes de IA (Claude Code) que automatiza o processo inteiro, do código ao CI.
+- Cliente Practice Tek (set/2026 – atual), software de saúde: sistema para clínicas odontológicas em C#, .NET, TypeScript e Next.js, com SQL Server e AWS; engenharia de harness para agentes de IA (Claude Code) que automatiza o processo inteiro, do código ao CI.
 - Cliente UL Solutions (jun – ago/2026): nova plataforma de cálculo de emissão de carbono em C# e .NET, substituindo o legado; seis skills de IA (Claude Code) que geram entidades, repositórios, controllers e testes a partir do modelo e o validam contra os scripts SQL.
 
 **Projetos Independentes — Ecossistema RVM** — Desenvolvedor de Software | fev/2026 – jun/2026
