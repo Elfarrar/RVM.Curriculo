@@ -46,7 +46,9 @@ jobs:
   deploy:
     name: Deploy to GitHub Pages
     needs: build
-    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+    # workflow_dispatch = o RVM.Depoimentos republicando apos uma aprovacao (TASK-839). Sem ele aqui, o
+    # disparo construia o site e NAO publicava.
+    if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
     environment:
       name: github-pages

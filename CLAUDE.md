@@ -72,10 +72,11 @@ python cv/build.py         # regenera DOCX/PDF e publica em public/cv/
 Push em `master` -> `.github/workflows/deploy.yml` -> build Astro -> `actions/deploy-pages@v4`.
 DNS: `rvmtech.com.br` -> `elfarrar.github.io` (Hostinger). `CNAME` em `public/CNAME`.
 
-⏳ **Planejado (TASK-839):** o `deploy.yml` ganha `workflow_dispatch:` — e o **RVM.Depoimentos**
-que dispara, quando o Rafael aprova um comentario. Nao ha outro gatilho novo.
+**`workflow_dispatch` publica** (TASK-839): e o **RVM.Depoimentos** que dispara quando o Rafael aprova um
+comentario. ⚠️ O job `deploy` precisa aceitar `workflow_dispatch` no `if` — antes so `push` publicava, e o
+disparo construia o site sem publicar.
 
-## Secao "Comentários" (planejada — TASK-839, decisao de 30/09/2026)
+## Secao "Comentários" (TASK-839, decisao de 30/09/2026; implementada 02/10)
 
 Depoimentos de ex-colegas (ex.: Bruno, da EMC), **no final da pagina**, titulo "Comentários".
 Detalhe: `RVM.Brainstorming/ajustes/Curriculo-2026-09-30.md`. Backend: projeto **`RVM.Depoimentos`**
@@ -90,7 +91,10 @@ Detalhe: `RVM.Brainstorming/ajustes/Curriculo-2026-09-30.md`. Backend: projeto *
   Ninguem republica a mao.
 - ⛔ **O formulario NAO mora aqui** (o link do convite e `depoimentos.rvmit.com.br/c/{token}`).
   ⛔ **Nada de backend/infra no `rvmtech.com.br`** — dominio pessoal (decisao de 27/09).
-- **Ordem:** implementar so depois que a API do RVM.Depoimentos estiver em prd (Fase 3 dela).
+- Codigo: `src/data/depoimentos.ts` (fetch no build, 10 s, falha = lista vazia) e
+  `src/components/Comentarios.astro` (ultima secao, `/` e `/en/`).
+- Testar contra outro ambiente: `DEPOIMENTOS_API_URL=https://depoimentos.dev.rvmit.pro npm run build`.
+- Enquanto a prd do RVM.Depoimentos nao existe, o build de producao omite a secao (API fora = sem secao).
 - PDF/DOCX nao mudam: comentario e so do site.
 
 ## Segredos
