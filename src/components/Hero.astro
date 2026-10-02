@@ -1,5 +1,6 @@
 ---
 import { tr, type Locale } from "../data/i18n";
+import { cv } from "../data/cv";
 interface Props { lang: Locale; }
 const { lang } = Astro.props;
 const isPt = lang === "pt";
@@ -17,7 +18,7 @@ const isPt = lang === "pt";
       </h1>
 
       <p class="hero-role mono">
-        {isPt ? "/ engenheiro sênior / .NET / 15+ anos" : "/ senior software engineer / .NET / 15+ years"}
+        / {cv(lang).role} / <span class="nowrap">{cv(lang).tagline}</span>
       </p>
 
       <p class="hero-sub">{tr(lang, "hero.desc")}</p>
@@ -152,6 +153,8 @@ const isPt = lang === "pt";
     letter-spacing: 0.06em;
     margin-bottom: 1.75rem;
   }
+
+  .hero-role .nowrap { white-space: nowrap; }
 
   .hero-sub {
     font-size: clamp(1rem, 1.5vw, 1.0625rem);
