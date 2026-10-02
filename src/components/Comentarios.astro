@@ -1,0 +1,137 @@
+---
+// Seção "Comentários" (TASK-839): depoimentos aprovados no RVM.Depoimentos, no final da página.
+// Texto no idioma ORIGINAL; a tradução, se houver, vem abaixo e marcada como tradução.
+import { type Locale } from "../data/i18n";
+import { depoimentos } from "../data/depoimentos";
+
+interface Props { lang: Locale; }
+const { lang } = Astro.props;
+const isPt = lang === "pt";
+const lista = await depoimentos();
+const nomeIdioma = (l: string) => (l === "en" ? (isPt ? "inglês" : "English") : (isPt ? "português" : "Portuguese"));
+---
+
+{lista.length > 0 && (
+  <section id="comentarios" class="com">
+    <header class="com-header reveal">
+      <span class="tag mono">/ {isPt ? "comentários" : "comments"}</span>
+      <h2 class="com-title display">
+        {isPt ? "Comentários" : "Comments"}<br/>
+        <span class="mix-italic">{isPt ? "de quem trabalhou comigo." : "from people I worked with."}</span>
+      </h2>
+    </header>
+
+    <div class="com-grid">
+      {lista.map((d) => (
+        <figure class="com-card reveal">
+          <blockquote class="com-texto" lang={d.idioma}>{d.texto}</blockquote>
+          {d.traducao && d.idiomaTraducao && (
+            <div class="com-traducao" lang={d.idiomaTraducao}>
+              <span class="com-traducao-tag mono">
+                {isPt ? `tradução do ${nomeIdioma(d.idioma)}` : `translated from ${nomeIdioma(d.idioma)}`}
+              </span>
+              <p>{d.traducao}</p>
+            </div>
+          )}
+          <figcaption class="com-autor">
+            <span class="com-nome">
+              {d.linkedIn
+                ? <a href={d.linkedIn} target="_blank" rel="noopener noreferrer nofollow">{d.nome}</a>
+                : d.nome}
+            </span>
+            {(d.cargo || d.empresa) && (
+              <span class="com-meta">{[d.cargo, d.empresa].filter(Boolean).join(" · ")}</span>
+            )}
+            {d.relacao && <span class="com-relacao">{d.relacao}</span>}
+          </figcaption>
+        </figure>
+      ))}
+    </div>
+  </section>
+)}
+
+<style>
+  .com {
+    max-width: 1200px;
+    margin: 9rem auto 0;
+    padding: 0 1.5rem;
+  }
+
+  .com-header { max-width: 720px; margin-bottom: 3rem; }
+
+  .com-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.0;
+    margin: 1.25rem 0 0;
+  }
+
+  .com-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .com-card {
+    margin: 0;
+    padding: 2rem 2.25rem;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    background: var(--color-bg-glass);
+    backdrop-filter: blur(20px) saturate(140%);
+    -webkit-backdrop-filter: blur(20px) saturate(140%);
+    border: 1px solid var(--color-border);
+  }
+
+  .com-texto {
+    margin: 0;
+    color: var(--color-text);
+    font-size: 1rem;
+    line-height: 1.7;
+    white-space: pre-line;
+    border-left: 3px solid var(--color-accent);
+    padding-left: 1.125rem;
+  }
+
+  .com-traducao {
+    color: var(--color-text-muted);
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    padding-left: 1.125rem;
+    border-left: 3px solid var(--color-border);
+  }
+
+  .com-traducao p { margin: 0.375rem 0 0; white-space: pre-line; }
+
+  .com-traducao-tag {
+    font-size: 0.6875rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-text-subtle);
+  }
+
+  .com-autor {
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+    margin-top: auto;
+  }
+
+  .com-nome {
+    color: var(--color-text);
+    font-weight: 600;
+    font-size: 0.9375rem;
+  }
+
+  .com-nome a { color: var(--color-accent); text-decoration: none; }
+  .com-nome a:hover { color: var(--color-accent-hover); text-decoration: underline; }
+
+  .com-meta { color: var(--color-text-muted); font-size: 0.875rem; }
+  .com-relacao { color: var(--color-text-subtle); font-size: 0.8125rem; }
+
+  @media (max-width: 900px) {
+    .com-grid { grid-template-columns: 1fr; }
+    .com-card { padding: 1.5rem; }
+  }
+</style>
