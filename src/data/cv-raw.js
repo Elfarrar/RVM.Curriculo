@@ -94,7 +94,7 @@ export const CV = {
           "Seis anos e meio no setor financeiro regulado, mexendo nos sistemas web pelos quais o cliente final abre conta e pelos quais a rede de parceiros é remunerada. Foi onde deixei de ser só quem executa e passei a ser quem o time procura antes de decidir.",
         bullets: [
           "Desenvolvimento e sustentação dos sistemas web do banco em C# e .NET sobre o CMS Sitefinity, que sustentaram picos de mais de 10 mil aberturas de conta por dia durante a pandemia.",
-          "Reconhecido como referência técnica do time de 6 desenvolvedores — vários com 10 anos de casa — após 1 ano na empresa: participação ativa nas decisões de arquitetura, apoio na resolução de problemas complexos e condução de code review.",
+          "Já no primeiro ano passei a ser uma referência técnica para o time: participava das decisões de arquitetura, ajudava a destravar problemas mais complexos e conduzia code reviews.",
           "Responsável técnico pelos sistemas de afiliados e parceiros, com mais de 50 afiliados ativos, incluindo regras de comissionamento e integrações com sistemas internos.",
           "Construção de APIs REST e integrações entre as plataformas do banco.",
           "Ambiente regulado — segurança, rastreabilidade e auditoria —, com comunicação diária em inglês com o time e as áreas de negócio no Canadá.",
@@ -346,7 +346,7 @@ export const CV = {
           "Six and a half years in regulated finance, working on the web systems where end clients open their accounts and where the partner network gets paid. This is where I stopped being just the person who executes and became the person the team asks before deciding.",
         bullets: [
           "Developed and maintained the bank's web systems in C# and .NET on top of the Sitefinity CMS, which sustained peaks of over 10,000 account openings per day during the pandemic.",
-          "Recognized as the technical reference of a 6-developer team — several with 10 years at the company — within the first year: active in architecture decisions, complex problem solving and code review.",
+          "Within my first year I became a technical reference for the team: I took part in architecture decisions, helped work through the more complex problems and led code reviews.",
           "Technical owner of the affiliate and partner systems, covering 50+ active affiliates, including commission rules and integrations with internal systems.",
           "Built REST APIs and integrations across the bank's platforms.",
           "Regulated environment — security, traceability and audit —, communicating daily in English with the team and business stakeholders in Canada.",
