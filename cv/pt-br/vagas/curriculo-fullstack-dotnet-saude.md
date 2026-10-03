@@ -30,13 +30,13 @@ Mais de 15 anos em desenvolvimento full stack com C#, .NET Framework e .NET Core
 
 - Ecossistema .NET 10 do zero até produção, com EF Core, PostgreSQL, Docker e CI/CD no GitHub Actions; ERP operado por WhatsApp em linguagem natural (camada MCP) e serviços de pagamento e identidade.
 
-**Questrade** — Programador Sênior | Belo Horizonte, MG | jun/2019 – jan/2026
+**Questrade** — Programador Sênior | Belo Horizonte, MG | jun/2020 – jan/2026
 
 - Sistemas web do banco em C# e .NET, que sustentaram picos de mais de 10 mil aberturas de conta por dia durante a pandemia.
 - Referência técnica do time de 6 desenvolvedores após 1 ano de casa: decisões de arquitetura, apoio em problemas complexos e condução de code review.
 - Responsável técnico pelos sistemas de afiliados e parceiros (50+ ativos): APIs REST e integrações em setor regulado, com rastreabilidade e auditoria.
 
-**Mereo** — Programador Sênior / Líder Técnico | Belo Horizonte, MG | jul/2018 – jun/2019
+**Mereo** — Programador Sênior / Líder Técnico | Belo Horizonte, MG | jul/2018 – jun/2020
 
 - Liderança técnica de 3 desenvolvedores e 1 QA num SaaS de gestão de RH, em C# com ASP.NET, front-end em Angular e SQL Server: APIs REST, telas e modelagem e otimização do banco.
 
