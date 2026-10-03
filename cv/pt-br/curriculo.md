@@ -28,13 +28,13 @@ Mais de 15 anos construindo sistemas corporativos em C# e .NET de ponta a ponta 
 - Ecossistema .NET 10 do zero até produção em Vertical Slice Architecture, com Blazor Server, EF Core e PostgreSQL, em VPS Linux com Docker, Nginx e CI/CD no GitHub Actions.
 - ERPAgro: ERP para o pequeno produtor rural operado por WhatsApp em linguagem natural (camada MCP), gerando o LCDPR; mais serviços de pagamento (Pix, boleto, cartão) e identidade centralizada.
 
-**Questrade** — Programador Sênior | Belo Horizonte, MG | jun/2019 – jan/2026
+**Questrade** — Programador Sênior | Belo Horizonte, MG | jun/2020 – jan/2026
 
 - Sistemas web do banco em C# e .NET sobre o CMS Sitefinity, que sustentaram picos de mais de 10 mil aberturas de conta por dia durante a pandemia.
 - Referência técnica do time de 6 desenvolvedores após 1 ano de casa: decisões de arquitetura, apoio em problemas complexos e condução de code review.
 - Responsável técnico pelos sistemas de afiliados e parceiros (50+ ativos): comissionamento, APIs REST e integrações, em setor financeiro regulado, com comunicação diária em inglês com o Canadá.
 
-**Mereo** — Programador Sênior / Líder Técnico | Belo Horizonte, MG | jul/2018 – jun/2019
+**Mereo** — Programador Sênior / Líder Técnico | Belo Horizonte, MG | jul/2018 – jun/2020
 
 - Liderança técnica de 3 desenvolvedores e 1 QA no módulo de avaliação de desempenho de um SaaS de gestão de RH (nine box e planos de sucessão), em C# com ASP.NET, Angular 2 e SQL Server.
 

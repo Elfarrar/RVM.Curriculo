@@ -26,7 +26,6 @@ export const CV = {
     metrics: [
       { v: "15+", l: "anos de carreira" },
       { v: "10k", l: "contas/dia no pico" },
-      { v: "6", l: "devs sob referência técnica" },
       { v: "6", l: "domínios de negócio" },
     ],
 
@@ -85,13 +84,13 @@ export const CV = {
         stack: [".NET 10", "VSA", "Blazor Server", "EF Core", "PostgreSQL", "Docker", "Nginx", "GitHub Actions", "MCP", "Agentes de IA", "Claude Code", "LLM", "Vibe Coding"],
       },
       {
-        period: "jun/2019 — jan/2026",
+        period: "jun/2020 — jan/2026",
         role: "Programador Sênior",
         company: "Questrade",
         client: "corretora e banco digital canadense",
         location: "Belo Horizonte, MG · time no Canadá",
         context:
-          "Seis anos e meio no setor financeiro regulado, mexendo nos sistemas web pelos quais o cliente final abre conta e pelos quais a rede de parceiros é remunerada. Foi onde deixei de ser só quem executa e passei a ser quem o time procura antes de decidir.",
+          "Cinco anos e meio no setor financeiro regulado, mexendo nos sistemas web pelos quais o cliente final abre conta e pelos quais a rede de parceiros é remunerada. Foi onde deixei de ser só quem executa e passei a ser quem o time procura antes de decidir.",
         bullets: [
           "Desenvolvimento e sustentação dos sistemas web do banco em C# e .NET sobre o CMS Sitefinity, que sustentaram picos de mais de 10 mil aberturas de conta por dia durante a pandemia.",
           "Já no primeiro ano passei a ser uma referência técnica para o time: participava das decisões de arquitetura, ajudava a destravar problemas mais complexos e conduzia code reviews.",
@@ -102,7 +101,7 @@ export const CV = {
         stack: ["C#", ".NET", "Sitefinity", "REST API", "SQL Server", "Jenkins", "Docker", "Git"],
       },
       {
-        period: "jul/2018 — jun/2019",
+        period: "jul/2018 — jun/2020",
         role: "Programador Sênior / Líder Técnico de Time",
         company: "Mereo",
         client: "SaaS de gestão de RH",
@@ -160,10 +159,10 @@ export const CV = {
         ],
       },
       {
-        tag: "Questrade · 2019—2026",
-        title: "10 mil contas por dia, e o time que passou a perguntar antes de decidir",
+        tag: "Questrade · 2020—2026",
+        title: "10 mil contas por dia",
         lead:
-          "A pandemia jogou uma onda de novos investidores em cima dos sistemas de abertura de conta. Ao mesmo tempo, eu era o mais novo de casa num time onde vários tinham 10 anos de empresa.",
+          "A pandemia jogou uma onda de novos investidores em cima dos sistemas de abertura de conta. Ao mesmo tempo, eu ainda era novo no time.",
         blocks: [
           {
             h: "A escala",
@@ -174,8 +173,8 @@ export const CV = {
             p: "Fui o responsável técnico pelos sistemas de afiliados e parceiros, com mais de 50 afiliados ativos. É um domínio onde o software mexe direto no dinheiro de terceiros: regra de comissionamento errada vira pagamento errado, e pagamento errado vira disputa. A integração com os sistemas internos do banco tinha que fechar sempre.",
           },
           {
-            h: "Virar referência",
-            p: "Entrei em 2019 num time de 6 desenvolvedores, vários com uma década de empresa. Depois de um ano, passei a ser a pessoa que o time procurava antes de fechar uma decisão de arquitetura, destravar um problema difícil ou aprovar um code review. Isso não veio de cargo — veio de estar certo com frequência suficiente para valer a pergunta.",
+            h: "Ganhar a confiança do time",
+            p: "Entrei no time em 2020. Com o tempo, o pessoal passou a me procurar para conversar sobre decisões de arquitetura, destravar problemas mais difíceis e revisar código. Não veio de cargo: veio do dia a dia, de ajudar sempre que dava.",
           },
         ],
       },
@@ -278,7 +277,6 @@ export const CV = {
     metrics: [
       { v: "15+", l: "years of career" },
       { v: "10k", l: "accounts/day at peak" },
-      { v: "6", l: "devs relying on me" },
       { v: "6", l: "business domains" },
     ],
 
@@ -337,13 +335,13 @@ export const CV = {
         stack: [".NET 10", "VSA", "Blazor Server", "EF Core", "PostgreSQL", "Docker", "Nginx", "GitHub Actions", "MCP", "AI Agents", "Claude Code", "LLM", "Vibe Coding"],
       },
       {
-        period: "Jun 2019 — Jan 2026",
+        period: "Jun 2020 — Jan 2026",
         role: "Senior Software Developer",
         company: "Questrade",
         client: "Canadian brokerage and digital bank",
         location: "Belo Horizonte, Brazil · team in Canada",
         context:
-          "Six and a half years in regulated finance, working on the web systems where end clients open their accounts and where the partner network gets paid. This is where I stopped being just the person who executes and became the person the team asks before deciding.",
+          "Five and a half years in regulated finance, working on the web systems where end clients open their accounts and where the partner network gets paid. This is where I stopped being just the person who executes and became the person the team asks before deciding.",
         bullets: [
           "Developed and maintained the bank's web systems in C# and .NET on top of the Sitefinity CMS, which sustained peaks of over 10,000 account openings per day during the pandemic.",
           "Within my first year I became a technical reference for the team: I took part in architecture decisions, helped work through the more complex problems and led code reviews.",
@@ -354,7 +352,7 @@ export const CV = {
         stack: ["C#", ".NET", "Sitefinity", "REST API", "SQL Server", "Jenkins", "Docker", "Git"],
       },
       {
-        period: "Jul 2018 — Jun 2019",
+        period: "Jul 2018 — Jun 2020",
         role: "Senior Software Developer / Team Lead",
         company: "Mereo",
         client: "HR management SaaS",
@@ -412,10 +410,10 @@ export const CV = {
         ],
       },
       {
-        tag: "Questrade · 2019—2026",
-        title: "10,000 accounts a day, and the team that started asking first",
+        tag: "Questrade · 2020—2026",
+        title: "10,000 accounts a day",
         lead:
-          "The pandemic threw a wave of new investors at the account opening systems. At the same time, I was the newest person on a team where several had been there for a decade.",
+          "The pandemic threw a wave of new investors at the account opening systems. At the same time, I was still new to the team.",
         blocks: [
           {
             h: "The scale",
@@ -426,8 +424,8 @@ export const CV = {
             p: "I was the technical owner of the affiliate and partner systems, covering 50+ active affiliates. It is a domain where software touches other people's money directly: a wrong commission rule becomes a wrong payment, and a wrong payment becomes a dispute. The integration with the bank's internal systems had to reconcile every time.",
           },
           {
-            h: "Becoming the reference",
-            p: "I joined in 2019 on a team of 6 developers, several with a decade at the company. After a year, I became the person the team came to before closing an architecture decision, unblocking a hard problem or signing off a code review. That did not come from a title — it came from being right often enough to be worth asking.",
+            h: "Earning the team's trust",
+            p: "I joined the team in 2020. Over time, people started coming to me to talk through architecture decisions, work through harder problems and review code. It did not come from a title: it came from day-to-day work and helping out whenever I could.",
           },
         ],
       },
