@@ -1,6 +1,8 @@
 ---
 // Seção "Comentários" (TASK-839): depoimentos aprovados no RVM.Depoimentos, no final da página.
-// Texto no idioma ORIGINAL; a tradução, se houver, vem abaixo e marcada como tradução.
+// Original SEMPRE. A tradução só aparece quando está no idioma DA PÁGINA (decisão do Rafael, 02/10/2026,
+// TASK-843): em `/`, comentário em inglês mostra o inglês e, abaixo, o português; comentário em português
+// mostra só ele. Em `/en/`, o espelho.
 import { type Locale } from "../data/i18n";
 import { depoimentos } from "../data/depoimentos";
 
@@ -25,7 +27,7 @@ const nomeIdioma = (l: string) => (l === "en" ? (isPt ? "inglês" : "English") :
       {lista.map((d) => (
         <figure class="com-card reveal">
           <blockquote class="com-texto" lang={d.idioma}>{d.texto}</blockquote>
-          {d.traducao && d.idiomaTraducao && (
+          {d.traducao && d.idiomaTraducao === lang && d.idioma !== lang && (
             <div class="com-traducao" lang={d.idiomaTraducao}>
               <span class="com-traducao-tag mono">
                 {isPt ? `tradução do ${nomeIdioma(d.idioma)}` : `translated from ${nomeIdioma(d.idioma)}`}

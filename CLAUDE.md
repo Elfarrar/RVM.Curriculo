@@ -86,7 +86,9 @@ Detalhe: `RVM.Brainstorming/ajustes/Curriculo-2026-09-30.md`. Backend: projeto *
   `GET https://depoimentos.rvmit.com.br/api/sites/curriculo/depoimentos` (publico, so aprovados).
   API fora no build → o build **nao falha** e a secao e **omitida** (sem fallback commitado — decisao dele).
 - Exibe: nome, cargo e empresa na epoca, relacao com o Rafael, LinkedIn e o texto **no idioma
-  original**; se houver traducao, ela aparece **abaixo**, marcada como traducao. Mesma lista em `/` e `/en/`.
+  original**. A traducao aparece **abaixo**, marcada, **so quando esta no idioma da pagina** (TASK-843):
+  em `/`, comentario em ingles mostra ingles + portugues; em portugues, so ele. Em `/en/`, o espelho.
+  Mesma lista em `/` e `/en/`. Sem traducao no idioma da pagina, fica so o original.
 - Aprovou no Telegram (`@Rvm_Depoimentos_bot`) → a API dispara o `deploy.yml` → no ar em ~1–2 min.
   Ninguem republica a mao.
 - ⛔ **O formulario NAO mora aqui** (o link do convite e `depoimentos.rvmit.com.br/c/{token}`).
