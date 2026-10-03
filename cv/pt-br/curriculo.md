@@ -31,7 +31,7 @@ Mais de 15 anos construindo sistemas corporativos em C# e .NET de ponta a ponta 
 **Questrade** — Programador Sênior | Belo Horizonte, MG | jun/2020 – jan/2026
 
 - Sistemas web do banco em C# e .NET sobre o CMS Sitefinity, que sustentaram picos de mais de 10 mil aberturas de conta por dia durante a pandemia.
-- Referência técnica do time de 6 desenvolvedores após 1 ano de casa: decisões de arquitetura, apoio em problemas complexos e condução de code review.
+- Referência técnica do time desde o primeiro ano: participação nas decisões de arquitetura, apoio em problemas complexos e condução de code review.
 - Responsável técnico pelos sistemas de afiliados e parceiros (50+ ativos): comissionamento, APIs REST e integrações, em setor financeiro regulado, com comunicação diária em inglês com o Canadá.
 
 **Mereo** — Programador Sênior / Líder Técnico | Belo Horizonte, MG | jul/2018 – jun/2020

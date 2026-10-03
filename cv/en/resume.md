@@ -31,7 +31,7 @@ rvmtech.com.br/en | linkedin.com/in/rafael-veneroso-morici | github.com/Elfarrar
 **Questrade** — Senior Software Developer | Belo Horizonte, Brazil | Jun 2020 – Jan 2026
 
 - The bank's web systems in C# and .NET on top of the Sitefinity CMS, which sustained peaks of over 10,000 account openings per day during the pandemic.
-- Technical reference of a 6-developer team within the first year: architecture decisions, support on complex problems and leading code reviews.
+- A technical reference for the team from the first year: took part in architecture decisions, helped with complex problems and led code reviews.
 - Technical owner of the affiliate and partner systems (50+ active): commission rules, REST APIs and integrations, in a regulated financial environment, communicating daily in English with Canada.
 
 **Mereo** — Senior Software Developer / Team Lead | Belo Horizonte, Brazil | Jul 2018 – Jun 2020

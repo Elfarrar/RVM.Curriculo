@@ -90,7 +90,7 @@ export const CV = {
         client: "corretora e banco digital canadense",
         location: "Belo Horizonte, MG · time no Canadá",
         context:
-          "Cinco anos e meio no setor financeiro regulado, mexendo nos sistemas web pelos quais o cliente final abre conta e pelos quais a rede de parceiros é remunerada. Foi onde deixei de ser só quem executa e passei a ser quem o time procura antes de decidir.",
+          "Cinco anos e meio no setor financeiro regulado, mexendo nos sistemas web pelos quais o cliente final abre conta e pelos quais a rede de parceiros é remunerada. Foi onde aprendi a olhar além da minha tarefa e a contribuir nas decisões do time.",
         bullets: [
           "Desenvolvimento e sustentação dos sistemas web do banco em C# e .NET sobre o CMS Sitefinity, que sustentaram picos de mais de 10 mil aberturas de conta por dia durante a pandemia.",
           "Já no primeiro ano passei a ser uma referência técnica para o time: participava das decisões de arquitetura, ajudava a destravar problemas mais complexos e conduzia code reviews.",
@@ -341,7 +341,7 @@ export const CV = {
         client: "Canadian brokerage and digital bank",
         location: "Belo Horizonte, Brazil · team in Canada",
         context:
-          "Five and a half years in regulated finance, working on the web systems where end clients open their accounts and where the partner network gets paid. This is where I stopped being just the person who executes and became the person the team asks before deciding.",
+          "Five and a half years in regulated finance, working on the web systems where end clients open their accounts and where the partner network gets paid. This is where I learned to look beyond my own tasks and contribute to the team's decisions.",
         bullets: [
           "Developed and maintained the bank's web systems in C# and .NET on top of the Sitefinity CMS, which sustained peaks of over 10,000 account openings per day during the pandemic.",
           "Within my first year I became a technical reference for the team: I took part in architecture decisions, helped work through the more complex problems and led code reviews.",
