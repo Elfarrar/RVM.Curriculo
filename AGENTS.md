@@ -80,7 +80,7 @@ disparo construia o site sem publicar.
 
 Depoimentos de ex-colegas (ex.: Bruno, da EMC), **no final da pagina**, titulo "Comentários".
 Detalhe: `RVM.Brainstorming/ajustes/Curriculo-2026-09-30.md`. Backend: projeto **`RVM.Depoimentos`**
-(`C:\IA\RVM.Depoimentos`).
+(`~/ia/RVM.Depoimentos`).
 
 - **O site continua estatico, sem backend e sem segredo.** No build, o Astro le
   `GET https://depoimentos.rvmit.com.br/api/sites/curriculo/depoimentos` (publico, so aprovados).
