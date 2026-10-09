@@ -1,0 +1,179 @@
+---
+import { type Locale } from "../data/i18n";
+
+// Página do Binder no portfólio (TASK-270): o Binder é projeto de portfólio da RVMTECH desde 09/10/2026 (ADR-012 do
+// RVM.Binder). O app roda em binder.rvmtech.com.br; esta página só apresenta — o GitHub Pages não roda o app.
+interface Props { lang: Locale; }
+const { lang } = Astro.props;
+const isPt = lang === "pt";
+const app = "https://binder.rvmtech.com.br";
+
+const recursos = isPt
+  ? [
+      ["Catálogo dos três jogos", "Pokémon, Magic: The Gathering e Yu-Gi-Oh! no mesmo lugar — mais de 166 mil cartas, com imagem, coleção e número de cada impressão, atualizadas sozinhas a partir das bases públicas de cada jogo."],
+      ["Busca pela foto", "Aponte o celular para a carta: o app lê o nome e o número com OCR (Tesseract) e mostra a carta para confirmar."],
+      ["Valor em R$, US$ e €", "Quanto a coleção vale, por jogo e no total, pelo preço de referência do TCGplayer e do Cardmarket convertido pela PTAX do Banco Central — com o gráfico de 30 e 90 dias."],
+      ["Nomes em português", "As cartas de Pokémon aparecem com o nome em português e o original de apoio, e a busca acha pelos dois."],
+      ["CSV de outros apps", "Importe a coleção do Moxfield, do ManaBox ou do Deckbox sem mudar nada no arquivo, com prévia linha a linha antes de gravar."],
+      ["Decks e lista de desejos", "Monte o deck a partir da coleção, veja o que falta e quanto custa, e mande o que falta para a lista de desejos com um clique."],
+    ]
+  : [
+      ["Three games, one catalog", "Pokémon, Magic: The Gathering and Yu-Gi-Oh! together — over 166k cards with image, set and number for every printing, kept up to date from each game's public sources."],
+      ["Search by photo", "Point the phone at the card: the app reads the name and number with OCR (Tesseract) and shows the card to confirm."],
+      ["Value in BRL, USD and EUR", "What the collection is worth, per game and in total, from TCGplayer and Cardmarket reference prices converted with the Brazilian Central Bank PTAX rate — with a 30/90-day chart."],
+      ["Portuguese card names", "Pokémon cards show the Portuguese name with the original below it, and search matches both."],
+      ["CSV from other apps", "Import a collection exported from Moxfield, ManaBox or Deckbox as is, with a line-by-line preview before saving."],
+      ["Decks and wishlist", "Build a deck from the collection, see what is missing and what it costs, and send the missing cards to the wishlist in one click."],
+    ];
+
+const feito = isPt
+  ? [
+      ["Arquitetura", ".NET 10 com Vertical Slice Architecture (sem MediatR), domínio rico, Blazor Server falando com a API por HTTP — a mesma API serve um futuro app mobile."],
+      ["Dados", "PostgreSQL com EF Core, isolamento por dono via filtro global, busca por trigramas (pg_trgm) e histórico diário de preços."],
+      ["SDK público", "O catálogo de Pokémon vem pelo RVM.TcgDex, um SDK C# open source (MIT) da API TCGdex, publicado no nuget.org."],
+      ["Conta e segurança", "Identity + OpenIddict, verificação em duas etapas, e-mail de confirmação e de senha nova, exportação e exclusão da conta (LGPD)."],
+      ["Qualidade", "500+ testes de integração com Postgres real (Testcontainers), E2E com Playwright em paralelo, revisão de código e de tela em cada entrega."],
+      ["Entrega", "GitHub Actions com workflows reutilizáveis, ambientes dev/stg/prd, deploy em Docker numa VPS, borda Caddy com TLS automático, backup cifrado e monitoramento."],
+    ]
+  : [
+      ["Architecture", ".NET 10 with Vertical Slice Architecture (no MediatR), a rich domain, Blazor Server talking to the API over HTTP — the same API will serve a mobile app."],
+      ["Data", "PostgreSQL with EF Core, per-owner isolation through global filters, trigram search (pg_trgm) and a daily price history."],
+      ["Public SDK", "Pokémon data comes through RVM.TcgDex, an open-source (MIT) C# SDK for the TCGdex API, published on nuget.org."],
+      ["Accounts and security", "Identity + OpenIddict, two-factor authentication, confirmation and password-reset e-mails, account export and deletion (LGPD)."],
+      ["Quality", "500+ integration tests against a real Postgres (Testcontainers), parallel Playwright E2E, code and UI review on every delivery."],
+      ["Delivery", "GitHub Actions with reusable workflows, dev/stg/prd environments, Docker deploys on a VPS, Caddy edge with automatic TLS, encrypted backups and monitoring."],
+    ];
+---
+
+<section class="binder">
+  <header class="binder-header">
+    <span class="tag mono">/ {isPt ? "portfólio" : "portfolio"}</span>
+    <h1 class="binder-title display">
+      Binder<br/>
+      <span class="mix-italic">{isPt ? "sua coleção de cartas, num lugar só." : "your card collection, in one place."}</span>
+    </h1>
+    <p class="binder-lead">
+      {isPt
+        ? "Catálogo, coleção e valor de cartas de Pokémon, Magic e Yu-Gi-Oh. Gratuito, no ar, feito do zero — da API ao deploy."
+        : "Catalog, collection and value for Pokémon, Magic and Yu-Gi-Oh cards. Free, live, built from scratch — from the API to the deploy."}
+    </p>
+    <div class="binder-acoes">
+      <a href={app} class="btn btn-primary" target="_blank" rel="noopener">{isPt ? "Abrir o app" : "Open the app"}</a>
+      <a href="https://github.com/Elfarrar/RVM.TcgDex" class="btn btn-ghost" target="_blank" rel="noopener">{isPt ? "SDK no GitHub" : "SDK on GitHub"}</a>
+    </div>
+  </header>
+
+  <figure class="binder-tela">
+    <img src="/portfolio/binder/inicio.jpg" width="1280" height="860" loading="eager"
+         alt={isPt ? "Tela inicial do Binder com uma bricolagem de cartas dos três jogos" : "Binder home screen with a collage of cards from the three games"} />
+  </figure>
+
+  <h2 class="binder-h2 display">{isPt ? "O que faz" : "What it does"}</h2>
+  <div class="binder-grade">
+    {recursos.map(([t, p]) => (
+      <article class="binder-item">
+        <h3 class="binder-h3">{t}</h3>
+        <p>{p}</p>
+      </article>
+    ))}
+  </div>
+
+  <h2 class="binder-h2 display">{isPt ? "Como foi feito" : "How it was built"}</h2>
+  <div class="binder-grade">
+    {feito.map(([t, p]) => (
+      <article class="binder-item">
+        <h3 class="binder-h3 mono">{t}</h3>
+        <p>{p}</p>
+      </article>
+    ))}
+  </div>
+
+  <p class="binder-rodape">
+    {isPt
+      ? "Dado de carta e preço vêm de bases públicas (TCGdex, Scryfall, YGOPRODeck, TCGplayer, Cardmarket) e são sempre gratuitos. Pokémon, Magic: The Gathering e Yu-Gi-Oh! são marcas de seus donos; o Binder não é afiliado a eles."
+      : "Card and price data come from public sources (TCGdex, Scryfall, YGOPRODeck, TCGplayer, Cardmarket) and are always free. Pokémon, Magic: The Gathering and Yu-Gi-Oh! are trademarks of their owners; Binder is not affiliated with them."}
+  </p>
+</section>
+
+<style>
+  .binder {
+    max-width: 1100px;
+    margin: 8rem auto 6rem;
+    padding: 0 1.5rem;
+  }
+
+  .binder-header { max-width: 760px; }
+
+  .binder-title {
+    font-size: clamp(2.25rem, 6vw, 4rem);
+    line-height: 1.0;
+    margin: 1.25rem 0 1.25rem;
+    text-wrap: balance;
+  }
+
+  .binder-lead {
+    color: var(--color-text-muted);
+    font-size: 1.125rem;
+    line-height: 1.6;
+    max-width: 60ch;
+  }
+
+  .binder-acoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 2rem;
+  }
+
+  .binder-tela {
+    margin: 3.5rem 0 0;
+    border: 1px solid var(--color-border);
+    border-radius: 1rem;
+    overflow: hidden;
+    background: var(--color-bg-elev);
+  }
+
+  .binder-tela img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .binder-h2 {
+    font-size: clamp(1.5rem, 3.5vw, 2.25rem);
+    margin: 5rem 0 1.75rem;
+  }
+
+  .binder-grade {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+    gap: 1.25rem;
+  }
+
+  .binder-item {
+    min-width: 0;
+    padding: 1.25rem 1.375rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.875rem;
+    background: var(--color-bg-elev);
+  }
+
+  .binder-h3 {
+    font-size: 1rem;
+    color: var(--color-accent);
+    margin: 0 0 0.5rem;
+  }
+
+  .binder-item p {
+    margin: 0;
+    color: var(--color-text-muted);
+    line-height: 1.55;
+  }
+
+  .binder-rodape {
+    margin-top: 4rem;
+    font-size: 0.8125rem;
+    color: var(--color-text-subtle);
+    max-width: 75ch;
+  }
+</style>
