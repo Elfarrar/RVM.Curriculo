@@ -41,10 +41,11 @@ export const CV = {
         bullets: [
           "Desenvolvimento full stack do sistema para dentistas em C# e .NET no backend e TypeScript com Next.js no front-end.",
           "Banco de dados SQL Server e serviços na AWS (Amazon Web Services).",
-          "Engenharia de harness para agentes de IA (Claude Code): o ambiente, as regras e as ferramentas com que os agentes conduzem o processo inteiro — do código ao CI —, com o engenheiro no julgamento e na revisão.",
+          "Trabalho com o harness de agentes de IA (Claude Code) do time: o ambiente, as regras e as ferramentas com que os agentes conduzem o processo inteiro — do código ao CI —, com o engenheiro no julgamento e na revisão.",
+          "Melhorei a skill que grava os testes E2E: o vídeo agora destaca o campo em que o teste está agindo e narra cada passo.",
           "Ambiente de desenvolvimento em WSL.",
         ],
-        stack: [".NET", "C#", "TypeScript", "Next.js", "SQL Server", "AWS", "Claude Code", "Harness engineering", "WSL"],
+        stack: [".NET", "C#", "TypeScript", "Next.js", "SQL Server", "AWS", "Claude Code", "WSL"],
       },
       {
         period: "jun/2026 — ago/2026",
@@ -292,10 +293,11 @@ export const CV = {
         bullets: [
           "Full stack development of the dental practice system in C# and .NET on the back end and TypeScript with Next.js on the front end.",
           "SQL Server database and services on AWS (Amazon Web Services).",
-          "Harness engineering for AI agents (Claude Code): the environment, rules and tools through which the agents drive the whole process — from code to CI —, with the engineer owning judgment and review.",
+          "Working with the team's AI agent harness (Claude Code): the environment, rules and tools through which the agents drive the whole process — from code to CI —, with the engineer owning judgment and review.",
+          "Improved the skill that records the E2E tests: the video now highlights the field the test is acting on and narrates each step.",
           "Development environment on WSL.",
         ],
-        stack: [".NET", "C#", "TypeScript", "Next.js", "SQL Server", "AWS", "Claude Code", "Harness engineering", "WSL"],
+        stack: [".NET", "C#", "TypeScript", "Next.js", "SQL Server", "AWS", "Claude Code", "WSL"],
       },
       {
         period: "Jun 2026 — Aug 2026",

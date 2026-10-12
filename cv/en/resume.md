@@ -20,7 +20,7 @@ rvmtech.com.br/en | linkedin.com/in/rafael-veneroso-morici | github.com/Elfarrar
 
 **Marlabs** — Senior Software Engineer | remote | Jun 2026 – Present
 
-- Client Practice Tek (Sep 2026 – Present), healthcare software: system for dental clinics in C#, .NET, TypeScript and Next.js, with SQL Server and AWS; harness engineering for AI agents (Claude Code) that automates the whole process, from code to CI.
+- Client Practice Tek (Sep 2026 – Present), healthcare software: system for dental clinics in C#, .NET, TypeScript and Next.js, with SQL Server and AWS, in a process driven by AI agents (Claude Code); improved the skill that records the E2E tests, which now highlights the field under test and narrates each step.
 - Client UL Solutions (Jun – Aug 2026): new carbon emission calculation platform in C# and .NET, replacing the legacy system; six AI skills (Claude Code) that generate entities, repositories, controllers and tests from the model and validate it against the SQL scripts.
 
 **Independent Projects — RVM Ecosystem** — Software Engineer | Feb 2026 – Jun 2026
