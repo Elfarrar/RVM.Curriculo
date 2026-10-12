@@ -20,7 +20,7 @@ Mais de 15 anos construindo sistemas corporativos em C# e .NET de ponta a ponta 
 
 **Marlabs** — Engenheiro de Software Sênior | remoto | jun/2026 – atual
 
-- Cliente Practice Tek (set/2026 – atual), software de saúde: sistema para clínicas odontológicas em C#, .NET, TypeScript e Next.js, com SQL Server e AWS; engenharia de harness para agentes de IA (Claude Code) que automatiza o processo inteiro, do código ao CI.
+- Cliente Practice Tek (set/2026 – atual), software de saúde: sistema para clínicas odontológicas em C#, .NET, TypeScript e Next.js, com SQL Server e AWS, num processo conduzido por agentes de IA (Claude Code); melhorei a skill que grava os testes E2E, que agora destaca o campo em teste e narra cada passo.
 - Cliente UL Solutions (jun – ago/2026): nova plataforma de cálculo de emissão de carbono em C# e .NET, substituindo o legado; seis skills de IA (Claude Code) que geram entidades, repositórios, controllers e testes a partir do modelo e o validam contra os scripts SQL.
 
 **Projetos Independentes — Ecossistema RVM** — Desenvolvedor de Software | fev/2026 – jun/2026

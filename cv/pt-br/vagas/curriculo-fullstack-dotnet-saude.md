@@ -23,7 +23,7 @@ Mais de 15 anos em desenvolvimento full stack com C#, .NET Framework e .NET Core
 **Marlabs** — Engenheiro de Software Sênior | remoto | jun/2026 – atual
 
 - Cliente Practice Tek (set/2026 – atual), software de saúde: desenvolvimento full stack do sistema para clínicas odontológicas em C#, .NET, TypeScript e Next.js, com SQL Server e AWS.
-- Engenharia de harness para agentes de IA (Claude Code), que automatiza o processo inteiro — do código e dos testes até o CI —, com o engenheiro no julgamento e na revisão.
+- Trabalho num processo conduzido por agentes de IA (Claude Code); melhorei a skill que grava os testes E2E, que agora destaca o campo em teste e narra cada passo.
 - Cliente UL Solutions (jun – ago/2026): modernização do legado de cálculo de emissão de carbono numa nova plataforma em C# e .NET com APIs REST; seis skills de IA que geram entidades, repositórios, controllers e testes unitários a partir do modelo e o validam contra os scripts SQL.
 
 **Projetos Independentes — Ecossistema RVM** — Desenvolvedor de Software | fev/2026 – jun/2026
