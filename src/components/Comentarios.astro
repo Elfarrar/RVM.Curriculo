@@ -67,14 +67,15 @@ const nomeIdioma = (l: string) => (l === "en" ? (isPt ? "inglês" : "English") :
     margin: 1.25rem 0 0;
   }
 
+  /* Colunas em vez de grid: cada card tem a altura do próprio texto (no grid, a linha esticava o menor). */
   .com-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
+    columns: 2;
+    column-gap: 1.5rem;
   }
 
   .com-card {
-    margin: 0;
+    margin: 0 0 1.5rem;
+    break-inside: avoid;
     padding: 2rem 2.25rem;
     border-radius: 20px;
     display: flex;
@@ -133,7 +134,7 @@ const nomeIdioma = (l: string) => (l === "en" ? (isPt ? "inglês" : "English") :
   .com-relacao { color: var(--color-text-subtle); font-size: 0.8125rem; }
 
   @media (max-width: 900px) {
-    .com-grid { grid-template-columns: 1fr; }
+    .com-grid { columns: 1; }
     .com-card { padding: 1.5rem; }
   }
 </style>
