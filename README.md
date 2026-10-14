@@ -28,7 +28,7 @@ public/cv/               # PDFs servidos para download (gerados, versionados)
 2. `python cv/build.py` — gera os `.docx` e `.pdf` e copia os PDFs para `public/cv/`. No WSL, rode com o
    Python do Windows apontando para `\\wsl$\...` (o PDF sai pelo Word via COM).
 3. Refletir a mudança em `src/data/cv-raw.js` (o site tem o texto expandido, não é o mesmo texto).
-4. `npm run dev` para revisar, commit numa branch `task-NNN` e PR para `master`. O merge publica sozinho e
+4. `npm run dev` para revisar, commit numa branch `task-NNN` e PR para `prd` na forja. O merge publica sozinho (pelo espelho) e
    exige o aprovado do Rafael.
 
 > **Duas fontes por decisão:** o PDF é enxuto e otimizado para ATS; o site é a versão longa, com
@@ -48,7 +48,7 @@ public/cv/               # PDFs servidos para download (gerados, versionados)
 
 ## Deploy
 
-Push em `master` → GitHub Actions (`.github/workflows/deploy.yml`) → GitHub Pages →
+Merge na `prd` da forja → espelho para o GitHub (até 15 min) → GitHub Actions (`.github/workflows/deploy.yml`) → GitHub Pages →
 `rvmtech.com.br`. O `CNAME` mora em `public/CNAME` para sair na raiz do `dist/`.
 
 O `workflow_dispatch` também publica: é o RVM.Depoimentos que dispara quando um comentário é aprovado.

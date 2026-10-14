@@ -35,8 +35,10 @@ tem que bater nos dois. Mudou um, muda o outro na mesma task.
   da timeline) e azul do VS Code `#007ACC` como apoio (titulos em italico, linha da timeline).
   Escolha do Rafael em 01/09/2026. Cores **so** via tokens em `src/styles/global.css`; nao cravar
   `oklch()` em componente.
-- **Branch:** `task-NNN` a partir de `master`. Sem `dev` (site estatico, baixo risco).
-  Merge em `master` publica — exige sinal verde explicito do Rafael, como todo `master` do ecossistema.
+- **Repo na forja** (`forja:Elfarrar/RVM.Curriculo.git`) desde 14/10/2026; o GitHub publico `Elfarrar/RVM.Curriculo`
+  recebe so a `prd` pelo espelho (`/opt/espelhar-prd.sh`, 15 min) e e quem publica no Pages. Nada se empurra la direto.
+- **Branch:** `task-NNN` a partir de `prd`. Sem `dev`/`stg` (site estatico, baixo risco).
+  Merge em `prd` publica — exige sinal verde explicito do Rafael, como toda `prd` do ecossistema.
 - **PDFs sao versionados** em `public/cv/`. Regerar com `python cv/build.py` sempre que os `.md`
   mudarem; o script copia sozinho.
 
@@ -69,7 +71,8 @@ python cv/build.py         # regenera DOCX/PDF e publica em public/cv/
 
 ## Deploy
 
-Push em `master` -> `.github/workflows/deploy.yml` -> build Astro -> `actions/deploy-pages@v4`.
+Merge na `prd` da forja (o CI de la so confere o build) -> espelho leva a `prd` ao GitHub em ate 15 min ->
+`.github/workflows/deploy.yml` no GitHub -> build Astro -> `actions/deploy-pages@v4`.
 DNS: `rvmtech.com.br` -> `elfarrar.github.io` (Hostinger). `CNAME` em `public/CNAME`.
 
 **`workflow_dispatch` publica** (TASK-839): e o **RVM.Depoimentos** que dispara quando o Rafael aprova um

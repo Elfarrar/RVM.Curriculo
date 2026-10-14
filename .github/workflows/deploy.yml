@@ -3,10 +3,10 @@ name: Deploy CV to GitHub Pages
 on:
   push:
     branches:
-      - master
+      - prd
   pull_request:
     branches:
-      - master
+      - prd
   workflow_dispatch:
 
 permissions:
@@ -38,7 +38,10 @@ jobs:
       - name: Build
         run: npm run build
 
+      # Na forja (origem desde 14/10/2026) o job so confere o build; o Pages so existe no GitHub, que recebe a
+      # prd pelo espelho (/opt/espelhar-prd.sh) e publica a partir desse push.
       - name: Upload Pages Artifact
+        if: github.server_url == 'https://github.com'
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
@@ -48,7 +51,7 @@ jobs:
     needs: build
     # workflow_dispatch = o RVM.Depoimentos republicando apos uma aprovacao (TASK-839). Sem ele aqui, o
     # disparo construia o site e NAO publicava.
-    if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/master'
+    if: github.server_url == 'https://github.com' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/prd'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
