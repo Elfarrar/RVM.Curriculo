@@ -10,6 +10,10 @@ name: Deploy MinasTirith
 on:
   push:
     branches: [prd]
+  # Na forja, .gitea/workflows tem precedencia sobre .github/workflows: sem isto o PR ficaria sem CI.
+  # No PR so roda o job `build` (confere o build); o `deploy` so em push na prd / disparo manual.
+  pull_request:
+    branches: [prd]
   workflow_dispatch:
 
 concurrency:
@@ -20,10 +24,9 @@ env:
   DEPLOY_PATH: /opt/nginx/manager/rvmtech
 
 jobs:
-  deploy:
-    name: Build + Publish
+  build:
+    name: Build Astro
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/prd'
     steps:
       - uses: actions/checkout@v4
 
@@ -36,6 +39,25 @@ jobs:
         run: |
           npm ci
           npm run build
+
+      - name: Upload dist
+        if: github.event_name != 'pull_request'
+        uses: actions/upload-artifact@v3
+        with:
+          name: dist
+          path: dist
+
+  deploy:
+    name: Publish
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/prd'
+    steps:
+      - name: Download dist
+        uses: actions/download-artifact@v3
+        with:
+          name: dist
+          path: dist
 
       - name: Configure SSH
         env:
