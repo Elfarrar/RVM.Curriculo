@@ -1,0 +1,84 @@
+name: Deploy MinasTirith
+
+# Publica o site estatico (rvmtech.com.br) no MinasTirith: build Astro -> backup -> rsync --delete -> verificacao.
+# Segunda forma de publicacao; o GitHub Pages (.github/workflows/deploy.yml) segue ligado ate a virada do DNS.
+# Padrao: deploy-landing.yml do RVM.Anotaria (runner empurra por SSH).
+#
+# Secrets do repo (valores nunca em arquivo): MINASTIRITH_HOST, MINASTIRITH_PORT, MINASTIRITH_USER,
+# MINASTIRITH_SSH_KEY_B64 (chave privada em base64).
+
+on:
+  push:
+    branches: [prd]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-minastirith
+  cancel-in-progress: false
+
+env:
+  DEPLOY_PATH: /opt/nginx/manager/rvmtech
+
+jobs:
+  deploy:
+    name: Build + Publish
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/prd'
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - name: Build
+        run: |
+          npm ci
+          npm run build
+
+      - name: Configure SSH
+        env:
+          SSH_KEY_B64: ${{ secrets.MINASTIRITH_SSH_KEY_B64 }}
+          HOST: ${{ secrets.MINASTIRITH_HOST }}
+          PORT: ${{ secrets.MINASTIRITH_PORT }}
+        run: |
+          install -m 700 -d ~/.ssh
+          printf '%s' "$SSH_KEY_B64" | tr -d '\r\n' | base64 -d > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keygen -y -f ~/.ssh/id_ed25519 > /dev/null
+          for i in 1 2 3; do
+            if ssh-keyscan -T 10 -p "${PORT:-22}" -H "$HOST" > keyscan.out 2>/dev/null && [ -s keyscan.out ]; then
+              cat keyscan.out >> ~/.ssh/known_hosts; rm -f keyscan.out; exit 0
+            fi
+            sleep 5
+          done
+          echo "::error::ssh-keyscan falhou 3x"; exit 1
+
+      - name: Backup do que esta publicado
+        env:
+          HOST: ${{ secrets.MINASTIRITH_HOST }}
+          PORT: ${{ secrets.MINASTIRITH_PORT }}
+          USER_: ${{ secrets.MINASTIRITH_USER }}
+        run: |
+          ssh -i ~/.ssh/id_ed25519 -p "${PORT:-22}" -o StrictHostKeyChecking=yes "${USER_}@${HOST}" \
+            "mkdir -p '${DEPLOY_PATH}' && tar -czf '${DEPLOY_PATH}.bak.tgz' -C \"\$(dirname '${DEPLOY_PATH}')\" \"\$(basename '${DEPLOY_PATH}')\" && ls -lh '${DEPLOY_PATH}.bak.tgz'"
+
+      - name: Publish (rsync --delete)
+        env:
+          HOST: ${{ secrets.MINASTIRITH_HOST }}
+          PORT: ${{ secrets.MINASTIRITH_PORT }}
+          USER_: ${{ secrets.MINASTIRITH_USER }}
+        run: |
+          rsync -a --delete \
+            -e "ssh -i ~/.ssh/id_ed25519 -p ${PORT:-22} -o StrictHostKeyChecking=yes" \
+            dist/ "${USER_}@${HOST}:${DEPLOY_PATH}/"
+
+      - name: Verify (no servidor)
+        env:
+          HOST: ${{ secrets.MINASTIRITH_HOST }}
+          PORT: ${{ secrets.MINASTIRITH_PORT }}
+          USER_: ${{ secrets.MINASTIRITH_USER }}
+        run: |
+          ssh -i ~/.ssh/id_ed25519 -p "${PORT:-22}" -o StrictHostKeyChecking=yes "${USER_}@${HOST}" \
+            "cd '${DEPLOY_PATH}' && for f in index.html artigos/ia-salvou-meu-trabalho/index.html en/articles/ai-saved-my-career/index.html; do test -f \"\$f\" || { echo \"FALTA: \$f\"; exit 1; }; done; echo 'verificacao ok'"

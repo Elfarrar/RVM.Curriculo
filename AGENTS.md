@@ -75,6 +75,13 @@ Merge na `prd` da forja (o CI de la so confere o build) -> espelho leva a `prd` 
 `.github/workflows/deploy.yml` no GitHub -> build Astro -> `actions/deploy-pages@v4`.
 DNS: `rvmtech.com.br` -> `elfarrar.github.io` (Hostinger). `CNAME` em `public/CNAME`.
 
+**Segunda via — MinasTirith (Issue #4):** `.gitea/workflows/deploy-minastirith.yml` roda na forja a cada push na `prd`
+(e por `workflow_dispatch`): build Astro -> backup (`/opt/nginx/manager/rvmtech.bak.tgz`) -> `rsync -a --delete dist/` para
+`/opt/nginx/manager/rvmtech` (Caddy serve como `/var/www/manager/rvmtech`) -> verificacao no servidor (`index.html` e os
+dois artigos). Secrets do repo na forja: `MINASTIRITH_HOST`, `MINASTIRITH_PORT`, `MINASTIRITH_USER`,
+`MINASTIRITH_SSH_KEY_B64`. O GitHub Pages segue ligado **ate a virada do DNS**. A primeira publicacao e escrita em
+servidor de producao: so com aprovacao do Rafael.
+
 **`workflow_dispatch` publica** (TASK-839): e o **RVM.Depoimentos** que dispara quando o Rafael aprova um
 comentario. ⚠️ O job `deploy` precisa aceitar `workflow_dispatch` no `if` — antes so `push` publicava, e o
 disparo construia o site sem publicar.
