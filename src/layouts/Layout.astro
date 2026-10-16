@@ -13,6 +13,8 @@ interface Props {
   ogImage?: string;
   canonical?: string;
   lang?: Locale;
+  ogType?: "website" | "article";
+  alternates?: { pt: string; en: string };
 }
 
 const {
@@ -21,6 +23,8 @@ const {
   ogImage = "/og/default.png",
   canonical = Astro.url.href,
   lang = "pt",
+  ogType = "website",
+  alternates = { pt: "https://rvmtech.com.br/", en: "https://rvmtech.com.br/en/" },
 } = Astro.props;
 ---
 
@@ -38,7 +42,7 @@ const {
     <link rel="canonical" href={canonical} />
 
     <!-- Open Graph -->
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={ogType} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
@@ -46,9 +50,9 @@ const {
     <meta property="og:locale" content={lang === "pt" ? "pt_BR" : "en_US"} />
 
     <!-- Alternate languages -->
-    <link rel="alternate" hreflang="pt-BR" href="https://rvmtech.com.br/" />
-    <link rel="alternate" hreflang="en" href="https://rvmtech.com.br/en/" />
-    <link rel="alternate" hreflang="x-default" href="https://rvmtech.com.br/" />
+    <link rel="alternate" hreflang="pt-BR" href={alternates.pt} />
+    <link rel="alternate" hreflang="en" href={alternates.en} />
+    <link rel="alternate" hreflang="x-default" href={alternates.pt} />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -72,7 +76,7 @@ const {
     <AuroraOrbs />
     <NoiseGrain />
 
-    <Nav lang={lang} transition:persist />
+    <Nav lang={lang} alternates={alternates} />
 
     <main>
       <slot />

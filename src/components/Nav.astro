@@ -1,8 +1,11 @@
 ---
 import { tr, type Locale } from "../data/i18n";
 
-interface Props { lang: Locale; }
-const { lang } = Astro.props;
+interface Props { lang: Locale; alternates?: { pt: string; en: string }; }
+const { lang, alternates } = Astro.props;
+const toPath = (u: string) => new URL(u).pathname;
+const ptHref = alternates ? toPath(alternates.pt) : "/";
+const enHref = alternates ? toPath(alternates.en) : "/en/";
 
 const base = lang === "en" ? "/en" : "";
 const links = [
@@ -11,6 +14,7 @@ const links = [
   { href: `${base}/#cases`,       label: tr(lang, "nav.cases") },
   { href: `${base}/#credentials`, label: tr(lang, "nav.credentials") },
   { href: `${base}/#contact`,     label: tr(lang, "nav.contact") },
+  { href: lang === "en" ? "/en/articles/" : "/artigos/", label: tr(lang, "nav.articles") },
 ];
 ---
 
@@ -27,8 +31,8 @@ const links = [
   </div>
 
   <div class="lang-switch" role="group" aria-label="Language">
-    <a href="/" class={`lang-btn ${lang === "pt" ? "active" : ""}`}>PT</a>
-    <a href="/en/" class={`lang-btn ${lang === "en" ? "active" : ""}`}>EN</a>
+    <a href={ptHref} class={`lang-btn ${lang === "pt" ? "active" : ""}`}>PT</a>
+    <a href={enHref} class={`lang-btn ${lang === "en" ? "active" : ""}`}>EN</a>
   </div>
 </nav>
 

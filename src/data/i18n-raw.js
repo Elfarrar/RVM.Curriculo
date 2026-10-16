@@ -8,6 +8,7 @@ export const LANG = {
     'nav.cases': 'Casos',
     'nav.credentials': 'Credenciais',
     'nav.contact': 'Contato',
+    'nav.articles': 'Artigos',
 
     // Hero
     'hero.label': 'Disponível para trabalho remoto',
@@ -54,6 +55,14 @@ export const LANG = {
     'contact.title': 'Contato',
     'contact.subtitle': 'Vamos conversar?',
     'contact.phone': 'Telefone',
+
+    // Artigos
+    'articles.title': 'Artigos',
+    'articles.lead': 'Textos sobre o meu trabalho com IA e software.',
+    'articles.meta': 'Artigos | Rafael Veneroso Morici',
+    'articles.back': '← Todos os artigos',
+    'articles.read': 'min de leitura',
+    'articles.empty': 'Nenhum artigo publicado ainda.',
   },
 
   en: {
@@ -64,6 +73,7 @@ export const LANG = {
     'nav.cases': 'Cases',
     'nav.credentials': 'Credentials',
     'nav.contact': 'Contact',
+    'nav.articles': 'Articles',
 
     // Hero
     'hero.label': 'Available for remote work',
@@ -110,6 +120,14 @@ export const LANG = {
     'contact.title': 'Contact',
     'contact.subtitle': 'Let\'s talk?',
     'contact.phone': 'Phone',
+
+    // Articles
+    'articles.title': 'Articles',
+    'articles.lead': 'Writing about my work with AI and software.',
+    'articles.meta': 'Articles | Rafael Veneroso Morici',
+    'articles.back': '← All articles',
+    'articles.read': 'min read',
+    'articles.empty': 'No articles published yet.',
   }
 };
 

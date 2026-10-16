@@ -1,0 +1,15 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import ArtigoCorpo from "../../../components/ArtigoCorpo.astro";
+import { publicados, slugOf, alternatesOf } from "../../../lib/artigos";
+
+export async function getStaticPaths() {
+  return (await publicados("en")).map((artigo) => ({ params: { slug: slugOf(artigo) }, props: { artigo } }));
+}
+const { artigo } = Astro.props;
+const alternates = await alternatesOf(artigo);
+---
+
+<Layout lang="en" title={`${artigo.data.title} | Rafael Veneroso Morici`} description={artigo.data.description} ogType="article" canonical={alternates.en} alternates={alternates}>
+  <ArtigoCorpo lang="en" artigo={artigo} />
+</Layout>

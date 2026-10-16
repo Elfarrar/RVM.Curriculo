@@ -1,0 +1,11 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ArtigoLista from "../../components/ArtigoLista.astro";
+import { tr } from "../../data/i18n";
+import { listAlternates } from "../../lib/artigos";
+const alternates = listAlternates();
+---
+
+<Layout lang="pt" title={tr("pt", "articles.meta")} description={tr("pt", "articles.lead")} canonical={alternates.pt} alternates={alternates}>
+  <ArtigoLista lang="pt" />
+</Layout>

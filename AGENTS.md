@@ -102,6 +102,20 @@ Detalhe: `RVM.Brainstorming/ajustes/Curriculo-2026-09-30.md`. Backend: projeto *
 - Enquanto a prd do RVM.Depoimentos nao existe, o build de producao omite a secao (API fora = sem secao).
 - PDF/DOCX nao mudam: comentario e so do site.
 
+## Artigos (TASK #2, 16/10/2026)
+
+Seção bilíngue: `/artigos/` e `/artigos/<slug>` (PT), `/en/articles/` e `/en/articles/<slug>` (EN). Série
+"Construindo o ecossistema RVM"; fontes dos textos em `RVM.Brainstorming/artigos/`.
+
+- **Conteúdo:** `src/content/artigos/{pt,en}/<slug>.md` (coleção Astro, `src/content.config.ts`).
+- **Schema:** `title`, `description` (vira meta description), `date`, `series` (opcional), `translationKey`
+  (liga PT e EN; os slugs são diferentes), `draft` (padrão `false`).
+- **`draft: true`** não gera página nem entra na lista. Hoje o artigo 01 (`ecossistema-rvm` / `rvm-ecosystem`) é rascunho.
+- **Publicar um novo:** criar os dois `.md` com o mesmo `translationKey`, `date` = dia do merge na `prd`, sem `draft`.
+  O `# título` do texto não vai no corpo (a página já mostra o `title`). O botão PT/EN leva ao par pelo `translationKey`.
+- Código: `src/lib/artigos.ts`, `ArtigoLista.astro`, `ArtigoCorpo.astro`, páginas em `src/pages/artigos` e `src/pages/en/articles`.
+  `Layout.astro` aceita `ogType` e `alternates` (hreflang/canonical por página).
+
 ## Segredos
 
 Nenhum. Site estatico, sem backend, sem `.env`. O deploy usa o token do proprio GitHub Actions.
