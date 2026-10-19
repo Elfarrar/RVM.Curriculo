@@ -1,5 +1,5 @@
 ---
-import { type Locale } from "../data/i18n";
+import { tr, type Locale } from "../data/i18n";
 import { cv } from "../data/cv";
 
 interface Props { lang: Locale; }
@@ -20,6 +20,7 @@ const isPt = lang === "pt";
         ? "Currículo lista o que a pessoa fez. Estas três histórias explicam como — e o que estava em jogo quando deu certo."
         : "A résumé lists what someone did. These three stories explain how — and what was at stake when it worked."}
     </p>
+    <a href={isPt ? "/portfolio/" : "/en/portfolio/"} class="cases-portfolio mono">{tr(lang, "portfolio.home")}</a>
   </header>
 
   <div class="cases-list">
@@ -47,6 +48,8 @@ const isPt = lang === "pt";
 </section>
 
 <style>
+  .cases-portfolio { display: inline-block; margin-top: 1rem; font-size: 0.8125rem; color: var(--color-accent); text-decoration: none; }
+  .cases-portfolio:hover { text-decoration: underline; }
   .cases {
     max-width: 1200px;
     margin: 9rem auto 0;

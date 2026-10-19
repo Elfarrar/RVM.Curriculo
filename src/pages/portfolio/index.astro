@@ -1,0 +1,9 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import PortfolioLista from "../../components/PortfolioLista.astro";
+import { tr } from "../../data/i18n";
+---
+
+<Layout lang="pt" title={tr("pt", "portfolio.meta")} description={tr("pt", "portfolio.lead")}>
+  <PortfolioLista lang="pt" />
+</Layout>
