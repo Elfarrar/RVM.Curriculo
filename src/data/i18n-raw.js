@@ -9,6 +9,7 @@ export const LANG = {
     'nav.credentials': 'Credenciais',
     'nav.contact': 'Contato',
     'nav.articles': 'Artigos',
+    'nav.portfolio': 'Portfólio',
 
     // Hero
     'hero.label': 'Disponível para trabalho remoto',
@@ -63,6 +64,12 @@ export const LANG = {
     'articles.back': '← Todos os artigos',
     'articles.read': 'min de leitura',
     'articles.empty': 'Nenhum artigo publicado ainda.',
+    'portfolio.title': 'Portfólio',
+    'portfolio.lead': 'Projetos que construí do zero, da API ao deploy.',
+    'portfolio.meta': 'Portfólio | Rafael Veneroso Morici',
+    'portfolio.back': '← Portfólio',
+    'portfolio.see': 'Ver projeto',
+    'portfolio.home': 'Ver o portfólio →',
   },
 
   en: {
@@ -74,6 +81,7 @@ export const LANG = {
     'nav.credentials': 'Credentials',
     'nav.contact': 'Contact',
     'nav.articles': 'Articles',
+    'nav.portfolio': 'Portfolio',
 
     // Hero
     'hero.label': 'Available for remote work',
@@ -128,6 +136,12 @@ export const LANG = {
     'articles.back': '← All articles',
     'articles.read': 'min read',
     'articles.empty': 'No articles published yet.',
+    'portfolio.title': 'Portfolio',
+    'portfolio.lead': 'Projects I built from scratch, from the API to the deploy.',
+    'portfolio.meta': 'Portfolio | Rafael Veneroso Morici',
+    'portfolio.back': '← Portfolio',
+    'portfolio.see': 'View project',
+    'portfolio.home': 'See the portfolio →',
   }
 };
 

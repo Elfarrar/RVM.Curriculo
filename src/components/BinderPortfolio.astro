@@ -1,5 +1,5 @@
 ---
-import { type Locale } from "../data/i18n";
+import { tr, type Locale } from "../data/i18n";
 
 // Página do Binder no portfólio (TASK-270): o Binder é projeto de portfólio da RVMTECH desde 09/10/2026 (ADR-012 do
 // RVM.Binder). O app roda em binder.rvmtech.com.br; esta página só apresenta — o GitHub Pages não roda o app.
@@ -47,6 +47,7 @@ const feito = isPt
 
 <section class="binder">
   <header class="binder-header">
+    <a href={isPt ? "/portfolio/" : "/en/portfolio/"} class="binder-voltar mono">{tr(lang, "portfolio.back")}</a>
     <span class="tag mono">/ {isPt ? "portfólio" : "portfolio"}</span>
     <h1 class="binder-title display">
       Binder<br/>
@@ -96,6 +97,8 @@ const feito = isPt
 </section>
 
 <style>
+  .binder-voltar { display: inline-block; margin-bottom: 1rem; font-size: 0.8125rem; color: var(--color-accent); text-decoration: none; }
+  .binder-voltar:hover { text-decoration: underline; }
   .binder {
     max-width: 1100px;
     margin: 8rem auto 6rem;
