@@ -117,8 +117,12 @@ Seção bilíngue: `/artigos/` e `/artigos/<slug>` (PT), `/en/articles/` e `/en/
 - **Conteúdo:** `src/content/artigos/{pt,en}/<slug>.md` (coleção Astro, `src/content.config.ts`).
 - **Schema:** `title`, `description` (vira meta description), `date`, `series` (opcional), `translationKey`
   (liga PT e EN; os slugs são diferentes), `draft` (padrão `false`).
-- **`draft: true`** não gera página nem entra na lista. Hoje o artigo 01 (`ecossistema-rvm` / `rvm-ecosystem`) é rascunho.
-- **Publicar um novo:** criar os dois `.md` com o mesmo `translationKey`, `date` = dia do merge na `prd`, sem `draft`.
+- **`draft: true`** não gera página nem entra na lista.
+- **`date` no futuro agenda** (TASK #10, 20/10/2026): o artigo só entra no build a partir do dia. Os dois deploys
+  rodam por `schedule` às 00:05 de Brasília e publicam o do dia sozinhos. Simular outro dia: `ARTIGOS_HOJE=2026-11-19 npm run build`.
+  Os capítulos 01–10 da série já estão aqui, cada um com o `publicar_em` do rascunho.
+- **Imagens:** `src/content/artigos/img/<translationKey>/`, referenciadas no `.md` como `../img/<key>/arquivo`.
+- **Publicar um novo:** criar os dois `.md` com o mesmo `translationKey`, `date` = dia em que deve aparecer, sem `draft`.
   O `# título` do texto não vai no corpo (a página já mostra o `title`). O botão PT/EN leva ao par pelo `translationKey`.
 - Código: `src/lib/artigos.ts`, `ArtigoLista.astro`, `ArtigoCorpo.astro`, páginas em `src/pages/artigos` e `src/pages/en/articles`.
   `Layout.astro` aceita `ogType` e `alternates` (hreflang/canonical por página).

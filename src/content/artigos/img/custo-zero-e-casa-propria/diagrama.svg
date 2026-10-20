@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 960 460" xmlns="http://www.w3.org/2000/svg" class="rvm-d" role="img" aria-labelledby="diagrama-08-title diagrama-08-desc" id="diagrama-root">
+        <title id="diagrama-08-title">A forja como origem, o GitHub como arquivo</title>
+        <desc id="diagrama-08-desc">O código de produção nasce na forja própria, que roda pipeline e deploy sem porta aberta para a internet, e só a branch prd é copiada a cada 15 minutos para o GitHub, que virou arquivo com os pipelines desligados.</desc>
+        <style>
+          .rvm-d { --paper:#F4F5FA; --card:#FFFFFF; --ink:#28243D; --muted:#4D5056; --soft:#676C74;
+                   --rule:rgba(40,36,61,0.12); --rule-solid:#D1D0D3; --accent:#264CC8; --accent-tint:rgba(38,76,200,0.08);
+                   --ok:#378100; --ok-line:#4CB200; --ok-tint:rgba(86,202,0,0.10);
+                   --bad:#A33134; --bad-line:#E04347; --bad-tint:rgba(255,76,81,0.10);
+                   --warn:#A37300; --warn-line:#E09E00; --warn-tint:rgba(255,180,0,0.12);
+                   --ai:#6E3FD1; --ai-line:#8A63E0; --ai-tint:rgba(138,99,224,0.10); }
+          @media (prefers-color-scheme: dark) {
+            .rvm-d { --paper:#28243D; --card:#312D4B; --ink:#F4F5FA; --muted:#CFCBE5; --soft:#9C9FA4;
+                     --rule:rgba(244,245,250,0.12); --rule-solid:#5B5774; --accent:#8FA5F5; --accent-tint:rgba(143,165,245,0.12);
+                     --ok:#6AD01F; --ok-line:#6AD01F; --ok-tint:rgba(106,208,31,0.14);
+                     --bad:#FF6166; --bad-line:#FF6166; --bad-tint:rgba(255,97,102,0.14);
+                     --warn:#FFB547; --warn-line:#FFB547; --warn-tint:rgba(255,181,71,0.14);
+                     --ai:#B79CFF; --ai-line:#B79CFF; --ai-tint:rgba(183,156,255,0.14); }
+          }
+          .rvm-d text { font-family:'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif; fill:var(--ink); }
+          .rvm-d .bg { fill:var(--paper); }
+          .rvm-d .zone { fill:none; stroke:var(--rule-solid); stroke-width:1; stroke-dasharray:4 4; }
+          .rvm-d .mask { fill:var(--paper); }
+          .rvm-d .node { fill:var(--card); stroke:var(--ink); stroke-width:1; }
+          .rvm-d .focal { fill:var(--accent-tint); stroke:var(--accent); stroke-width:1.2; }
+          .rvm-d .name { font-size:14px; font-weight:600; }
+          .rvm-d .env { font-size:16px; font-weight:600; font-family:ui-monospace, 'SF Mono', Menlo, Consolas, monospace; }
+          .rvm-d .sub { font-size:11px; fill:var(--soft); font-family:ui-monospace, 'SF Mono', Menlo, Consolas, monospace; }
+          .rvm-d .eyebrow { font-size:10px; font-weight:500; letter-spacing:0.16em; fill:var(--muted); font-family:ui-monospace, 'SF Mono', Menlo, Consolas, monospace; }
+          .rvm-d .lbl { font-size:10px; letter-spacing:0.06em; fill:var(--soft); font-family:ui-monospace, 'SF Mono', Menlo, Consolas, monospace; }
+          .rvm-d .lbl-acc { fill:var(--accent); }
+          .rvm-d .callout { font-size:13px; font-style:italic; fill:var(--muted); }
+          .rvm-d .acc-t { fill:var(--accent); }
+          .rvm-d .arr { fill:none; stroke:var(--muted); stroke-width:1.2; }
+          .rvm-d .arr-acc { fill:none; stroke:var(--accent); stroke-width:1.6; }
+          .rvm-d .dash { stroke-dasharray:5 4; }
+          .rvm-d .opt { fill:var(--card); stroke:var(--soft); stroke-width:1; stroke-dasharray:4 3; }
+          .rvm-d .hair { stroke:var(--rule); stroke-width:1; }
+          .rvm-d .ah { fill:var(--muted); }
+          .rvm-d .ah-acc { fill:var(--accent); }
+          .rvm-d .ok   { fill:var(--ok-tint);   stroke:var(--ok-line);   stroke-width:1.2; }
+          .rvm-d .bad  { fill:var(--bad-tint);  stroke:var(--bad-line);  stroke-width:1.2; }
+          .rvm-d .warn { fill:var(--warn-tint); stroke:var(--warn-line); stroke-width:1.2; }
+          .rvm-d .ai   { fill:var(--ai-tint);   stroke:var(--ai-line);   stroke-width:1.2; }
+          .rvm-d .ok-t { fill:var(--ok); } .rvm-d .bad-t { fill:var(--bad); } .rvm-d .warn-t { fill:var(--warn); } .rvm-d .ai-t { fill:var(--ai); }
+          .rvm-d .arr-ok  { fill:none; stroke:var(--ok-line);  stroke-width:1.6; }
+          .rvm-d .arr-bad { fill:none; stroke:var(--bad-line); stroke-width:1.6; }
+          .rvm-d .ah-ok { fill:var(--ok-line); } .rvm-d .ah-bad { fill:var(--bad-line); }
+        </style>
+        <defs>
+      <style>#diagrama-root { --page: #F4F5FA; --page-ink: #28243D; --page-muted: #4D5056; }
+      #diagrama-root { --page: #28243D; --page-ink: #F4F5FA; --page-muted: #CFCBE5; }
+      #diagrama-root { font-family: 'Inter', system-ui, sans-serif; color: var(--page-ink); }
+      #diagrama-root .diagram-container { width: 100%; overflow-x: auto; }
+      #diagrama-root .diagram-container { overflow-x: visible; }
+      #diagrama-root .rvm-d { --paper:#F4F5FA; --card:#FFFFFF; --ink:#28243D; --muted:#4D5056; --soft:#676C74;
+                   --rule:rgba(40,36,61,0.12); --rule-solid:#D1D0D3; --accent:#264CC8; --accent-tint:rgba(38,76,200,0.08);
+                   --ok:#378100; --ok-line:#4CB200; --ok-tint:rgba(86,202,0,0.10);
+                   --bad:#A33134; --bad-line:#E04347; --bad-tint:rgba(255,76,81,0.10);
+                   --warn:#A37300; --warn-line:#E09E00; --warn-tint:rgba(255,180,0,0.12);
+                   --ai:#6E3FD1; --ai-line:#8A63E0; --ai-tint:rgba(138,99,224,0.10); }
+      #diagrama-root .rvm-d { --paper:#28243D; --card:#312D4B; --ink:#F4F5FA; --muted:#CFCBE5; --soft:#9C9FA4;
+                     --rule:rgba(244,245,250,0.12); --rule-solid:#5B5774; --accent:#8FA5F5; --accent-tint:rgba(143,165,245,0.12);
+                     --ok:#6AD01F; --ok-line:#6AD01F; --ok-tint:rgba(106,208,31,0.14);
+                     --bad:#FF6166; --bad-line:#FF6166; --bad-tint:rgba(255,97,102,0.14);
+                     --warn:#FFB547; --warn-line:#FFB547; --warn-tint:rgba(255,181,71,0.14);
+                     --ai:#B79CFF; --ai-line:#B79CFF; --ai-tint:rgba(183,156,255,0.14); }
+      #diagrama-root .rvm-d text { font-family:'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif; fill:var(--ink); }
+      #diagrama-root .rvm-d .bg { fill:var(--paper); }
+      #diagrama-root .rvm-d .zone { fill:none; stroke:var(--rule-solid); stroke-width:1; stroke-dasharray:4 4; }
+      #diagrama-root .rvm-d .mask { fill:var(--paper); }
+      #diagrama-root .rvm-d .node { fill:var(--card); stroke:var(--ink); stroke-width:1; }
+      #diagrama-root .rvm-d .focal { fill:var(--accent-tint); stroke:var(--accent); stroke-width:1.2; }
+      #diagrama-root .rvm-d .name { font-size:14px; font-weight:600; }
+      #diagrama-root .rvm-d .env { font-size:16px; font-weight:600; font-family:ui-monospace, 'SF Mono', Menlo, Consolas, monospace; }
+      #diagrama-root .rvm-d .sub { font-size:11px; fill:var(--soft); font-family:ui-monospace, 'SF Mono', Menlo, Consolas, monospace; }
+      #diagrama-root .rvm-d .eyebrow { font-size:10px; font-weight:500; letter-spacing:0.16em; fill:var(--muted); font-family:ui-monospace, 'SF Mono', Menlo, Consolas, monospace; }
+      #diagrama-root .rvm-d .lbl { font-size:10px; letter-spacing:0.06em; fill:var(--soft); font-family:ui-monospace, 'SF Mono', Menlo, Consolas, monospace; }
+      #diagrama-root .rvm-d .lbl-acc { fill:var(--accent); }
+      #diagrama-root .rvm-d .callout { font-size:13px; font-style:italic; fill:var(--muted); }
+      #diagrama-root .rvm-d .acc-t { fill:var(--accent); }
+      #diagrama-root .rvm-d .arr { fill:none; stroke:var(--muted); stroke-width:1.2; }
+      #diagrama-root .rvm-d .arr-acc { fill:none; stroke:var(--accent); stroke-width:1.6; }
+      #diagrama-root .rvm-d .dash { stroke-dasharray:5 4; }
+      #diagrama-root .rvm-d .opt { fill:var(--card); stroke:var(--soft); stroke-width:1; stroke-dasharray:4 3; }
+      #diagrama-root .rvm-d .hair { stroke:var(--rule); stroke-width:1; }
+      #diagrama-root .rvm-d .ah { fill:var(--muted); }
+      #diagrama-root .rvm-d .ah-acc { fill:var(--accent); }
+      #diagrama-root .rvm-d .ok { fill:var(--ok-tint);   stroke:var(--ok-line);   stroke-width:1.2; }
+      #diagrama-root .rvm-d .bad { fill:var(--bad-tint);  stroke:var(--bad-line);  stroke-width:1.2; }
+      #diagrama-root .rvm-d .warn { fill:var(--warn-tint); stroke:var(--warn-line); stroke-width:1.2; }
+      #diagrama-root .rvm-d .ai { fill:var(--ai-tint);   stroke:var(--ai-line);   stroke-width:1.2; }
+      #diagrama-root .rvm-d .ok-t { fill:var(--ok); }
+      #diagrama-root .rvm-d .bad-t { fill:var(--bad); }
+      #diagrama-root .rvm-d .warn-t { fill:var(--warn); }
+      #diagrama-root .rvm-d .ai-t { fill:var(--ai); }
+      #diagrama-root .rvm-d .arr-ok { fill:none; stroke:var(--ok-line);  stroke-width:1.6; }
+      #diagrama-root .rvm-d .arr-bad { fill:none; stroke:var(--bad-line); stroke-width:1.6; }
+      #diagrama-root .rvm-d .ah-ok { fill:var(--ok-line); }
+      #diagrama-root .rvm-d .ah-bad { fill:var(--bad-line); }</style>
+          <marker id="diagrama-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon class="ah" points="0 0, 8 3, 0 6"/></marker>
+          <marker id="diagrama-arrow-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon class="ah-acc" points="0 0, 8 3, 0 6"/></marker>
+          <marker id="diagrama-arrow-ok" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon class="ah-ok" points="0 0, 8 3, 0 6"/></marker>
+          <marker id="diagrama-arrow-bad" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon class="ah-bad" points="0 0, 8 3, 0 6"/></marker>
+        </defs>
+
+        <rect class="bg" width="100%" height="100%"/>
+
+        <!-- Zona: a forja própria -->
+        <rect class="zone" x="264" y="64" width="464" height="148" rx="8"/>
+        <text class="eyebrow acc-t" x="280" y="88">FORJA PRÓPRIA · ORIGEM</text>
+        <text class="sub" x="280" y="108">sem porta aberta para a internet · segredos de prd ficam aqui</text>
+
+        <!-- Setas -->
+        <path class="arr" d="M200 156 H276" marker-end="url(#diagrama-arrow)"/>
+        <path class="arr" d="M408 156 H428" marker-end="url(#diagrama-arrow)"/>
+        <path class="arr" d="M560 156 H580" marker-end="url(#diagrama-arrow)"/>
+        <path class="arr-ok" d="M712 156 H780" marker-end="url(#diagrama-arrow-ok)"/>
+        <rect class="mask" x="724" y="134" width="48" height="14" rx="2"/>
+        <text class="lbl ok-t" x="748" y="144" text-anchor="middle">DEPLOY</text>
+        <path class="arr dash" d="M496 184 V292" marker-end="url(#diagrama-arrow)"/>
+        <rect class="mask" x="504" y="236" width="164" height="14" rx="2"/>
+        <text class="lbl" x="508" y="246">A CADA 15 MIN · SÓ PRD</text>
+
+        <!-- Nós -->
+        <rect class="mask" x="40" y="128" width="160" height="56" rx="6"/>
+        <rect class="ai" x="40" y="128" width="160" height="56" rx="6"/>
+        <text class="name" x="120" y="152" text-anchor="middle">Eu e os agentes</text>
+        <text class="sub" x="120" y="170" text-anchor="middle">por túnel seguro</text>
+
+        <rect class="mask" x="280" y="128" width="128" height="56" rx="6"/>
+        <rect class="focal" x="280" y="128" width="128" height="56" rx="6"/>
+        <text class="name" x="344" y="152" text-anchor="middle">Código</text>
+        <text class="sub" x="344" y="170" text-anchor="middle">dev · stg · prd</text>
+
+        <rect class="node" x="432" y="128" width="128" height="56" rx="6"/>
+        <text class="name" x="496" y="152" text-anchor="middle">Pipeline</text>
+        <text class="sub" x="496" y="170" text-anchor="middle">testes e build</text>
+
+        <rect class="node" x="584" y="128" width="128" height="56" rx="6"/>
+        <text class="name" x="648" y="152" text-anchor="middle">Deploy</text>
+        <text class="sub" x="648" y="170" text-anchor="middle">dev · stg · prd</text>
+
+        <rect class="mask" x="784" y="128" width="136" height="56" rx="6"/>
+        <rect class="ok" x="784" y="128" width="136" height="56" rx="6"/>
+        <text class="name" x="852" y="152" text-anchor="middle">Servidores</text>
+        <text class="sub" x="852" y="170" text-anchor="middle">dev · stg · prd</text>
+
+        <rect class="node" x="408" y="296" width="176" height="56" rx="6" style="fill:var(--paper);stroke:var(--soft)"/>
+        <text class="name" x="496" y="320" text-anchor="middle">GitHub (arquivo)</text>
+        <text class="sub" x="496" y="338" text-anchor="middle">pipelines desligados</text>
+
+        <text class="callout" x="480" y="392" text-anchor="middle">Se a forja falhar, o código de produção existe lá fora. Se o GitHub sumir, nada para.</text>
+
+        <!-- Legenda -->
+        <line class="hair" x1="40" y1="416" x2="920" y2="416"/>
+        <text class="eyebrow" x="40" y="440">LEGENDA</text>
+        <path class="arr" d="M136 436 H168" marker-end="url(#diagrama-arrow)"/>
+        <text class="sub" x="176" y="440">fluxo de trabalho</text>
+        <path class="arr dash" d="M312 436 H344" marker-end="url(#diagrama-arrow)"/>
+        <text class="sub" x="352" y="440">cópia só da prd</text>
+        <rect class="focal" x="476" y="430" width="16" height="12" rx="2"/>
+        <text class="sub" x="500" y="440">origem do código</text>
+        <rect class="ok" x="628" y="430" width="16" height="12" rx="2"/>
+        <text class="sub" x="652" y="440">produção no ar</text>
+        <rect class="ai" x="768" y="430" width="16" height="12" rx="2"/>
+        <text class="sub" x="792" y="440">eu e agentes</text>
+      </svg>

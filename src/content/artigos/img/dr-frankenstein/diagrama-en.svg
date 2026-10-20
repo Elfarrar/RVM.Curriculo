@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 960 500" xmlns="http://www.w3.org/2000/svg" class="rvm-d" role="img" aria-labelledby="diagrama-05-en-title diagrama-05-en-desc" id="diagrama-en-root">
+        <title id="diagrama-05-en-title">Vertical slices with the domain at the center</title>
+        <desc id="diagrama-05-en-desc">With horizontal layers one feature spreads across screens, rules and data; with vertical slices each feature is one file with route, validation, handler and response, under rules applied to every route and on top of a shared domain.</desc>
+        <style>
+          .rvm-d { --paper:#F4F5FA; --card:#FFFFFF; --ink:#28243D; --muted:#4D5056; --soft:#676C74;
+                   --rule:rgba(40,36,61,0.12); --rule-solid:#D1D0D3; --accent:#264CC8; --accent-tint:rgba(38,76,200,0.08); --ok:#378100; --ok-line:#4CB200; --ok-tint:rgba(86,202,0,0.10); --bad:#A33134; --bad-line:#E04347; --bad-tint:rgba(255,76,81,0.10); --warn:#A37300; --warn-line:#E09E00; --warn-tint:rgba(255,180,0,0.12); --ai:#6E3FD1; --ai-line:#8A63E0; --ai-tint:rgba(138,99,224,0.10); }
+          @media (prefers-color-scheme: dark) {
+            .rvm-d { --paper:#28243D; --card:#312D4B; --ink:#F4F5FA; --muted:#CFCBE5; --soft:#9C9FA4;
+                     --rule:rgba(244,245,250,0.12); --rule-solid:#5B5774; --accent:#8FA5F5; --accent-tint:rgba(143,165,245,0.12); --ok:#6AD01F; --ok-line:#6AD01F; --ok-tint:rgba(106,208,31,0.14); --bad:#FF6166; --bad-line:#FF6166; --bad-tint:rgba(255,97,102,0.14); --warn:#FFB547; --warn-line:#FFB547; --warn-tint:rgba(255,181,71,0.14); --ai:#B79CFF; --ai-line:#B79CFF; --ai-tint:rgba(183,156,255,0.14); }
+          }
+          .rvm-d text { font-family:'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif; fill:var(--ink); }
+          .rvm-d .bg { fill:var(--paper); }
+          .rvm-d .zone { fill:none; stroke:var(--rule-solid); stroke-width:1; stroke-dasharray:4 4; }
+          .rvm-d .mask { fill:var(--paper); }
+          .rvm-d .node { fill:var(--card); stroke:var(--ink); stroke-width:1; }
+          .rvm-d .focal { fill:var(--accent-tint); stroke:var(--accent); stroke-width:1.2; }
+          .rvm-d .name { font-size:14px; font-weight:600; }
+          .rvm-d .env { font-size:16px; font-weight:600; font-family:ui-monospace, 'SF Mono', Menlo, Consolas, monospace; }
+          .rvm-d .sub { font-size:11px; fill:var(--soft); font-family:ui-monospace, 'SF Mono', Menlo, Consolas, monospace; }
+          .rvm-d .eyebrow { font-size:10px; font-weight:500; letter-spacing:0.16em; fill:var(--muted); font-family:ui-monospace, 'SF Mono', Menlo, Consolas, monospace; }
+          .rvm-d .lbl { font-size:10px; letter-spacing:0.06em; fill:var(--soft); font-family:ui-monospace, 'SF Mono', Menlo, Consolas, monospace; }
+          .rvm-d .lbl-acc { fill:var(--accent); }
+          .rvm-d .callout { font-size:13px; font-style:italic; fill:var(--muted); }
+          .rvm-d .acc-t { fill:var(--accent); }
+          .rvm-d .arr { fill:none; stroke:var(--muted); stroke-width:1.2; }
+          .rvm-d .arr-acc { fill:none; stroke:var(--accent); stroke-width:1.6; }
+          .rvm-d .hair { stroke:var(--rule); stroke-width:1; }
+          .rvm-d .ah { fill:var(--muted); }
+          .rvm-d .ah-acc { fill:var(--accent); }
+          .rvm-d .arr-dash { fill:none; stroke:var(--muted); stroke-width:1.2; stroke-dasharray:5 4; } .rvm-d .dot { fill:var(--muted); }
+          .rvm-d .ok   { fill:var(--ok-tint);   stroke:var(--ok-line);   stroke-width:1.2; }
+          .rvm-d .bad  { fill:var(--bad-tint);  stroke:var(--bad-line);  stroke-width:1.2; }
+          .rvm-d .warn { fill:var(--warn-tint); stroke:var(--warn-line); stroke-width:1.2; }
+          .rvm-d .ai   { fill:var(--ai-tint);   stroke:var(--ai-line);   stroke-width:1.2; }
+          .rvm-d .ok-t { fill:var(--ok); } .rvm-d .bad-t { fill:var(--bad); } .rvm-d .warn-t { fill:var(--warn); } .rvm-d .ai-t { fill:var(--ai); }
+          .rvm-d .arr-ok  { fill:none; stroke:var(--ok-line);  stroke-width:1.6; }
+          .rvm-d .arr-bad { fill:none; stroke:var(--bad-line); stroke-width:1.6; }
+          .rvm-d .dash2 { stroke-dasharray:5 4; }
+          .rvm-d .ah-ok { fill:var(--ok-line); } .rvm-d .ah-bad { fill:var(--bad-line); }
+        </style>
+        <defs>
+      <style>#diagrama-en-root { --page: #F4F5FA; --page-ink: #28243D; --page-muted: #4D5056; }
+      #diagrama-en-root { --page: #28243D; --page-ink: #F4F5FA; --page-muted: #CFCBE5; }
+      #diagrama-en-root { font-family: 'Inter', system-ui, sans-serif; color: var(--page-ink); }
+      #diagrama-en-root .diagram-container { width: 100%; overflow-x: auto; }
+      #diagrama-en-root .diagram-container { overflow-x: visible; }
+      #diagrama-en-root .rvm-d { --paper:#F4F5FA; --card:#FFFFFF; --ink:#28243D; --muted:#4D5056; --soft:#676C74;
+                   --rule:rgba(40,36,61,0.12); --rule-solid:#D1D0D3; --accent:#264CC8; --accent-tint:rgba(38,76,200,0.08); --ok:#378100; --ok-line:#4CB200; --ok-tint:rgba(86,202,0,0.10); --bad:#A33134; --bad-line:#E04347; --bad-tint:rgba(255,76,81,0.10); --warn:#A37300; --warn-line:#E09E00; --warn-tint:rgba(255,180,0,0.12); --ai:#6E3FD1; --ai-line:#8A63E0; --ai-tint:rgba(138,99,224,0.10); }
+      #diagrama-en-root .rvm-d { --paper:#28243D; --card:#312D4B; --ink:#F4F5FA; --muted:#CFCBE5; --soft:#9C9FA4;
+                     --rule:rgba(244,245,250,0.12); --rule-solid:#5B5774; --accent:#8FA5F5; --accent-tint:rgba(143,165,245,0.12); --ok:#6AD01F; --ok-line:#6AD01F; --ok-tint:rgba(106,208,31,0.14); --bad:#FF6166; --bad-line:#FF6166; --bad-tint:rgba(255,97,102,0.14); --warn:#FFB547; --warn-line:#FFB547; --warn-tint:rgba(255,181,71,0.14); --ai:#B79CFF; --ai-line:#B79CFF; --ai-tint:rgba(183,156,255,0.14); }
+      #diagrama-en-root .rvm-d text { font-family:'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif; fill:var(--ink); }
+      #diagrama-en-root .rvm-d .bg { fill:var(--paper); }
+      #diagrama-en-root .rvm-d .zone { fill:none; stroke:var(--rule-solid); stroke-width:1; stroke-dasharray:4 4; }
+      #diagrama-en-root .rvm-d .mask { fill:var(--paper); }
+      #diagrama-en-root .rvm-d .node { fill:var(--card); stroke:var(--ink); stroke-width:1; }
+      #diagrama-en-root .rvm-d .focal { fill:var(--accent-tint); stroke:var(--accent); stroke-width:1.2; }
+      #diagrama-en-root .rvm-d .name { font-size:14px; font-weight:600; }
+      #diagrama-en-root .rvm-d .env { font-size:16px; font-weight:600; font-family:ui-monospace, 'SF Mono', Menlo, Consolas, monospace; }
+      #diagrama-en-root .rvm-d .sub { font-size:11px; fill:var(--soft); font-family:ui-monospace, 'SF Mono', Menlo, Consolas, monospace; }
+      #diagrama-en-root .rvm-d .eyebrow { font-size:10px; font-weight:500; letter-spacing:0.16em; fill:var(--muted); font-family:ui-monospace, 'SF Mono', Menlo, Consolas, monospace; }
+      #diagrama-en-root .rvm-d .lbl { font-size:10px; letter-spacing:0.06em; fill:var(--soft); font-family:ui-monospace, 'SF Mono', Menlo, Consolas, monospace; }
+      #diagrama-en-root .rvm-d .lbl-acc { fill:var(--accent); }
+      #diagrama-en-root .rvm-d .callout { font-size:13px; font-style:italic; fill:var(--muted); }
+      #diagrama-en-root .rvm-d .acc-t { fill:var(--accent); }
+      #diagrama-en-root .rvm-d .arr { fill:none; stroke:var(--muted); stroke-width:1.2; }
+      #diagrama-en-root .rvm-d .arr-acc { fill:none; stroke:var(--accent); stroke-width:1.6; }
+      #diagrama-en-root .rvm-d .hair { stroke:var(--rule); stroke-width:1; }
+      #diagrama-en-root .rvm-d .ah { fill:var(--muted); }
+      #diagrama-en-root .rvm-d .ah-acc { fill:var(--accent); }
+      #diagrama-en-root .rvm-d .arr-dash { fill:none; stroke:var(--muted); stroke-width:1.2; stroke-dasharray:5 4; }
+      #diagrama-en-root .rvm-d .dot { fill:var(--muted); }
+      #diagrama-en-root .rvm-d .ok { fill:var(--ok-tint);   stroke:var(--ok-line);   stroke-width:1.2; }
+      #diagrama-en-root .rvm-d .bad { fill:var(--bad-tint);  stroke:var(--bad-line);  stroke-width:1.2; }
+      #diagrama-en-root .rvm-d .warn { fill:var(--warn-tint); stroke:var(--warn-line); stroke-width:1.2; }
+      #diagrama-en-root .rvm-d .ai { fill:var(--ai-tint);   stroke:var(--ai-line);   stroke-width:1.2; }
+      #diagrama-en-root .rvm-d .ok-t { fill:var(--ok); }
+      #diagrama-en-root .rvm-d .bad-t { fill:var(--bad); }
+      #diagrama-en-root .rvm-d .warn-t { fill:var(--warn); }
+      #diagrama-en-root .rvm-d .ai-t { fill:var(--ai); }
+      #diagrama-en-root .rvm-d .arr-ok { fill:none; stroke:var(--ok-line);  stroke-width:1.6; }
+      #diagrama-en-root .rvm-d .arr-bad { fill:none; stroke:var(--bad-line); stroke-width:1.6; }
+      #diagrama-en-root .rvm-d .dash2 { stroke-dasharray:5 4; }
+      #diagrama-en-root .rvm-d .ah-ok { fill:var(--ok-line); }
+      #diagrama-en-root .rvm-d .ah-bad { fill:var(--bad-line); }</style>
+          <marker id="diagrama-en-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon class="ah" points="0 0, 8 3, 0 6"/></marker>
+          <marker id="diagrama-en-arrow-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon class="ah-acc" points="0 0, 8 3, 0 6"/></marker>
+          <marker id="diagrama-en-arrow-ok" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon class="ah-ok" points="0 0, 8 3, 0 6"/></marker>
+          <marker id="diagrama-en-arrow-bad" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon class="ah-bad" points="0 0, 8 3, 0 6"/></marker>
+        </defs>
+
+        <rect class="bg" width="100%" height="100%"/>
+
+        <!-- Zonas -->
+        <rect class="zone" x="36" y="40" width="320" height="392" rx="8"/>
+        <text class="eyebrow bad-t" x="52" y="64">BEFORE: HORIZONTAL LAYERS</text>
+        <rect class="zone" x="388" y="40" width="536" height="392" rx="8"/>
+        <text class="eyebrow acc-t" x="404" y="64">AFTER: VERTICAL SLICES + DOMAIN</text>
+
+        <!-- Antes: camadas horizontais -->
+        <rect class="node" x="52" y="88" width="288" height="72" rx="6"/>
+        <text class="name" x="212" y="120" text-anchor="middle">Screens</text>
+        <text class="sub" x="212" y="138" text-anchor="middle">every screen in the system</text>
+        <rect class="node" x="52" y="176" width="288" height="72" rx="6"/>
+        <text class="name" x="212" y="208" text-anchor="middle">Rules</text>
+        <text class="sub" x="212" y="226" text-anchor="middle">every rule, all mixed</text>
+        <rect class="node" x="52" y="264" width="288" height="72" rx="6"/>
+        <text class="name" x="212" y="296" text-anchor="middle">Data</text>
+        <text class="sub" x="212" y="314" text-anchor="middle">all database access</text>
+        <!-- uma funcionalidade espalhada pelas três camadas -->
+        <path class="arr-bad dash2" d="M76 124 V292" marker-end="url(#diagrama-en-arrow-bad)"/>
+        <circle class="ah-bad" cx="76" cy="124" r="4"/>
+        <circle class="ah-bad" cx="76" cy="212" r="4"/>
+        <text class="callout bad-t" x="196" y="372" text-anchor="middle">1 feature = 3 or more folders,</text>
+        <text class="callout bad-t" x="196" y="392" text-anchor="middle">and hope you don't forget one.</text>
+
+        <!-- Depois: fatias verticais sobre o domínio -->
+        <path class="arr-ok" d="M480 280 V316" marker-end="url(#diagrama-en-arrow-ok)"/>
+        <path class="arr-ok" d="M656 280 V316" marker-end="url(#diagrama-en-arrow-ok)"/>
+        <path class="arr-ok" d="M832 280 V316" marker-end="url(#diagrama-en-arrow-ok)"/>
+        <rect class="mask" x="404" y="80" width="504" height="48" rx="6"/>
+        <rect class="warn" x="404" y="80" width="504" height="48" rx="6"/>
+        <text class="name" x="656" y="100" text-anchor="middle">Applied to every route, in one place</text>
+        <text class="sub" x="656" y="118" text-anchor="middle">permission · company · transaction</text>
+        <rect class="mask" x="404" y="144" width="152" height="136" rx="6"/>
+        <rect class="focal" x="404" y="144" width="152" height="136" rx="6"/>
+        <text class="name acc-t" x="480" y="170" text-anchor="middle">Register a field</text>
+        <text class="sub" x="480" y="196" text-anchor="middle">route</text>
+        <text class="sub" x="480" y="214" text-anchor="middle">validation</text>
+        <text class="sub" x="480" y="232" text-anchor="middle">handler</text>
+        <text class="sub" x="480" y="250" text-anchor="middle">response</text>
+        <rect class="mask" x="580" y="144" width="152" height="136" rx="6"/>
+        <rect class="focal" x="580" y="144" width="152" height="136" rx="6"/>
+        <text class="name acc-t" x="656" y="170" text-anchor="middle">Assign a person</text>
+        <text class="sub" x="656" y="196" text-anchor="middle">route</text>
+        <text class="sub" x="656" y="214" text-anchor="middle">validation</text>
+        <text class="sub" x="656" y="232" text-anchor="middle">handler</text>
+        <text class="sub" x="656" y="250" text-anchor="middle">response</text>
+        <rect class="mask" x="756" y="144" width="152" height="136" rx="6"/>
+        <rect class="focal" x="756" y="144" width="152" height="136" rx="6"/>
+        <text class="name acc-t" x="832" y="170" text-anchor="middle">Close the month</text>
+        <text class="sub" x="832" y="196" text-anchor="middle">route</text>
+        <text class="sub" x="832" y="214" text-anchor="middle">validation</text>
+        <text class="sub" x="832" y="232" text-anchor="middle">handler</text>
+        <text class="sub" x="832" y="250" text-anchor="middle">response</text>
+        <rect class="mask" x="404" y="320" width="504" height="64" rx="6"/>
+        <rect class="ok" x="404" y="320" width="504" height="64" rx="6"/>
+        <text class="name" x="656" y="346" text-anchor="middle">Domain: the business rules, in one place</text>
+        <text class="sub" x="656" y="366" text-anchor="middle">no database, no screens, no internet; tested alone</text>
+        <text class="callout ok-t" x="656" y="412" text-anchor="middle">1 feature = 1 file.</text>
+
+        <!-- Legenda -->
+        <line class="hair" x1="36" y1="456" x2="924" y2="456"/>
+        <text class="eyebrow" x="36" y="480">LEGEND</text>
+        <path class="arr-bad dash2" d="M136 476 H168" marker-end="url(#diagrama-en-arrow-bad)"/>
+        <text class="sub" x="176" y="480">one feature, scattered</text>
+        <path class="arr-ok" d="M460 476 H492" marker-end="url(#diagrama-en-arrow-ok)"/>
+        <text class="sub" x="500" y="480">the slice uses the domain</text>
+      </svg>
