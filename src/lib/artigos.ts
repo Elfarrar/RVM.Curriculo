@@ -12,9 +12,14 @@ export const slugOf = (a: Artigo) => a.id.split("/").pop()!;
 
 export const pathOf = (lang: Locale, slug: string) => `${listPath(lang)}${slug}`;
 
-/** Artigos publicados (sem draft) do idioma, do mais novo para o mais antigo. */
+/** Artigos publicados (sem draft e com a data ja chegada) do idioma, do mais novo para o mais antigo.
+ * A data futura agenda: o rebuild diario do deploy publica o artigo no dia (`ARTIGOS_HOJE` simula outro dia). */
 export async function publicados(lang: Locale): Promise<Artigo[]> {
-  const todos = await getCollection("artigos", (a) => !a.data.draft && a.id.startsWith(`${lang}/`));
+  const hoje = new Date(process.env.ARTIGOS_HOJE ?? Date.now());
+  const todos = await getCollection(
+    "artigos",
+    (a) => !a.data.draft && a.data.date <= hoje && a.id.startsWith(`${lang}/`),
+  );
   return todos.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 }
 

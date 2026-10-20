@@ -8,6 +8,9 @@ on:
     branches:
       - prd
   workflow_dispatch:
+  # Artigo com data futura so entra no build do dia: rebuild diario as 00:05 de Brasilia.
+  schedule:
+    - cron: "5 3 * * *"
 
 permissions:
   contents: read
@@ -51,7 +54,7 @@ jobs:
     needs: build
     # workflow_dispatch = o RVM.Depoimentos republicando apos uma aprovacao (TASK-839). Sem ele aqui, o
     # disparo construia o site e NAO publicava.
-    if: github.server_url == 'https://github.com' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/prd'
+    if: github.server_url == 'https://github.com' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch' || github.event_name == 'schedule') && github.ref == 'refs/heads/prd'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
