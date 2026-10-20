@@ -31,10 +31,10 @@ tem que bater nos dois. Mudou um, muda o outro na mesma task.
   (`src/data/cv.ts`).
 - **Acentuacao correta no portugues.** O site herdado do RVM.Portfolio era todo sem acento; o
   conteudo daqui nao e. Nao "corrigir" removendo acento.
-- **Tema claro** — roxo do Visual Studio `#68217A` como cor principal (botoes, links, chips, ponto
-  da timeline) e azul do VS Code `#007ACC` como apoio (titulos em italico, linha da timeline).
-  Escolha do Rafael em 01/09/2026. Cores **so** via tokens em `src/styles/global.css`; nao cravar
-  `oklch()` em componente.
+- **Tema escuro** (decisao do Rafael em 20/10/2026, issue #13, trazido da versao do Lovable; de 01/09 a
+  20/10 o tema era claro) — roxo do Visual Studio e azul do VS Code **clareados** para contraste sobre
+  grafite; o italico dos titulos e um gradiente azul→roxo. Cores **so** via tokens em
+  `src/styles/global.css`; nao cravar `oklch()` em componente.
 - **Repo na forja** (`forja:Elfarrar/RVM.Curriculo.git`) desde 14/10/2026; o GitHub publico `Elfarrar/RVM.Curriculo`
   recebe so a `prd` pelo espelho (`/opt/espelhar-prd.sh`, 15 min) e e quem publica no Pages. Nada se empurra la direto.
 - **Branch:** `task-NNN` a partir de `prd`. Sem `dev`/`stg` (site estatico, baixo risco).

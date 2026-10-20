@@ -17,7 +17,7 @@ const data = cv(lang);
   </header>
 
   <ol class="exp-list">
-    {data.experiences.map((e) => (
+    {data.experiences.map((e, i) => (
       <li class="exp-item reveal">
         <div class="exp-aside">
           <div class="exp-period mono">{e.period}</div>
@@ -33,15 +33,22 @@ const data = cv(lang);
 
           <p class="exp-context">{e.context}</p>
 
-          <ul class="exp-bullets">
-            {e.bullets.map((b) => (
-              <li><span class="exp-dot" aria-hidden="true"></span><span>{b}</span></li>
-            ))}
-          </ul>
-
           <ul class="exp-stack" aria-label="stack">
             {e.stack.map((s) => <li class="exp-chip mono">{s}</li>)}
           </ul>
+
+          <details class="exp-details" open={i === 0}>
+            <summary class="exp-toggle mono">
+              <span class="exp-more">{lang === "pt" ? "Ver detalhes" : "Show details"}</span>
+              <span class="exp-less">{lang === "pt" ? "Menos detalhes" : "Hide details"}</span>
+              <span class="exp-chev" aria-hidden="true"></span>
+            </summary>
+            <ul class="exp-bullets">
+              {e.bullets.map((b) => (
+                <li><span class="exp-dot" aria-hidden="true"></span><span>{b}</span></li>
+              ))}
+            </ul>
+          </details>
         </div>
       </li>
     ))}
@@ -77,7 +84,7 @@ const data = cv(lang);
     gap: 2rem;
     padding: 2.25rem 0 2.25rem 2rem;
     position: relative;
-    border-left: 2px solid oklch(52% 0.16 245 / 0.22);
+    border-left: 2px solid var(--color-border-strong);
   }
 
   .exp-item::before {
@@ -145,7 +152,7 @@ const data = cv(lang);
   .exp-bullets {
     list-style: none;
     padding: 0;
-    margin: 0 0 1.5rem;
+    margin: 1.25rem 0 0;
     display: flex;
     flex-direction: column;
     gap: 0.625rem;
@@ -181,11 +188,37 @@ const data = cv(lang);
     font-size: 0.6875rem;
     letter-spacing: 0.04em;
     padding: 0.25rem 0.625rem;
-    border: 1px solid oklch(38% 0.155 320 / 0.16);
+    border: 1px solid var(--color-border-strong);
     border-radius: 999px;
-    color: var(--color-accent);
-    background: oklch(38% 0.155 320 / 0.06);
+    color: var(--color-text-muted);
+    background: var(--color-bg-elev);
   }
+
+  .exp-details { margin-top: 1rem; }
+  .exp-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    list-style: none;
+    cursor: pointer;
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+    color: var(--color-text-muted);
+    border-radius: 6px;
+  }
+  .exp-toggle::-webkit-details-marker { display: none; }
+  .exp-toggle:hover { color: var(--color-accent); }
+  .exp-less, .exp-details[open] .exp-more { display: none; }
+  .exp-details[open] .exp-less { display: inline; }
+  .exp-chev {
+    width: 6px;
+    height: 6px;
+    border-right: 1.5px solid currentColor;
+    border-bottom: 1.5px solid currentColor;
+    transform: translateY(-2px) rotate(45deg);
+    transition: transform 0.3s var(--ease-out-expo);
+  }
+  .exp-details[open] .exp-chev { transform: translateY(1px) rotate(-135deg); }
 
   .exp-prior {
     margin: 2rem 0 0 2rem;
@@ -197,6 +230,32 @@ const data = cv(lang);
   @media (max-width: 768px) {
     .exp-item { grid-template-columns: 1fr; gap: 0.75rem; padding-left: 1.25rem; }
     .exp-aside { flex-direction: row; gap: 0.75rem; align-items: baseline; }
-    .exp-prior { margin-left: 1.25rem; }
+    .exp-details { margin-top: 1rem; }
+  .exp-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    list-style: none;
+    cursor: pointer;
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+    color: var(--color-text-muted);
+    border-radius: 6px;
+  }
+  .exp-toggle::-webkit-details-marker { display: none; }
+  .exp-toggle:hover { color: var(--color-accent); }
+  .exp-less, .exp-details[open] .exp-more { display: none; }
+  .exp-details[open] .exp-less { display: inline; }
+  .exp-chev {
+    width: 6px;
+    height: 6px;
+    border-right: 1.5px solid currentColor;
+    border-bottom: 1.5px solid currentColor;
+    transform: translateY(-2px) rotate(45deg);
+    transition: transform 0.3s var(--ease-out-expo);
+  }
+  .exp-details[open] .exp-chev { transform: translateY(1px) rotate(-135deg); }
+
+  .exp-prior { margin-left: 1.25rem; }
   }
 </style>
