@@ -23,7 +23,7 @@ const isPt = lang === "pt";
     <a href={isPt ? "/portfolio/" : "/en/portfolio/"} class="cases-portfolio mono">{tr(lang, "portfolio.home")}</a>
   </header>
 
-  <div class="cases-tabs reveal" role="tablist" aria-label={isPt ? "Estudos de caso" : "Case studies"}>
+  <div class="cases-tabs reveal" role="tablist" hidden aria-label={isPt ? "Estudos de caso" : "Case studies"}>
     {data.caseStudies.map((c, i) => (
       <button
         type="button"
@@ -67,7 +67,7 @@ const isPt = lang === "pt";
 </section>
 
 <script>
-  // Sem JS os tres casos ficam empilhados; com JS vira abas (um caso aberto por vez).
+  // Sem JS as abas ficam escondidas e os tres casos empilhados; com JS vira abas (um caso aberto por vez).
   const tabs = [...document.querySelectorAll<HTMLButtonElement>(".case-tab")];
   const show = (i: number, focus = false) => {
     tabs.forEach((t, k) => {
@@ -85,7 +85,10 @@ const isPt = lang === "pt";
       if (e.key === "ArrowLeft") show((i - 1 + tabs.length) % tabs.length, true);
     });
   });
-  if (tabs.length) show(0);
+  if (tabs.length) {
+    tabs[0].parentElement!.hidden = false;
+    show(0);
+  }
 </script>
 
 <style>
@@ -167,7 +170,7 @@ const isPt = lang === "pt";
     border: 1px solid var(--color-border);
     overflow: hidden;
   }
-  .case[hidden] { display: none; }
+  .case[hidden], .cases-tabs[hidden] { display: none; }
 
   .case-head { padding: 2.75rem 3rem 2.25rem; }
 
