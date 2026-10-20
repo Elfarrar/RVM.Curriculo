@@ -14,6 +14,7 @@ export interface CvExperience {
 
 export interface CvCaseStudy {
   tag: string;
+  metric: { n: string; l: string };
   title: string;
   lead: string;
   blocks: { h: string; p: string }[];

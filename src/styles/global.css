@@ -1,36 +1,33 @@
 @import "tailwindcss";
 
 @theme {
-  /* === Editorial Light 2026 — Tokens OKLCH ===
-     Roxo do Visual Studio (#68217A) como cor principal,
-     azul do VS Code (#007ACC) como apoio, sobre cinza claro. */
-  --color-bg: oklch(95% 0.004 286);
-  --color-bg-elev: oklch(99.2% 0.002 286);
-  --color-bg-glass: oklch(100% 0 0 / 0.72);
-  --color-border: oklch(89% 0.006 286);
-  --color-border-strong: oklch(79% 0.012 286);
-  --color-text: oklch(24% 0.015 285);
-  --color-text-muted: oklch(46% 0.015 285);
-  --color-text-subtle: oklch(60% 0.012 285);
-  --color-accent: oklch(38% 0.155 320);
-  --color-accent-hover: oklch(45% 0.17 320);
-  --color-accent-glow: oklch(38% 0.155 320 / 0.16);
-  --color-accent-alt: oklch(52% 0.16 245);
-  --color-accent-soft: oklch(38% 0.155 320 / 0.07);
-  --color-accent-warm: oklch(55% 0.14 50);
-  --color-danger: oklch(52% 0.2 25);
+  /* === Editorial Dark 2026 — Tokens OKLCH ===
+     Roxo do Visual Studio e azul do VS Code, clareados para contraste
+     sobre grafite (TASK #13, 20/10/2026 — antes era tema claro). */
+  --color-bg: oklch(15% 0.012 285);
+  --color-bg-elev: oklch(19.5% 0.014 285);
+  --color-bg-glass: oklch(19.5% 0.014 285 / 0.72);
+  --color-border: oklch(28% 0.014 285);
+  --color-border-strong: oklch(38% 0.016 285);
+  --color-text: oklch(95% 0.005 285);
+  --color-text-muted: oklch(77% 0.012 285);
+  --color-text-subtle: oklch(63% 0.012 285);
+  --color-accent: oklch(72% 0.16 320);
+  --color-accent-hover: oklch(78% 0.15 320);
+  --color-accent-glow: oklch(72% 0.16 320 / 0.22);
+  --color-accent-alt: oklch(72% 0.14 240);
+  --color-accent-soft: oklch(72% 0.16 320 / 0.12);
+  --color-accent-warm: oklch(75% 0.13 60);
+  --color-danger: oklch(68% 0.19 25);
+  --color-on-accent: oklch(16% 0.02 285);
+  --color-shadow: oklch(5% 0.01 285 / 0.5);
 
-  /* Post-its do hero — uma cor por categoria de stack */
-  --color-note-backend: oklch(93% 0.045 320);
-  --color-note-backend-ink: oklch(42% 0.14 320);
-  --color-note-data: oklch(93% 0.055 160);
-  --color-note-data-ink: oklch(42% 0.11 160);
-  --color-note-ui: oklch(92% 0.05 235);
-  --color-note-ui-ink: oklch(42% 0.13 245);
-  --color-note-infra: oklch(93% 0.055 65);
-  --color-note-infra-ink: oklch(45% 0.12 55);
-  --color-note-ai: oklch(94% 0.075 95);
-  --color-note-ai-ink: oklch(45% 0.11 80);
+  /* Cartao de codigo do hero (Rafael.cs) */
+  --color-code-bg: oklch(17.5% 0.013 285);
+  --color-code-keyword: oklch(72% 0.16 320);
+  --color-code-type: oklch(80% 0.11 200);
+  --color-code-string: oklch(80% 0.13 140);
+  --color-code-comment: oklch(58% 0.012 285);
 
   /* Tipografia — Geist (sans + mono), Vercel-style geometric */
   --font-sans: "Geist", "Inter Variable", -apple-system, BlinkMacSystemFont, sans-serif;
@@ -61,7 +58,7 @@
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
     scroll-behavior: smooth;
-    color-scheme: light;
+    color-scheme: dark;
   }
 
   body {
@@ -69,14 +66,14 @@
     line-height: 1.6;
     overflow-x: hidden;
     background:
-      radial-gradient(ellipse 80% 60% at 50% -10%, oklch(38% 0.155 320 / 0.07), transparent 70%),
-      radial-gradient(ellipse 60% 40% at 90% 110%, oklch(52% 0.16 245 / 0.06), transparent 70%),
+      radial-gradient(ellipse 80% 60% at 50% -10%, oklch(72% 0.16 320 / 0.08), transparent 70%),
+      radial-gradient(ellipse 60% 40% at 90% 110%, oklch(72% 0.14 240 / 0.07), transparent 70%),
       var(--color-bg);
   }
 
   ::selection {
     background: var(--color-accent);
-    color: oklch(99% 0 0);
+    color: var(--color-on-accent);
   }
 
   /* Scrollbar custom */
@@ -114,7 +111,12 @@
     font-weight: 400;
     font-style: italic;
     color: var(--color-accent-alt);
+    background: linear-gradient(100deg, var(--color-accent-alt) 20%, var(--color-accent));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
     letter-spacing: -0.02em;
+    padding-right: 0.08em; /* o italico passa da caixa; sem isso o clip corta a ultima letra */
   }
 
   /* Focus visivel acessivel */
@@ -161,12 +163,12 @@
   }
 
   .btn-primary {
-    background: var(--color-accent);
-    color: oklch(99% 0 0);
+    background: linear-gradient(100deg, var(--color-accent-alt), var(--color-accent));
+    color: var(--color-on-accent);
     box-shadow: 0 0 0 0 var(--color-accent-glow);
   }
   .btn-primary:hover {
-    background: var(--color-accent-hover);
+    background: linear-gradient(100deg, var(--color-accent-alt), var(--color-accent-hover));
     box-shadow: 0 8px 24px var(--color-accent-glow);
   }
 

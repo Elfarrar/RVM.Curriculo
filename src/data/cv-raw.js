@@ -141,6 +141,7 @@ export const CV = {
     caseStudies: [
       {
         tag: "EMC · 2017—2018",
+        metric: { n: "100+", l: "funcionários operando no ERP" },
         title: "O ERP que entrou onde os pacotes de mercado não entraram",
         lead:
           "Duas implantações de ERP de mercado fracassaram na mesma empresa. A terceira tentativa foi construir o sistema em casa — e coube a mim desenhar o domínio.",
@@ -161,6 +162,7 @@ export const CV = {
       },
       {
         tag: "Questrade · 2020—2026",
+        metric: { n: "10 mil", l: "contas abertas por dia no pico" },
         title: "10 mil contas por dia",
         lead:
           "A pandemia jogou uma onda de novos investidores em cima dos sistemas de abertura de conta. Ao mesmo tempo, eu ainda era novo no time.",
@@ -181,6 +183,7 @@ export const CV = {
       },
       {
         tag: "Ecossistema RVM · 2026",
+        metric: { n: "5 meses", l: "do zero à produção" },
         title: "Cinco meses para construir a plataforma que eu queria ter encontrado pronta",
         lead:
           "Entre a saída da Questrade e a entrada na Marlabs, construí do zero um ecossistema de aplicações .NET em produção — arquitetura, código, infraestrutura e deploy, tudo meu.",
@@ -393,6 +396,7 @@ export const CV = {
     caseStudies: [
       {
         tag: "EMC · 2017—2018",
+        metric: { n: "100+", l: "employees running on the ERP" },
         title: "The ERP that got in where the off-the-shelf packages could not",
         lead:
           "Two off-the-shelf ERP rollouts failed at the same company. The third attempt was to build it in house — and I owned the domain design.",
@@ -413,6 +417,7 @@ export const CV = {
       },
       {
         tag: "Questrade · 2020—2026",
+        metric: { n: "10k", l: "accounts opened per day at peak" },
         title: "10,000 accounts a day",
         lead:
           "The pandemic threw a wave of new investors at the account opening systems. At the same time, I was still new to the team.",
@@ -433,6 +438,7 @@ export const CV = {
       },
       {
         tag: "RVM Ecosystem · 2026",
+        metric: { n: "5 months", l: "from zero to production" },
         title: "Five months to build the platform I wish I had found ready",
         lead:
           "Between leaving Questrade and joining Marlabs, I built an ecosystem of .NET applications in production from scratch — architecture, code, infrastructure and deployment, all mine.",
