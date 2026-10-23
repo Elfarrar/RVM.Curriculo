@@ -42,6 +42,11 @@ jobs:
           npm ci
           npm run build
 
+      - name: Testes do workflow (CA1, CA3, CA4)
+        run: |
+          python3 -c "import yaml" 2>/dev/null || pip install -q pyyaml
+          bash tests/deploy-minastirith.test.sh
+
       - name: Upload dist
         if: github.event_name != 'pull_request'
         uses: actions/upload-artifact@v3
