@@ -94,6 +94,7 @@ jobs:
         run: |
           # ssh/rsync escrevem host, porta e usuario no stderr em falha de conexao: mascara antes de ir ao log (CA4).
           mask() { sed -e "s|${HOST}|***|g" -e "s|${USER_}|***|g" -e "s|port ${PORT:-22}|port ***|g"; }
+          set -o pipefail   # sem isto o status do pipe é o do sed e a falha do ssh/rsync passa como verde
           ssh -i ~/.ssh/id_ed25519 -p "${PORT:-22}" -o StrictHostKeyChecking=yes -o ConnectTimeout=15 "${USER_}@${HOST}" \
             "mkdir -p '${DEPLOY_PATH}' && tar -czf '${DEPLOY_PATH}.bak.tgz' -C \"\$(dirname '${DEPLOY_PATH}')\" \"\$(basename '${DEPLOY_PATH}')\" && ls -lh '${DEPLOY_PATH}.bak.tgz'" 2>&1 | mask
 
@@ -105,6 +106,7 @@ jobs:
         run: |
           # ssh/rsync escrevem host, porta e usuario no stderr em falha de conexao: mascara antes de ir ao log (CA4).
           mask() { sed -e "s|${HOST}|***|g" -e "s|${USER_}|***|g" -e "s|port ${PORT:-22}|port ***|g"; }
+          set -o pipefail   # sem isto o status do pipe é o do sed e a falha do ssh/rsync passa como verde
           # Falha de rede: ate 3 tentativas (rsync e idempotente); depois disso o job fica vermelho (backup ja feito).
           for i in 1 2 3; do
             rsync -a --delete \
@@ -122,5 +124,6 @@ jobs:
         run: |
           # ssh/rsync escrevem host, porta e usuario no stderr em falha de conexao: mascara antes de ir ao log (CA4).
           mask() { sed -e "s|${HOST}|***|g" -e "s|${USER_}|***|g" -e "s|port ${PORT:-22}|port ***|g"; }
+          set -o pipefail   # sem isto o status do pipe é o do sed e a falha do ssh/rsync passa como verde
           ssh -i ~/.ssh/id_ed25519 -p "${PORT:-22}" -o StrictHostKeyChecking=yes -o ConnectTimeout=15 "${USER_}@${HOST}" \
             "cd '${DEPLOY_PATH}' && for f in index.html artigos/ia-salvou-meu-trabalho/index.html en/articles/ai-saved-my-career/index.html; do test -f \"\$f\" || { echo \"FALTA: \$f\"; exit 1; }; done; echo 'verificacao ok'" 2>&1 | mask
