@@ -2,7 +2,6 @@ name: Deploy MinasTirith
 
 # Publica o site estatico (rvmtech.com.br) no MinasTirith: build Astro -> backup -> rsync --delete -> verificacao.
 # Segunda forma de publicacao; o GitHub Pages (.github/workflows/deploy.yml) segue ligado ate a virada do DNS.
-# Padrao: deploy-landing.yml do RVM.Anotaria (runner empurra por SSH).
 #
 # Secrets do repo (valores nunca em arquivo): MINASTIRITH_HOST, MINASTIRITH_PORT, MINASTIRITH_USER,
 # MINASTIRITH_SSH_KEY_B64 (chave privada em base64).
