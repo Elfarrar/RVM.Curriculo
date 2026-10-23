@@ -29,18 +29,28 @@ export SSH_KEY_B64=$(printf '%s' "$(cat "$T/k")" | base64 -w0)
 step "Configure SSH" > "$T/cfg.sh"
 bash -e -o pipefail "$T/cfg.sh" > "$T/cfg.log" 2>&1 && ok "chave sem newline final aceita" || { ko "Configure SSH"; cat "$T/cfg.log"; }
 
-# CA3: rsync quebrado -> job vermelho, mensagem do passo, aponta o backup (que roda antes do rsync).
-step "Publish" > "$T/pub.sh"; mkdir -p "$T/dist"; cd "$T"
-bash -e -o pipefail "$T/pub.sh" > "$T/pub.log" 2>&1; rc=$?
-cd - >/dev/null
+# CA3: backup REAL (ssh stub executa o comando remoto localmente) e depois rsync quebrado.
+mkdir -p "$T/sshstub" "$T/srv/rvmtech" "$T/dist"; echo "site antigo" > "$T/srv/rvmtech/index.html"
+printf '#!/bin/bash\nbash -c "${@: -1}"\n' > "$T/sshstub/ssh"; chmod +x "$T/sshstub/ssh"
+export DEPLOY_PATH="$T/srv/rvmtech"
+step "Backup" > "$T/bkp.sh"; step "Publish" > "$T/pub.sh"
+PATH="$T/sshstub:$PATH" bash -e -o pipefail "$T/bkp.sh" > "$T/bkp.log" 2>&1 && ok "CA3 backup executado" || { ko "CA3 backup"; cat "$T/bkp.log"; }
+tar -tzf "$DEPLOY_PATH.bak.tgz" | grep -q 'rvmtech/index.html' && ok "CA3 .bak.tgz existe e tem o site anterior" || ko "CA3 .bak.tgz ausente"
+(cd "$T" && bash -e -o pipefail "$T/pub.sh" > "$T/pub.log" 2>&1); rc=$?
 [ $rc -ne 0 ] && ok "CA3 rsync com falha => job vermelho" || ko "CA3 job verde com falha"
-grep -q "rsync falhou 3x" "$T/pub.log" && grep -q "bak.tgz" "$T/pub.log" && ok "CA3 mensagem do passo e backup" || ko "CA3 mensagem"
-python3 - <<P && ok "CA3 backup antes do rsync" || ko "CA3 ordem dos passos"
-import yaml;n=[s.get('name','') for s in yaml.safe_load(open('$WF'))['jobs']['deploy']['steps']]
-assert n.index(next(x for x in n if x.startswith('Backup')))<n.index(next(x for x in n if x.startswith('Publish')))
-P
+grep -q "rsync falhou 3x" "$T/pub.log" && ok "CA3 mensagem do passo" || ko "CA3 mensagem"
+[ -s "$DEPLOY_PATH.bak.tgz" ] && ok "CA3 backup segue la apos a falha" || ko "CA3 backup sumiu"
 
-# CA4: nenhum valor sentinela (host, porta, usuario, chave) nos logs.
-if grep -rqE "sentinela-host|sentinela-user|29999|BEGIN OPENSSH|$(head -c 20 <<<"$SSH_KEY_B64")" "$T"/*.log; then ko "CA4 segredo no log"; else ok "CA4 sem segredo no log"; fi
-grep -nE 'set -x|-v ' "$WF" >/dev/null && ko "CA4 modo verboso no workflow" || ok "CA4 sem set -x/ssh -v"
+# CA4: falha de conexao REAL do ssh (host que nao resolve e porta recusada) nao pode vazar host, porta ou usuario.
+for H in sentinela-host.invalid 127.0.0.1; do
+  export HOST=$H PORT=29999 USER_=sentinela-user
+  for st in Backup Verify; do
+    step "$st" > "$T/net.sh"
+    bash -e -o pipefail "$T/net.sh" > "$T/net-$st-$H.log" 2>&1 && ko "CA4 $st deveria falhar sem rede"
+  done
+done
+cat "$T"/net-*.log > "$T/all.log"; grep -q -E 'Could not resolve|refused|Connection' "$T/all.log" && ok "CA4 ssh real falhou como esperado" || ko "CA4 ssh nao falhou por rede"
+export HOST=sentinela-host.invalid
+if grep -qE "sentinela-host|sentinela-user|29999|127\.0\.0\.1|BEGIN OPENSSH|$(head -c 20 <<<"$SSH_KEY_B64")" "$T"/*.log; then ko "CA4 segredo no log"; grep -hE "sentinela|29999|127\.0\.0\.1" "$T"/*.log | head; else ok "CA4 sem segredo no log"; fi
+grep -nE 'set -x|ssh -v' "$WF" >/dev/null && ko "CA4 modo verboso no workflow" || ok "CA4 sem set -x/ssh -v"
 exit $fail
