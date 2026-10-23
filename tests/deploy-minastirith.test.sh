@@ -41,6 +41,16 @@ tar -tzf "$DEPLOY_PATH.bak.tgz" | grep -q 'rvmtech/index.html' && ok "CA3 .bak.t
 grep -q "rsync falhou 3x" "$T/pub.log" && ok "CA3 mensagem do passo" || ko "CA3 mensagem"
 [ -s "$DEPLOY_PATH.bak.tgz" ] && ok "CA3 backup segue la apos a falha" || ko "CA3 backup sumiu"
 
+# CA2: caminho feliz — Publish envia (rsync stub copia para o "servidor" local) e o Verify confere as 3 paginas.
+mkdir -p "$T/dist/artigos/ia-salvou-meu-trabalho" "$T/dist/en/articles/ai-saved-my-career"
+for f in index.html artigos/ia-salvou-meu-trabalho/index.html en/articles/ai-saved-my-career/index.html; do echo novo > "$T/dist/$f"; done
+printf '#!/bin/bash\nd="${@: -1}"; cp -a dist/. "${d#*:}"\n' > "$T/sshstub/rsync"; chmod +x "$T/sshstub/rsync"
+step "Verify" > "$T/ver.sh"
+(cd "$T" && PATH="$T/sshstub:$PATH" bash -e -o pipefail "$T/pub.sh" > "$T/pub-ok.log" 2>&1) && ok "CA2 Publish verde" || { ko "CA2 Publish"; cat "$T/pub-ok.log"; }
+PATH="$T/sshstub:$PATH" bash -e -o pipefail "$T/ver.sh" > "$T/ver-ok.log" 2>&1 && grep -q 'verificacao ok' "$T/ver-ok.log" && ok "CA2 Verify verde" || { ko "CA2 Verify"; cat "$T/ver-ok.log"; }
+rm "$DEPLOY_PATH/en/articles/ai-saved-my-career/index.html"
+PATH="$T/sshstub:$PATH" bash -e -o pipefail "$T/ver.sh" > "$T/ver-ko.log" 2>&1 && ko "CA2 Verify aceitou pagina faltando" || ok "CA2 Verify falha se faltar pagina"
+
 # CA4: falha de conexao REAL do ssh (host que nao resolve e porta recusada) nao pode vazar host, porta ou usuario.
 for H in sentinela-host.invalid 127.0.0.1; do
   export HOST=$H PORT=29999 USER_=sentinela-user
