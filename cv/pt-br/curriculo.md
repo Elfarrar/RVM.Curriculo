@@ -28,7 +28,7 @@ Mais de 15 anos construindo sistemas corporativos em C# e .NET de ponta a ponta 
 - Ecossistema .NET 10 do zero até produção em Vertical Slice Architecture, com Blazor Server, EF Core e PostgreSQL, em VPS Linux com Docker, Nginx e CI/CD no GitHub Actions.
 - ERPAgro: ERP para o pequeno produtor rural operado por WhatsApp em linguagem natural (camada MCP), gerando o LCDPR; mais serviços de pagamento (Pix, boleto, cartão) e identidade centralizada.
 
-**Questrade** — Desenvolvedor Full Stack Sênior | Belo Horizonte, MG | jun/2020 – jan/2026
+**Questrade** — Desenvolvedor Full Stack, promovido a Sênior em 2023 | Belo Horizonte, MG | jun/2020 – jan/2026
 
 - Sistemas web do banco em C# e .NET sobre o CMS Sitefinity, que sustentaram picos de mais de 10 mil aberturas de conta por dia durante a pandemia.
 - Referência técnica do time desde o primeiro ano: participação nas decisões de arquitetura, apoio em problemas complexos e condução de code review.

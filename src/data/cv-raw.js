@@ -86,7 +86,7 @@ export const CV = {
       },
       {
         period: "jun/2020 — jan/2026",
-        role: "Desenvolvedor Full Stack Sênior",
+        role: "Desenvolvedor Full Stack, promovido a Sênior em 2023",
         company: "Questrade",
         client: "corretora e banco digital canadense",
         location: "Belo Horizonte, MG · time no Canadá",
@@ -341,7 +341,7 @@ export const CV = {
       },
       {
         period: "Jun 2020 — Jan 2026",
-        role: "Senior Full Stack Developer",
+        role: "Full Stack Developer, promoted to Senior in 2023",
         company: "Questrade",
         client: "Canadian brokerage and digital bank",
         location: "Belo Horizonte, Brazil · team in Canada",

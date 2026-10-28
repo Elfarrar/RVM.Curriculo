@@ -28,7 +28,7 @@ rvmtech.com.br/en | linkedin.com/in/rafael-veneroso-morici | github.com/Elfarrar
 - .NET 10 ecosystem from scratch to production on Vertical Slice Architecture, with Blazor Server, EF Core and PostgreSQL, on a Linux VPS with Docker, Nginx and CI/CD on GitHub Actions.
 - ERPAgro: ERP for small-scale farmers operated through WhatsApp in natural language (MCP layer), generating the Brazilian LCDPR tax report; plus payment (Pix, bank slip, card) and centralized identity services.
 
-**Questrade** — Senior Full Stack Developer | Belo Horizonte, Brazil | Jun 2020 – Jan 2026
+**Questrade** — Full Stack Developer, promoted to Senior in 2023 | Belo Horizonte, Brazil | Jun 2020 – Jan 2026
 
 - The bank's web systems in C# and .NET on top of the Sitefinity CMS, which sustained peaks of over 10,000 account openings per day during the pandemic.
 - A technical reference for the team from the first year: took part in architecture decisions, helped with complex problems and led code reviews.
