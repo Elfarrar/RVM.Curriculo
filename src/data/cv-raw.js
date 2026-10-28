@@ -18,7 +18,7 @@ export const CV = {
       { l: "Localização", v: "Belo Horizonte, MG" },
       { l: "Disponibilidade", v: "Remoto" },
       { l: "Experiência", v: "15+ anos" },
-      { l: "Cargo atual", v: "Sênior @ Marlabs" },
+      { l: "Cargo atual", v: "Especialista Full Stack @ Marlabs" },
       { l: "Formação", v: "Pós em IA Aplicada (em curso) · SI (2009)" },
       { l: "Idiomas", v: "PT nativo · EN avançado" },
     ],
@@ -32,7 +32,7 @@ export const CV = {
     experiences: [
       {
         period: "set/2026 — atual",
-        role: "Engenheiro de Software Sênior",
+        role: "Especialista em Desenvolvimento Full Stack",
         company: "Marlabs",
         client: "alocado no cliente Practice Tek",
         location: "remoto",
@@ -49,7 +49,7 @@ export const CV = {
       },
       {
         period: "jun/2026 — ago/2026",
-        role: "Engenheiro de Software Sênior",
+        role: "Especialista em Desenvolvimento Full Stack",
         company: "Marlabs",
         client: "alocado no cliente UL Solutions",
         location: "remoto",
@@ -86,7 +86,7 @@ export const CV = {
       },
       {
         period: "jun/2020 — jan/2026",
-        role: "Programador Sênior",
+        role: "Desenvolvedor Full Stack, promovido a Sênior em 2023",
         company: "Questrade",
         client: "corretora e banco digital canadense",
         location: "Belo Horizonte, MG · time no Canadá",
@@ -102,8 +102,8 @@ export const CV = {
         stack: ["C#", ".NET", "Sitefinity", "REST API", "SQL Server", "Jenkins", "Docker", "Git"],
       },
       {
-        period: "jul/2018 — jun/2020",
-        role: "Programador Sênior / Líder Técnico de Time",
+        period: "jul/2019 — jun/2020",
+        role: "Desenvolvedor de Software Sênior",
         company: "Mereo",
         client: "SaaS de gestão de RH",
         location: "Belo Horizonte, MG",
@@ -118,7 +118,7 @@ export const CV = {
         stack: ["C#", "ASP.NET", "Angular 2", "SQL Server", "REST API", "Scrum"],
       },
       {
-        period: "jan/2017 — jul/2018",
+        period: "jan/2017 — jul/2019",
         role: "Programador Pleno",
         company: "EMC",
         client: "locação de equipamentos de informática",
@@ -140,7 +140,7 @@ export const CV = {
 
     caseStudies: [
       {
-        tag: "EMC · 2017—2018",
+        tag: "EMC · 2017—2019",
         metric: { n: "100+", l: "funcionários operando no ERP" },
         title: "O ERP que entrou onde os pacotes de mercado não entraram",
         lead:
@@ -273,7 +273,7 @@ export const CV = {
       { l: "Location", v: "Belo Horizonte, Brazil" },
       { l: "Availability", v: "Remote" },
       { l: "Experience", v: "15+ years" },
-      { l: "Current role", v: "Senior @ Marlabs" },
+      { l: "Current role", v: "Full Stack Specialist @ Marlabs" },
       { l: "Education", v: "Postgrad in Applied AI (ongoing) · IS (2009)" },
       { l: "Languages", v: "PT native · EN advanced" },
     ],
@@ -287,7 +287,7 @@ export const CV = {
     experiences: [
       {
         period: "Sep 2026 — Present",
-        role: "Senior Software Engineer",
+        role: "Full Stack Development Specialist",
         company: "Marlabs",
         client: "assigned to client Practice Tek",
         location: "remote",
@@ -304,7 +304,7 @@ export const CV = {
       },
       {
         period: "Jun 2026 — Aug 2026",
-        role: "Senior Software Engineer",
+        role: "Full Stack Development Specialist",
         company: "Marlabs",
         client: "assigned to client UL Solutions",
         location: "remote",
@@ -341,7 +341,7 @@ export const CV = {
       },
       {
         period: "Jun 2020 — Jan 2026",
-        role: "Senior Software Developer",
+        role: "Full Stack Developer, promoted to Senior in 2023",
         company: "Questrade",
         client: "Canadian brokerage and digital bank",
         location: "Belo Horizonte, Brazil · team in Canada",
@@ -357,8 +357,8 @@ export const CV = {
         stack: ["C#", ".NET", "Sitefinity", "REST API", "SQL Server", "Jenkins", "Docker", "Git"],
       },
       {
-        period: "Jul 2018 — Jun 2020",
-        role: "Senior Software Developer / Team Lead",
+        period: "Jul 2019 — Jun 2020",
+        role: "Senior Software Developer",
         company: "Mereo",
         client: "HR management SaaS",
         location: "Belo Horizonte, Brazil",
@@ -373,7 +373,7 @@ export const CV = {
         stack: ["C#", "ASP.NET", "Angular 2", "SQL Server", "REST API", "Scrum"],
       },
       {
-        period: "Jan 2017 — Jul 2018",
+        period: "Jan 2017 — Jul 2019",
         role: "Mid-level Software Developer",
         company: "EMC",
         client: "IT equipment leasing",
@@ -395,7 +395,7 @@ export const CV = {
 
     caseStudies: [
       {
-        tag: "EMC · 2017—2018",
+        tag: "EMC · 2017—2019",
         metric: { n: "100+", l: "employees running on the ERP" },
         title: "The ERP that got in where the off-the-shelf packages could not",
         lead:

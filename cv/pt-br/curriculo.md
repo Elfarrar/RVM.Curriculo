@@ -18,7 +18,7 @@ Mais de 15 anos construindo sistemas corporativos em C# e .NET de ponta a ponta 
 
 ## Experiência Profissional
 
-**Marlabs** — Engenheiro de Software Sênior | remoto | jun/2026 – atual
+**Marlabs** — Especialista em Desenvolvimento Full Stack | remoto | jun/2026 – atual
 
 - Cliente Practice Tek (set/2026 – atual), software de saúde: sistema para clínicas odontológicas em C#, .NET, TypeScript e Next.js, com SQL Server e AWS, num processo conduzido por agentes de IA (Claude Code); melhorei a skill que grava os testes E2E, que agora destaca o campo em teste e narra cada passo.
 - Cliente UL Solutions (jun – ago/2026): nova plataforma de cálculo de emissão de carbono em C# e .NET, substituindo o legado; seis skills de IA (Claude Code) que geram entidades, repositórios, controllers e testes a partir do modelo e o validam contra os scripts SQL.
@@ -28,17 +28,17 @@ Mais de 15 anos construindo sistemas corporativos em C# e .NET de ponta a ponta 
 - Ecossistema .NET 10 do zero até produção em Vertical Slice Architecture, com Blazor Server, EF Core e PostgreSQL, em VPS Linux com Docker, Nginx e CI/CD no GitHub Actions.
 - ERPAgro: ERP para o pequeno produtor rural operado por WhatsApp em linguagem natural (camada MCP), gerando o LCDPR; mais serviços de pagamento (Pix, boleto, cartão) e identidade centralizada.
 
-**Questrade** — Programador Sênior | Belo Horizonte, MG | jun/2020 – jan/2026
+**Questrade** — Desenvolvedor Full Stack, promovido a Sênior em 2023 | Belo Horizonte, MG | jun/2020 – jan/2026
 
 - Sistemas web do banco em C# e .NET sobre o CMS Sitefinity, que sustentaram picos de mais de 10 mil aberturas de conta por dia durante a pandemia.
 - Referência técnica do time desde o primeiro ano: participação nas decisões de arquitetura, apoio em problemas complexos e condução de code review.
 - Responsável técnico pelos sistemas de afiliados e parceiros (50+ ativos): comissionamento, APIs REST e integrações, em setor financeiro regulado, com comunicação diária em inglês com o Canadá.
 
-**Mereo** — Programador Sênior / Líder Técnico | Belo Horizonte, MG | jul/2018 – jun/2020
+**Mereo** — Desenvolvedor de Software Sênior | Belo Horizonte, MG | jul/2019 – jun/2020
 
 - Liderança técnica de 3 desenvolvedores e 1 QA no módulo de avaliação de desempenho de um SaaS de gestão de RH (nine box e planos de sucessão), em C# com ASP.NET, Angular 2 e SQL Server.
 
-**EMC** — Programador Pleno | Belo Horizonte, MG | jan/2017 – jul/2018
+**EMC** — Programador Pleno | Belo Horizonte, MG | jan/2017 – jul/2019
 
 - ERP construído do zero, com DDD e arquitetura em camadas, que passou a controlar a operação de uma empresa de mais de 100 funcionários: locação de equipamentos, ordens de serviço, contratos e financeiro.
 
